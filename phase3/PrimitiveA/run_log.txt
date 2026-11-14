@@ -1,0 +1,38 @@
+trial 126: failed to parse output, skipping
+trial 473: failed to parse output, skipping
+======================================================================
+Primitive A (Augury Algorithm 3) -- mach_absolute_time results
+======================================================================
+Trials:              498 (of 500 requested)
+Accuracy:            39.0% (194/498)
+95% CI (Wilson):     [34.8%, 43.3%]
+
+Augury paper, PMC timer:              92.0%  (not reproduced -- see header note)
+Augury paper, mach_absolute_time:      70.2%
+This replication, mach_absolute_time:  39.0%  (delta: -31.2 pts)
+
+Hit/miss timing separation (first-probe reading, in timer units):
+  chosen candidate (expected: fast/hit) (n=498):
+    [   0-0   ] ################################### 121
+    [   1-1   ] ##################################### 129
+    [   2-3   ]  1
+    [   4-7   ]  0
+    [   8-15  ]  0
+    [  16-31  ] ############ 42
+    [  32-63  ] ######################################## 136
+    [  64-127 ] ################### 65
+    [ 128-255 ] # 4
+    [ 256+    ]  0
+  other candidates (expected: slow/miss) (n=996):
+    [   0-0   ] ################### 143
+    [   1-1   ] ######################################## 287
+    [   2-3   ] ## 16
+    [   4-7   ] ##### 40
+    [   8-15  ] # 11
+    [  16-31  ] ############ 89
+    [  32-63  ] ##################################### 266
+    [  64-127 ] ################# 128
+    [ 128-255 ] # 14
+    [ 256+    ]  2
+
+Wrote per-trial data to out_mach.csv

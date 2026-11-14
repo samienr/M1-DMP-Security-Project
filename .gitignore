@@ -1,0 +1,44 @@
+# --- OS cruft ---
+.DS_Store
+
+# --- Build artifacts (C/clang) ---
+*.o
+*.ko
+*.obj
+*.elf
+*.a
+*.la
+*.lo
+*.so
+*.so.*
+*.dylib
+*.dSYM/
+augury/bin/
+augury/obj/
+phase0_skeleton/*.o
+
+# --- Rust ---
+target/
+Cargo.lock
+
+# --- Python ---
+__pycache__/
+*.pyc
+venv/
+venv3/
+
+# --- Gradle / Android build output ---
+Assignment5Weather/.gradle/
+Assignment5Weather/build/
+Assignment5Weather/app/build/
+
+# --- Generated experiment data (regenerable; upstream repos ignore these too) ---
+phase2/GoFetch/data/
+phase2/GoFetch/plots/
+
+# --- Unrelated coursework sharing this folder (not part of the DMP term project) ---
+Assignment5Weather/
+assignment5-verification/
+briefing/
+output/
+tmp/
