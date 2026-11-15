@@ -127,9 +127,25 @@ impl Allocator {
     }
 
     // use reverse engineering M1 L2 set mapping
+    //
+    // Disabled: this calls `parse_pfn`, which has no definition anywhere
+    // in this crate (confirmed via grep) -- it was `#[cfg(target_os =
+    // "linux")]`, i.e. gated exactly *on* our Asahi target, so building
+    // this crate for Linux at all would fail with an unresolved-name error
+    // before ever reaching the ct-swap attack code, which doesn't call
+    // this function anyway (it uses the OS-agnostic, purely timing-based
+    // `eviction_set_gen64`/`eviction_set_generation` path instead -- the
+    // "standard L2 eviction set generation (Appendix A method)" the
+    // project plan calls for). Presumably an earlier, unfinished attempt
+    // at a physical-address-based (pagemap) Linux eviction-set method;
+    // left here commented out rather than deleted in case that approach
+    // is picked back up later (it would also need root, since
+    // /proc/pid/pagemap PFNs are zeroed for unprivileged readers on
+    // modern kernels).
+    /*
     #[cfg(target_os = "linux")]
     pub fn l2_evset_gen(
-        &mut self, 
+        &mut self,
         ways: usize,
         slice: u8,
         pfn_set: u8
@@ -151,6 +167,7 @@ impl Allocator {
             cache_lines,
         }
     }
+    */
 }
 
 pub struct CacheLineSet {

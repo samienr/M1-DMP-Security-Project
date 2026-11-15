@@ -1,0 +1,7367 @@
+[+] Grab dyld search space from file...
+[+] Dst Array page offset -> 0x0
+[+] Target Pointer start frame -> 0xfffff7d80000
+[+] Target Pointer end frame -> 0xfffff7f44000
+--------------------------------Evsets Preparation-----------------------------
+[+] Find one target with different set at 0xffffe9efc000
+cached: 108
+evicted: 255
+eviction rate: 100.00%
+[+] Get the eviction set 1
+Size of conflict set: 12
+Maximum load latency for new victim: 148
+[+] Find one target with different set at 0xffffe9f00000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 2
+Size of conflict set: 24
+Maximum load latency for new victim: 148
+[+] Find one target with different set at 0xffffe9f04000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 3
+Size of conflict set: 36
+Maximum load latency for new victim: 132
+[+] Find one target with different set at 0xffffe9f08000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 4
+Size of conflict set: 48
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f10000
+cached: 108
+evicted: 270
+eviction rate: 100.00%
+[+] Get the eviction set 5
+Size of conflict set: 60
+Maximum load latency for new victim: 132
+[+] Find one target with different set at 0xffffe9f14000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 6
+Size of conflict set: 72
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f18000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 7
+Size of conflict set: 84
+Maximum load latency for new victim: 132
+[+] Find one target with different set at 0xffffe9f1c000
+cached: 108
+evicted: 267
+eviction rate: 100.00%
+[+] Get the eviction set 8
+Size of conflict set: 96
+Maximum load latency for new victim: 132
+[+] Find one target with different set at 0xffffe9f20000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 9
+Size of conflict set: 108
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f28000
+cached: 108
+evicted: 269
+eviction rate: 0.00%
+cached: 108
+evicted: 269
+eviction rate: 42.00%
+cached: 108
+evicted: 270
+eviction rate: 0.00%
+cached: 108
+evicted: 277
+eviction rate: 100.00%
+[+] Get the eviction set 10
+Size of conflict set: 120
+Maximum load latency for new victim: 145
+[+] Find one target with different set at 0xffffe9f2c000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 11
+Size of conflict set: 132
+Maximum load latency for new victim: 132
+[+] Find one target with different set at 0xffffe9f30000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 12
+Size of conflict set: 144
+Maximum load latency for new victim: 132
+[+] Find one target with different set at 0xffffe9f34000
+cached: 108
+evicted: 270
+eviction rate: 100.00%
+[+] Get the eviction set 13
+Size of conflict set: 156
+Maximum load latency for new victim: 148
+[+] Find one target with different set at 0xffffe9f38000
+cached: 108
+evicted: 267
+eviction rate: 100.00%
+[+] Get the eviction set 14
+Size of conflict set: 168
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f3c000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 15
+Size of conflict set: 180
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f40000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 16
+Size of conflict set: 192
+Maximum load latency for new victim: 132
+[+] Find one target with different set at 0xffffe9f44000
+cached: 108
+evicted: 268
+eviction rate: 36.00%
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 17
+Size of conflict set: 204
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f48000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 18
+Size of conflict set: 216
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f4c000
+cached: 108
+evicted: 267
+eviction rate: 100.00%
+[+] Get the eviction set 19
+Size of conflict set: 228
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f50000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 20
+Size of conflict set: 240
+Maximum load latency for new victim: 137
+[+] Find one target with different set at 0xffffe9f54000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 21
+Size of conflict set: 252
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f60000
+cached: 108
+evicted: 267
+eviction rate: 100.00%
+[+] Get the eviction set 22
+Size of conflict set: 264
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f64000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 23
+Size of conflict set: 276
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f68000
+cached: 108
+evicted: 268
+eviction rate: 100.00%
+[+] Get the eviction set 24
+Size of conflict set: 288
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f70000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+cached: 108
+evicted: 269
+eviction rate: 0.00%
+cached: 108
+evicted: 270
+eviction rate: 29.00%
+cached: 108
+evicted: 276
+eviction rate: 100.00%
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+cached: 108
+evicted: 267
+eviction rate: 100.00%
+[+] Get the eviction set 25
+Size of conflict set: 300
+Maximum load latency for new victim: 148
+[+] Find one target with different set at 0xffffe9f74000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 26
+Size of conflict set: 312
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f80000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 27
+Size of conflict set: 324
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f84000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 28
+Size of conflict set: 336
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f90000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 29
+Size of conflict set: 348
+Maximum load latency for new victim: 149
+[+] Find one target with different set at 0xffffe9f94000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 30
+Size of conflict set: 360
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9f98000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 31
+Size of conflict set: 372
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9fa8000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 32
+Size of conflict set: 384
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9fb0000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 33
+Size of conflict set: 396
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9fb4000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 34
+Size of conflict set: 408
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9fbc000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 35
+Size of conflict set: 420
+Maximum load latency for new victim: 151
+[+] Find one target with different set at 0xffffe9fc0000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 36
+Size of conflict set: 432
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9fc8000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 37
+Size of conflict set: 444
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9fdc000
+cached: 108
+evicted: 268
+eviction rate: 100.00%
+[+] Get the eviction set 38
+Size of conflict set: 456
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9fe8000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 39
+Size of conflict set: 468
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9ff4000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 40
+Size of conflict set: 480
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffe9ffc000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 41
+Size of conflict set: 492
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea028000
+cached: 108
+evicted: 268
+eviction rate: 0.00%
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 42
+Size of conflict set: 504
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea030000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 43
+Size of conflict set: 516
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea044000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 44
+Size of conflict set: 528
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea048000
+cached: 108
+evicted: 269
+eviction rate: 0.00%
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 45
+Size of conflict set: 540
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea05c000
+cached: 108
+evicted: 269
+eviction rate: 0.00%
+cached: 108
+evicted: 269
+eviction rate: 88.00%
+cached: 108
+evicted: 270
+eviction rate: 100.00%
+[+] Get the eviction set 46
+Size of conflict set: 552
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea068000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 47
+Size of conflict set: 564
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea078000
+cached: 108
+evicted: 268
+eviction rate: 100.00%
+[+] Get the eviction set 48
+Size of conflict set: 576
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea07c000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 49
+Size of conflict set: 588
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea0a0000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 50
+Size of conflict set: 600
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea0cc000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 51
+Size of conflict set: 612
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea0e0000
+cached: 108
+evicted: 268
+eviction rate: 100.00%
+[+] Get the eviction set 52
+Size of conflict set: 624
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea0f8000
+cached: 108
+evicted: 268
+eviction rate: 100.00%
+[+] Get the eviction set 53
+Size of conflict set: 636
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea134000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 54
+Size of conflict set: 648
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea144000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 55
+Size of conflict set: 660
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea150000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 56
+Size of conflict set: 672
+Maximum load latency for new victim: 158
+[+] Find one target with different set at 0xffffea164000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 57
+Size of conflict set: 684
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea1d0000
+cached: 108
+evicted: 269
+eviction rate: 0.00%
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 58
+Size of conflict set: 696
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea214000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 59
+Size of conflict set: 708
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea228000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 60
+Size of conflict set: 720
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea248000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 61
+Size of conflict set: 732
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea2a8000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 62
+Size of conflict set: 744
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea318000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 63
+Size of conflict set: 756
+Maximum load latency for new victim: 144
+[+] Find one target with different set at 0xffffea380000
+cached: 108
+evicted: 269
+eviction rate: 100.00%
+[+] Get the eviction set 64
+[+] Finish generating 64 frame evset!
+Successfully connected to server in port 3333
+--------------------------------Calibration-----------------------------
+[+] Flush thread is created!
+[+] Set Target Pointer Offset as 0x2900
+Conflict times/Non-conflict times: 0/1 -> 671
+Conflict times/Non-conflict times: 1/2 -> 980
+Conflict times/Non-conflict times: 1/3 -> 387
+Conflict times/Non-conflict times: 2/4 -> 748
+Conflict times/Non-conflict times: 2/5 -> 405
+Conflict times/Non-conflict times: 2/6 -> 390
+Conflict times/Non-conflict times: 2/7 -> 400
+Conflict times/Non-conflict times: 2/8 -> 392
+Conflict times/Non-conflict times: 2/9 -> 419
+Conflict times/Non-conflict times: 3/10 -> 1015
+Conflict times/Non-conflict times: 3/11 -> 398
+Conflict times/Non-conflict times: 3/12 -> 410
+Conflict times/Non-conflict times: 3/13 -> 386
+Conflict times/Non-conflict times: 3/14 -> 615
+Conflict times/Non-conflict times: 3/15 -> 394
+Conflict times/Non-conflict times: 3/16 -> 587
+Conflict times/Non-conflict times: 4/17 -> 1225
+Conflict times/Non-conflict times: 4/18 -> 400
+Conflict times/Non-conflict times: 5/19 -> 757
+Conflict times/Non-conflict times: 6/20 -> 970
+Conflict times/Non-conflict times: 7/21 -> 815
+Conflict times/Non-conflict times: 8/22 -> 1136
+Conflict times/Non-conflict times: 9/23 -> 764
+Conflict times/Non-conflict times: 9/24 -> 404
+Conflict times/Non-conflict times: 9/25 -> 396
+Conflict times/Non-conflict times: 10/26 -> 1160
+Conflict times/Non-conflict times: 10/27 -> 551
+Conflict times/Non-conflict times: 11/28 -> 813
+Conflict times/Non-conflict times: 11/29 -> 394
+Conflict times/Non-conflict times: 11/30 -> 390
+Conflict times/Non-conflict times: 11/31 -> 388
+Conflict times/Non-conflict times: 12/32 -> 926
+Conflict times/Non-conflict times: 12/33 -> 578
+Conflict times/Non-conflict times: 12/34 -> 394
+Conflict times/Non-conflict times: 13/35 -> 1087
+Conflict times/Non-conflict times: 13/36 -> 398
+Conflict times/Non-conflict times: 13/37 -> 400
+Conflict times/Non-conflict times: 14/38 -> 1099
+Conflict times/Non-conflict times: 14/39 -> 426
+Conflict times/Non-conflict times: 14/40 -> 640
+Conflict times/Non-conflict times: 14/41 -> 391
+Conflict times/Non-conflict times: 14/42 -> 394
+Conflict times/Non-conflict times: 14/43 -> 650
+Conflict times/Non-conflict times: 14/44 -> 379
+Conflict times/Non-conflict times: 14/45 -> 408
+Conflict times/Non-conflict times: 14/46 -> 378
+Conflict times/Non-conflict times: 14/47 -> 418
+Conflict times/Non-conflict times: 15/48 -> 795
+Conflict times/Non-conflict times: 16/49 -> 750
+Conflict times/Non-conflict times: 17/50 -> 792
+Conflict times/Non-conflict times: 17/51 -> 422
+Conflict times/Non-conflict times: 17/52 -> 597
+Conflict times/Non-conflict times: 18/53 -> 944
+Conflict times/Non-conflict times: 18/54 -> 492
+Conflict times/Non-conflict times: 18/55 -> 399
+Conflict times/Non-conflict times: 18/56 -> 599
+Conflict times/Non-conflict times: 18/57 -> 393
+Conflict times/Non-conflict times: 19/58 -> 1137
+Conflict times/Non-conflict times: 20/59 -> 793
+Conflict times/Non-conflict times: 20/60 -> 566
+Conflict times/Non-conflict times: 21/61 -> 1105
+Conflict times/Non-conflict times: 22/62 -> 774
+Conflict times/Non-conflict times: 23/63 -> 800
+Conflict times/Non-conflict times: 23/64 -> 390
+[+] Conflict set: 23; Non-conflict set: 41
+[+] P+P Evset 0 Fixed!
+[+] Try 1: Pick Target addr:0xfffff7d82900 for P+P set 0
+[+] Group 0:
+Attack mode: 768
+Base mode: 642
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160477823ns
+[+] Group 0:
+Attack mode: 1026
+Base mode: 1000
+[+] Noise Test Environment 1
+[+] Time Elapse: 0s, 160659944ns
+[+] Group 0:
+Attack mode: 644
+Base mode: 771
+[+] Noise Test Environment 2
+[+] Time Elapse: 0s, 160283536ns
+[+] Group 0:
+Attack mode: 906
+Base mode: 808
+[+] Noise Test Environment 3
+[+] Try different P+P Evset!
+[+] P+P Evset 1 Fixed!
+[+] Try 1: Pick Target addr:0xfffff7d82900 for P+P set 1
+[+] Group 0:
+Attack mode: 438
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160437200ns
+[+] Group 1:
+Attack mode: 381
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160246037ns
+[+] Group 2:
+Attack mode: 387
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160199038ns
+[+] Group 3:
+Attack mode: 390
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160263287ns
+[+] Group 4:
+Attack mode: 391
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160390408ns
+[+] Group 5:
+Attack mode: 398
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160210872ns
+[+] Group 6:
+Attack mode: 394
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160036709ns
+[+] Group 7:
+Attack mode: 396
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 162728312ns
+[+] Try 2: Pick Target addr:0xfffff7d86900 for P+P set 1
+[+] Group 0:
+Attack mode: 386
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 159970543ns
+[+] Group 1:
+Attack mode: 388
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 162292448ns
+[+] Group 2:
+Attack mode: 435
+Base mode: 547
+[+] No signal
+[+] Time Elapse: 0s, 165633661ns
+[+] Group 3:
+Attack mode: 393
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 162047703ns
+[+] Group 4:
+Attack mode: 380
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160267286ns
+[+] Group 5:
+Attack mode: 389
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160198204ns
+[+] Group 6:
+Attack mode: 386
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160336743ns
+[+] Group 7:
+Attack mode: 395
+Base mode: 565
+[+] No signal
+[+] Time Elapse: 0s, 161800626ns
+[+] Try 3: Pick Target addr:0xfffff7d8a900 for P+P set 1
+[+] Group 0:
+Attack mode: 419
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160441991ns
+[+] Group 1:
+Attack mode: 391
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160265745ns
+[+] Group 2:
+Attack mode: 391
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160246787ns
+[+] Group 3:
+Attack mode: 428
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160445116ns
+[+] Group 4:
+Attack mode: 392
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 162148034ns
+[+] Group 5:
+Attack mode: 386
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160398533ns
+[+] Group 6:
+Attack mode: 563
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 160476198ns
+[+] Group 7:
+Attack mode: 386
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 168019438ns
+[+] Try 4: Pick Target addr:0xfffff7d8e900 for P+P set 1
+[+] Group 0:
+Attack mode: 1348
+Base mode: 1419
+[+] Noise Test Environment 1
+[+] Time Elapse: 0s, 213880697ns
+[+] Group 0:
+Attack mode: 392
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 168393763ns
+[+] Group 1:
+Attack mode: 398
+Base mode: 407
+[+] No signal
+[+] Time Elapse: 0s, 160282828ns
+[+] Group 2:
+Attack mode: 416
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160415409ns
+[+] Group 3:
+Attack mode: 422
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160054041ns
+[+] Group 4:
+Attack mode: 399
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160117331ns
+[+] Group 5:
+Attack mode: 400
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160344118ns
+[+] Group 6:
+Attack mode: 400
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160541364ns
+[+] Group 7:
+Attack mode: 385
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160352160ns
+[+] Try 5: Pick Target addr:0xfffff7d92900 for P+P set 1
+[+] Group 0:
+Attack mode: 394
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160553989ns
+[+] Group 1:
+Attack mode: 383
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160318077ns
+[+] Group 2:
+Attack mode: 389
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160208205ns
+[+] Group 3:
+Attack mode: 387
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160627528ns
+[+] Group 4:
+Attack mode: 388
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160322326ns
+[+] Group 5:
+Attack mode: 565
+Base mode: 564
+[+] No signal
+[+] Time Elapse: 0s, 160447824ns
+[+] Group 6:
+Attack mode: 383
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160308577ns
+[+] Group 7:
+Attack mode: 409
+Base mode: 407
+[+] No signal
+[+] Time Elapse: 0s, 160233662ns
+[+] Try 6: Pick Target addr:0xfffff7d96900 for P+P set 1
+[+] Group 0:
+Attack mode: 429
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 159963294ns
+[+] Group 1:
+Attack mode: 448
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160613362ns
+[+] Group 2:
+Attack mode: 391
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160319868ns
+[+] Group 3:
+Attack mode: 394
+Base mode: 409
+[+] No signal
+[+] Time Elapse: 0s, 160475032ns
+[+] Group 4:
+Attack mode: 380
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160464115ns
+[+] Group 5:
+Attack mode: 389
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160192872ns
+[+] Group 6:
+Attack mode: 392
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160604112ns
+[+] Group 7:
+Attack mode: 394
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160186872ns
+[+] Try 7: Pick Target addr:0xfffff7d9a900 for P+P set 1
+[+] Group 0:
+Attack mode: 379
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160246287ns
+[+] Group 1:
+Attack mode: 417
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160499948ns
+[+] Group 2:
+Attack mode: 387
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160285703ns
+[+] Group 3:
+Attack mode: 386
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160267369ns
+[+] Group 4:
+Attack mode: 398
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160442491ns
+[+] Group 5:
+Attack mode: 401
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160238829ns
+[+] Group 6:
+Attack mode: 388
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160314077ns
+[+] Group 7:
+Attack mode: 421
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160453616ns
+[+] Try 8: Pick Target addr:0xfffff7d9e900 for P+P set 1
+[+] Group 0:
+Attack mode: 387
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160302202ns
+[+] Group 1:
+Attack mode: 410
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 159921087ns
+[+] Group 2:
+Attack mode: 387
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160259078ns
+[+] Group 3:
+Attack mode: 565
+Base mode: 406
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160559113ns
+[+] Group 3:
+Attack mode: 399
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160439574ns
+[+] Group 4:
+Attack mode: 558
+Base mode: 411
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160505448ns
+[+] Group 4:
+Attack mode: 379
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160395075ns
+[+] Group 5:
+Attack mode: 407
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160092832ns
+[+] Group 6:
+Attack mode: 417
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 160091166ns
+[+] Group 7:
+Attack mode: 386
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160465240ns
+[+] Try 9: Pick Target addr:0xfffff7da2900 for P+P set 1
+[+] Group 0:
+Attack mode: 384
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160212913ns
+[+] Group 1:
+Attack mode: 383
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160235787ns
+[+] Group 2:
+Attack mode: 565
+Base mode: 557
+[+] No signal
+[+] Time Elapse: 0s, 160363076ns
+[+] Group 3:
+Attack mode: 390
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160316369ns
+[+] Group 4:
+Attack mode: 383
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160141206ns
+[+] Group 5:
+Attack mode: 398
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 159693050ns
+[+] Group 6:
+Attack mode: 388
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 159981251ns
+[+] Group 7:
+Attack mode: 418
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160024751ns
+[+] Try 10: Pick Target addr:0xfffff7da6900 for P+P set 1
+[+] Group 0:
+Attack mode: 386
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160235662ns
+[+] Group 1:
+Attack mode: 383
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160065332ns
+[+] Group 2:
+Attack mode: 386
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160084916ns
+[+] Group 3:
+Attack mode: 421
+Base mode: 410
+[+] No signal
+[+] Time Elapse: 0s, 160561780ns
+[+] Group 4:
+Attack mode: 390
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160318536ns
+[+] Group 5:
+Attack mode: 385
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160341284ns
+[+] Group 6:
+Attack mode: 391
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 161448551ns
+[+] Group 7:
+Attack mode: 387
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160083666ns
+[+] Try 11: Pick Target addr:0xfffff7daa900 for P+P set 1
+[+] Group 0:
+Attack mode: 386
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160231745ns
+[+] Group 1:
+Attack mode: 386
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160327285ns
+[+] Group 2:
+Attack mode: 432
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160170748ns
+[+] Group 3:
+Attack mode: 386
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160340660ns
+[+] Group 4:
+Attack mode: 396
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160196913ns
+[+] Group 5:
+Attack mode: 438
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 160551947ns
+[+] Group 6:
+Attack mode: 394
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160252995ns
+[+] Group 7:
+Attack mode: 394
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160127748ns
+[+] Try 12: Pick Target addr:0xfffff7dae900 for P+P set 1
+[+] Group 0:
+Attack mode: 391
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 160206330ns
+[+] Group 1:
+Attack mode: 389
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160469032ns
+[+] Group 2:
+Attack mode: 387
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160226204ns
+[+] Group 3:
+Attack mode: 387
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160051791ns
+[+] Group 4:
+Attack mode: 395
+Base mode: 408
+[+] No signal
+[+] Time Elapse: 0s, 160240079ns
+[+] Group 5:
+Attack mode: 558
+Base mode: 435
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160427324ns
+[+] Group 5:
+Attack mode: 383
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160283453ns
+[+] Group 6:
+Attack mode: 385
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160350118ns
+[+] Group 7:
+Attack mode: 382
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160373867ns
+[+] Try 13: Pick Target addr:0xfffff7db2900 for P+P set 1
+[+] Group 0:
+Attack mode: 385
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160128457ns
+[+] Group 1:
+Attack mode: 394
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 159967210ns
+[+] Group 2:
+Attack mode: 386
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160109249ns
+[+] Group 3:
+Attack mode: 434
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160188371ns
+[+] Group 4:
+Attack mode: 381
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 159944586ns
+[+] Group 5:
+Attack mode: 387
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160265036ns
+[+] Group 6:
+Attack mode: 406
+Base mode: 412
+[+] No signal
+[+] Time Elapse: 0s, 160257453ns
+[+] Group 7:
+Attack mode: 381
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160183039ns
+[+] Try 14: Pick Target addr:0xfffff7db6900 for P+P set 1
+[+] Group 0:
+Attack mode: 385
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160125831ns
+[+] Group 1:
+Attack mode: 387
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160115248ns
+[+] Group 2:
+Attack mode: 387
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 159862338ns
+[+] Group 3:
+Attack mode: 382
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160322161ns
+[+] Group 4:
+Attack mode: 562
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 160399117ns
+[+] Group 5:
+Attack mode: 381
+Base mode: 377
+[+] No signal
+[+] Time Elapse: 0s, 160086499ns
+[+] Group 6:
+Attack mode: 378
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160118831ns
+[+] Group 7:
+Attack mode: 385
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160662485ns
+[+] Try 15: Pick Target addr:0xfffff7dba900 for P+P set 1
+[+] Group 0:
+Attack mode: 387
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160249329ns
+[+] Group 1:
+Attack mode: 380
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160215247ns
+[+] Group 2:
+Attack mode: 426
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160159664ns
+[+] Group 3:
+Attack mode: 433
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 159723257ns
+[+] Group 4:
+Attack mode: 436
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 160010293ns
+[+] Group 5:
+Attack mode: 393
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160071333ns
+[+] Group 6:
+Attack mode: 431
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160241829ns
+[+] Group 7:
+Attack mode: 434
+Base mode: 431
+[+] No signal
+[+] Time Elapse: 0s, 160390033ns
+[+] Try 16: Pick Target addr:0xfffff7dbe900 for P+P set 1
+[+] Group 0:
+Attack mode: 432
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160272203ns
+[+] Group 1:
+Attack mode: 412
+Base mode: 408
+[+] No signal
+[+] Time Elapse: 0s, 159953168ns
+[+] Group 2:
+Attack mode: 391
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160224037ns
+[+] Group 3:
+Attack mode: 406
+Base mode: 408
+[+] No signal
+[+] Time Elapse: 0s, 160540238ns
+[+] Group 4:
+Attack mode: 388
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160474740ns
+[+] Group 5:
+Attack mode: 397
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160339868ns
+[+] Group 6:
+Attack mode: 566
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 160236912ns
+[+] Group 7:
+Attack mode: 387
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160135206ns
+[+] Try 17: Pick Target addr:0xfffff7dc2900 for P+P set 1
+[+] Group 0:
+Attack mode: 404
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160186997ns
+[+] Group 1:
+Attack mode: 402
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160338660ns
+[+] Group 2:
+Attack mode: 558
+Base mode: 558
+[+] No signal
+[+] Time Elapse: 0s, 160346410ns
+[+] Group 3:
+Attack mode: 396
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160315452ns
+[+] Group 4:
+Attack mode: 412
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160222080ns
+[+] Group 5:
+Attack mode: 407
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160234121ns
+[+] Group 6:
+Attack mode: 557
+Base mode: 557
+[+] No signal
+[+] Time Elapse: 0s, 160397950ns
+[+] Group 7:
+Attack mode: 386
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160294327ns
+[+] Try 18: Pick Target addr:0xfffff7dc6900 for P+P set 1
+[+] Group 0:
+Attack mode: 392
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160454324ns
+[+] Group 1:
+Attack mode: 388
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160248953ns
+[+] Group 2:
+Attack mode: 387
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160334076ns
+[+] Group 3:
+Attack mode: 391
+Base mode: 557
+[+] No signal
+[+] Time Elapse: 0s, 160468649ns
+[+] Group 4:
+Attack mode: 382
+Base mode: 377
+[+] No signal
+[+] Time Elapse: 0s, 160145237ns
+[+] Group 5:
+Attack mode: 404
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160280151ns
+[+] Group 6:
+Attack mode: 398
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160201986ns
+[+] Group 7:
+Attack mode: 386
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160509857ns
+[+] Try 19: Pick Target addr:0xfffff7dca900 for P+P set 1
+[+] Group 0:
+Attack mode: 382
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160708479ns
+[+] Group 1:
+Attack mode: 571
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 160168111ns
+[+] Group 2:
+Attack mode: 399
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 164356304ns
+[+] Group 3:
+Attack mode: 411
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 167074060ns
+[+] Group 4:
+Attack mode: 428
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160261902ns
+[+] Group 5:
+Attack mode: 408
+Base mode: 414
+[+] No signal
+[+] Time Elapse: 0s, 160467733ns
+[+] Group 6:
+Attack mode: 387
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160187236ns
+[+] Group 7:
+Attack mode: 387
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160647230ns
+[+] Try 20: Pick Target addr:0xfffff7dce900 for P+P set 1
+[+] Group 0:
+Attack mode: 386
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160226152ns
+[+] Group 1:
+Attack mode: 386
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160225277ns
+[+] Group 2:
+Attack mode: 409
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 161090474ns
+[+] Group 3:
+Attack mode: 395
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160097070ns
+[+] Group 4:
+Attack mode: 563
+Base mode: 416
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160434525ns
+[+] Group 4:
+Attack mode: 402
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160281568ns
+[+] Group 5:
+Attack mode: 413
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160151236ns
+[+] Group 6:
+Attack mode: 417
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160059071ns
+[+] Group 7:
+Attack mode: 565
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 160406733ns
+[+] Try 21: Pick Target addr:0xfffff7dd2900 for P+P set 1
+[+] Group 0:
+Attack mode: 393
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160182986ns
+[+] Group 1:
+Attack mode: 392
+Base mode: 408
+[+] No signal
+[+] Time Elapse: 0s, 159942198ns
+[+] Group 2:
+Attack mode: 419
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160190403ns
+[+] Group 3:
+Attack mode: 393
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160916059ns
+[+] Group 4:
+Attack mode: 395
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 159975155ns
+[+] Group 5:
+Attack mode: 412
+Base mode: 429
+[+] No signal
+[+] Time Elapse: 0s, 160243443ns
+[+] Group 6:
+Attack mode: 436
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160142570ns
+[+] Group 7:
+Attack mode: 438
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160583439ns
+[+] Try 22: Pick Target addr:0xfffff7dd6900 for P+P set 1
+[+] Group 0:
+Attack mode: 394
+Base mode: 411
+[+] No signal
+[+] Time Elapse: 0s, 160100862ns
+[+] Group 1:
+Attack mode: 407
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160194111ns
+[+] Group 2:
+Attack mode: 410
+Base mode: 414
+[+] No signal
+[+] Time Elapse: 0s, 159915865ns
+[+] Group 3:
+Attack mode: 399
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160146945ns
+[+] Group 4:
+Attack mode: 436
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160392775ns
+[+] Group 5:
+Attack mode: 387
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160336651ns
+[+] Group 6:
+Attack mode: 397
+Base mode: 430
+[+] No signal
+[+] Time Elapse: 0s, 160186069ns
+[+] Group 7:
+Attack mode: 403
+Base mode: 410
+[+] No signal
+[+] Time Elapse: 0s, 160479316ns
+[+] Try 23: Pick Target addr:0xfffff7dda900 for P+P set 1
+[+] Group 0:
+Attack mode: 433
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160100278ns
+[+] Group 1:
+Attack mode: 432
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160126903ns
+[+] Group 2:
+Attack mode: 433
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160411442ns
+[+] Group 3:
+Attack mode: 443
+Base mode: 489
+[+] No signal
+[+] Time Elapse: 0s, 160166945ns
+[+] Group 4:
+Attack mode: 462
+Base mode: 482
+[+] No signal
+[+] Time Elapse: 0s, 160318359ns
+[+] Group 5:
+Attack mode: 462
+Base mode: 424
+[+] No signal
+[+] Time Elapse: 0s, 160224027ns
+[+] Group 6:
+Attack mode: 407
+Base mode: 411
+[+] No signal
+[+] Time Elapse: 0s, 160271485ns
+[+] Group 7:
+Attack mode: 407
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160063113ns
+[+] Try 24: Pick Target addr:0xfffff7dde900 for P+P set 1
+[+] Group 0:
+Attack mode: 442
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160446482ns
+[+] Group 1:
+Attack mode: 411
+Base mode: 407
+[+] No signal
+[+] Time Elapse: 0s, 160156987ns
+[+] Group 2:
+Attack mode: 408
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160140278ns
+[+] Group 3:
+Attack mode: 402
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160194611ns
+[+] Group 4:
+Attack mode: 559
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 160451857ns
+[+] Group 5:
+Attack mode: 418
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 160157444ns
+[+] Group 6:
+Attack mode: 436
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160309318ns
+[+] Group 7:
+Attack mode: 387
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160138987ns
+[+] Try 25: Pick Target addr:0xfffff7de2900 for P+P set 1
+[+] Group 0:
+Attack mode: 403
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 163884853ns
+[+] Group 1:
+Attack mode: 408
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 161208264ns
+[+] Group 2:
+Attack mode: 563
+Base mode: 1013
+[+] Noise Test Environment 1
+[+] Time Elapse: 0s, 162347540ns
+[+] Group 2:
+Attack mode: 431
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 162255499ns
+[+] Group 3:
+Attack mode: 428
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160102613ns
+[+] Group 4:
+Attack mode: 436
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160587481ns
+[+] Group 5:
+Attack mode: 390
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 161932046ns
+[+] Group 6:
+Attack mode: 563
+Base mode: 385
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160057363ns
+[+] Group 6:
+Attack mode: 390
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160270652ns
+[+] Group 7:
+Attack mode: 391
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 162342082ns
+[+] Try 26: Pick Target addr:0xfffff7de6900 for P+P set 1
+[+] Group 0:
+Attack mode: 398
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160058571ns
+[+] Group 1:
+Attack mode: 437
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160459149ns
+[+] Group 2:
+Attack mode: 389
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160416900ns
+[+] Group 3:
+Attack mode: 415
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160786936ns
+[+] Group 4:
+Attack mode: 392
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160901602ns
+[+] Group 5:
+Attack mode: 387
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 161212847ns
+[+] Group 6:
+Attack mode: 558
+Base mode: 564
+[+] No signal
+[+] Time Elapse: 0s, 160729312ns
+[+] Group 7:
+Attack mode: 381
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 163892894ns
+[+] Try 27: Pick Target addr:0xfffff7dea900 for P+P set 1
+[+] Group 0:
+Attack mode: 380
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160607439ns
+[+] Group 1:
+Attack mode: 391
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160540648ns
+[+] Group 2:
+Attack mode: 417
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 163393984ns
+[+] Group 3:
+Attack mode: 394
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160331359ns
+[+] Group 4:
+Attack mode: 382
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160330443ns
+[+] Group 5:
+Attack mode: 396
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160927143ns
+[+] Group 6:
+Attack mode: 389
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160583564ns
+[+] Group 7:
+Attack mode: 436
+Base mode: 425
+[+] No signal
+[+] Time Elapse: 0s, 160654355ns
+[+] Try 28: Pick Target addr:0xfffff7dee900 for P+P set 1
+[+] Group 0:
+Attack mode: 468
+Base mode: 571
+[+] No signal
+[+] Time Elapse: 0s, 160308777ns
+[+] Group 1:
+Attack mode: 437
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160545022ns
+[+] Group 2:
+Attack mode: 386
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160791478ns
+[+] Group 3:
+Attack mode: 385
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160491399ns
+[+] Group 4:
+Attack mode: 391
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160727854ns
+[+] Group 5:
+Attack mode: 384
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160736396ns
+[+] Group 6:
+Attack mode: 381
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160541815ns
+[+] Group 7:
+Attack mode: 436
+Base mode: 430
+[+] No signal
+[+] Time Elapse: 0s, 160775978ns
+[+] Try 29: Pick Target addr:0xfffff7df2900 for P+P set 1
+[+] Group 0:
+Attack mode: 434
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 162839367ns
+[+] Group 1:
+Attack mode: 431
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160303401ns
+[+] Group 2:
+Attack mode: 436
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160599314ns
+[+] Group 3:
+Attack mode: 387
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160591439ns
+[+] Group 4:
+Attack mode: 476
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 160804687ns
+[+] Group 5:
+Attack mode: 994
+Base mode: 564
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160557772ns
+[+] Group 5:
+Attack mode: 648
+Base mode: 465
+[+] Get Signal (2)
+[+] Time Elapse: 0s, 160323026ns
+[+] Group 5:
+Attack mode: 397
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160254319ns
+[+] Group 6:
+Attack mode: 387
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160655146ns
+[+] Group 7:
+Attack mode: 494
+Base mode: 590
+[+] No signal
+[+] Time Elapse: 0s, 160680605ns
+[+] Try 30: Pick Target addr:0xfffff7df6900 for P+P set 1
+[+] Group 0:
+Attack mode: 407
+Base mode: 481
+[+] No signal
+[+] Time Elapse: 0s, 160195277ns
+[+] Group 1:
+Attack mode: 433
+Base mode: 429
+[+] No signal
+[+] Time Elapse: 0s, 160482232ns
+[+] Group 2:
+Attack mode: 570
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 160521190ns
+[+] Group 3:
+Attack mode: 424
+Base mode: 443
+[+] No signal
+[+] Time Elapse: 0s, 161318304ns
+[+] Group 4:
+Attack mode: 644
+Base mode: 569
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160605606ns
+[+] Group 4:
+Attack mode: 475
+Base mode: 513
+[+] No signal
+[+] Time Elapse: 0s, 160405524ns
+[+] Group 5:
+Attack mode: 532
+Base mode: 578
+[+] No signal
+[+] Time Elapse: 0s, 160644271ns
+[+] Group 6:
+Attack mode: 483
+Base mode: 486
+[+] No signal
+[+] Time Elapse: 0s, 160553523ns
+[+] Group 7:
+Attack mode: 596
+Base mode: 420
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160367442ns
+[+] Group 7:
+Attack mode: 397
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160919476ns
+[+] Try 31: Pick Target addr:0xfffff7dfa900 for P+P set 1
+[+] Group 0:
+Attack mode: 386
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160581981ns
+[+] Group 1:
+Attack mode: 439
+Base mode: 573
+[+] No signal
+[+] Time Elapse: 0s, 161617050ns
+[+] Group 2:
+Attack mode: 478
+Base mode: 461
+[+] No signal
+[+] Time Elapse: 0s, 160184611ns
+[+] Group 3:
+Attack mode: 476
+Base mode: 404
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160228527ns
+[+] Group 3:
+Attack mode: 397
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160514649ns
+[+] Group 4:
+Attack mode: 395
+Base mode: 423
+[+] No signal
+[+] Time Elapse: 0s, 175070534ns
+[+] Group 5:
+Attack mode: 391
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160213736ns
+[+] Group 6:
+Attack mode: 563
+Base mode: 497
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160439816ns
+[+] Group 6:
+Attack mode: 387
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160395984ns
+[+] Group 7:
+Attack mode: 387
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 161071515ns
+[+] Try 32: Pick Target addr:0xfffff7dfe900 for P+P set 1
+[+] Group 0:
+Attack mode: 433
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160453399ns
+[+] Group 1:
+Attack mode: 438
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160659272ns
+[+] Group 2:
+Attack mode: 427
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160459940ns
+[+] Group 3:
+Attack mode: 389
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160556273ns
+[+] Group 4:
+Attack mode: 406
+Base mode: 427
+[+] No signal
+[+] Time Elapse: 0s, 160660522ns
+[+] Group 5:
+Attack mode: 393
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160767604ns
+[+] Group 6:
+Attack mode: 386
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160604814ns
+[+] Group 7:
+Attack mode: 432
+Base mode: 439
+[+] No signal
+[+] Time Elapse: 0s, 161255097ns
+[+] Try 33: Pick Target addr:0xfffff7e02900 for P+P set 1
+[+] Group 0:
+Attack mode: 438
+Base mode: 440
+[+] No signal
+[+] Time Elapse: 0s, 160366817ns
+[+] Group 1:
+Attack mode: 437
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 161128265ns
+[+] Group 2:
+Attack mode: 386
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160823186ns
+[+] Group 3:
+Attack mode: 386
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160573356ns
+[+] Group 4:
+Attack mode: 394
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160671313ns
+[+] Group 5:
+Attack mode: 394
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160692854ns
+[+] Group 6:
+Attack mode: 385
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160232402ns
+[+] Group 7:
+Attack mode: 389
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160856810ns
+[+] Try 34: Pick Target addr:0xfffff7e06900 for P+P set 1
+[+] Group 0:
+Attack mode: 391
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160410941ns
+[+] Group 1:
+Attack mode: 428
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 165503997ns
+[+] Group 2:
+Attack mode: 435
+Base mode: 423
+[+] No signal
+[+] Time Elapse: 0s, 168343000ns
+[+] Group 3:
+Attack mode: 407
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160530273ns
+[+] Group 4:
+Attack mode: 429
+Base mode: 407
+[+] No signal
+[+] Time Elapse: 0s, 160322984ns
+[+] Group 5:
+Attack mode: 435
+Base mode: 431
+[+] No signal
+[+] Time Elapse: 0s, 160483066ns
+[+] Group 6:
+Attack mode: 429
+Base mode: 431
+[+] No signal
+[+] Time Elapse: 0s, 160573647ns
+[+] Group 7:
+Attack mode: 392
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 160444900ns
+[+] Try 35: Pick Target addr:0xfffff7e0a900 for P+P set 1
+[+] Group 0:
+Attack mode: 436
+Base mode: 418
+[+] No signal
+[+] Time Elapse: 0s, 160734354ns
+[+] Group 1:
+Attack mode: 399
+Base mode: 413
+[+] No signal
+[+] Time Elapse: 0s, 160597273ns
+[+] Group 2:
+Attack mode: 391
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 161364970ns
+[+] Group 3:
+Attack mode: 400
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160629480ns
+[+] Group 4:
+Attack mode: 399
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160358442ns
+[+] Group 5:
+Attack mode: 437
+Base mode: 433
+[+] No signal
+[+] Time Elapse: 0s, 160579856ns
+[+] Group 6:
+Attack mode: 432
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160162111ns
+[+] Group 7:
+Attack mode: 387
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160081279ns
+[+] Try 36: Pick Target addr:0xfffff7e0e900 for P+P set 1
+[+] Group 0:
+Attack mode: 394
+Base mode: 427
+[+] No signal
+[+] Time Elapse: 0s, 162113752ns
+[+] Group 1:
+Attack mode: 431
+Base mode: 429
+[+] No signal
+[+] Time Elapse: 0s, 160114862ns
+[+] Group 2:
+Attack mode: 436
+Base mode: 422
+[+] No signal
+[+] Time Elapse: 0s, 160122320ns
+[+] Group 3:
+Attack mode: 427
+Base mode: 433
+[+] No signal
+[+] Time Elapse: 0s, 160733104ns
+[+] Group 4:
+Attack mode: 390
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160468816ns
+[+] Group 5:
+Attack mode: 395
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 160563856ns
+[+] Group 6:
+Attack mode: 436
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160858477ns
+[+] Group 7:
+Attack mode: 407
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160019489ns
+[+] Try 37: Pick Target addr:0xfffff7e12900 for P+P set 1
+[+] Group 0:
+Attack mode: 389
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160345609ns
+[+] Group 1:
+Attack mode: 389
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160642147ns
+[+] Group 2:
+Attack mode: 386
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160729270ns
+[+] Group 3:
+Attack mode: 400
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160677271ns
+[+] Group 4:
+Attack mode: 389
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 160643647ns
+[+] Group 5:
+Attack mode: 386
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160294818ns
+[+] Group 6:
+Attack mode: 406
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160568689ns
+[+] Group 7:
+Attack mode: 402
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160582481ns
+[+] Try 38: Pick Target addr:0xfffff7e16900 for P+P set 1
+[+] Group 0:
+Attack mode: 387
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160529690ns
+[+] Group 1:
+Attack mode: 413
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 160808477ns
+[+] Group 2:
+Attack mode: 417
+Base mode: 433
+[+] No signal
+[+] Time Elapse: 0s, 160495732ns
+[+] Group 3:
+Attack mode: 391
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160497565ns
+[+] Group 4:
+Attack mode: 432
+Base mode: 431
+[+] No signal
+[+] Time Elapse: 0s, 160564397ns
+[+] Group 5:
+Attack mode: 389
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160711479ns
+[+] Group 6:
+Attack mode: 432
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160795228ns
+[+] Group 7:
+Attack mode: 403
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160541606ns
+[+] Try 39: Pick Target addr:0xfffff7e1a900 for P+P set 1
+[+] Group 0:
+Attack mode: 386
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160625396ns
+[+] Group 1:
+Attack mode: 387
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160438524ns
+[+] Group 2:
+Attack mode: 470
+Base mode: 393
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160562856ns
+[+] Group 2:
+Attack mode: 435
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160574814ns
+[+] Group 3:
+Attack mode: 435
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160714353ns
+[+] Group 4:
+Attack mode: 385
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160827144ns
+[+] Group 5:
+Attack mode: 393
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160839561ns
+[+] Group 6:
+Attack mode: 391
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 161911171ns
+[+] Group 7:
+Attack mode: 385
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160219277ns
+[+] Try 40: Pick Target addr:0xfffff7e1e900 for P+P set 1
+[+] Group 0:
+Attack mode: 387
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160785228ns
+[+] Group 1:
+Attack mode: 424
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160576772ns
+[+] Group 2:
+Attack mode: 416
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160684146ns
+[+] Group 3:
+Attack mode: 397
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160615231ns
+[+] Group 4:
+Attack mode: 391
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160549439ns
+[+] Group 5:
+Attack mode: 558
+Base mode: 433
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160524565ns
+[+] Group 5:
+Attack mode: 387
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160448316ns
+[+] Group 6:
+Attack mode: 388
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160754896ns
+[+] Group 7:
+Attack mode: 390
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160759687ns
+[+] Try 41: Pick Target addr:0xfffff7e22900 for P+P set 1
+[+] Group 0:
+Attack mode: 386
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 161260346ns
+[+] Group 1:
+Attack mode: 386
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160513190ns
+[+] Group 2:
+Attack mode: 436
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160390692ns
+[+] Group 3:
+Attack mode: 407
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160709979ns
+[+] Group 4:
+Attack mode: 389
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160462191ns
+[+] Group 5:
+Attack mode: 406
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160723688ns
+[+] Group 6:
+Attack mode: 425
+Base mode: 431
+[+] No signal
+[+] Time Elapse: 0s, 160457024ns
+[+] Group 7:
+Attack mode: 416
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 160495857ns
+[+] Try 42: Pick Target addr:0xfffff7e26900 for P+P set 1
+[+] Group 0:
+Attack mode: 417
+Base mode: 421
+[+] No signal
+[+] Time Elapse: 0s, 160455233ns
+[+] Group 1:
+Attack mode: 432
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160481566ns
+[+] Group 2:
+Attack mode: 392
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160384150ns
+[+] Group 3:
+Attack mode: 387
+Base mode: 430
+[+] No signal
+[+] Time Elapse: 0s, 160462440ns
+[+] Group 4:
+Attack mode: 387
+Base mode: 430
+[+] No signal
+[+] Time Elapse: 0s, 160550939ns
+[+] Group 5:
+Attack mode: 431
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160711604ns
+[+] Group 6:
+Attack mode: 395
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 161952545ns
+[+] Group 7:
+Attack mode: 395
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160236860ns
+[+] Try 43: Pick Target addr:0xfffff7e2a900 for P+P set 1
+[+] Group 0:
+Attack mode: 437
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160700687ns
+[+] Group 1:
+Attack mode: 379
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160362359ns
+[+] Group 2:
+Attack mode: 388
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160240569ns
+[+] Group 3:
+Attack mode: 436
+Base mode: 433
+[+] No signal
+[+] Time Elapse: 0s, 160650188ns
+[+] Group 4:
+Attack mode: 388
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160345484ns
+[+] Group 5:
+Attack mode: 436
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160497357ns
+[+] Group 6:
+Attack mode: 390
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160601022ns
+[+] Group 7:
+Attack mode: 416
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160695396ns
+[+] Try 44: Pick Target addr:0xfffff7e2e900 for P+P set 1
+[+] Group 0:
+Attack mode: 404
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160870476ns
+[+] Group 1:
+Attack mode: 415
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160710854ns
+[+] Group 2:
+Attack mode: 398
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160492023ns
+[+] Group 3:
+Attack mode: 394
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160643938ns
+[+] Group 4:
+Attack mode: 429
+Base mode: 414
+[+] No signal
+[+] Time Elapse: 0s, 160505857ns
+[+] Group 5:
+Attack mode: 390
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160607605ns
+[+] Group 6:
+Attack mode: 387
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160862602ns
+[+] Group 7:
+Attack mode: 386
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160671730ns
+[+] Try 45: Pick Target addr:0xfffff7e32900 for P+P set 1
+[+] Group 0:
+Attack mode: 386
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160375358ns
+[+] Group 1:
+Attack mode: 389
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160300276ns
+[+] Group 2:
+Attack mode: 448
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160583439ns
+[+] Group 3:
+Attack mode: 394
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160412691ns
+[+] Group 4:
+Attack mode: 408
+Base mode: 429
+[+] No signal
+[+] Time Elapse: 0s, 160657479ns
+[+] Group 5:
+Attack mode: 383
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160447899ns
+[+] Group 6:
+Attack mode: 437
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 160496399ns
+[+] Group 7:
+Attack mode: 418
+Base mode: 430
+[+] No signal
+[+] Time Elapse: 0s, 160296110ns
+[+] Try 46: Pick Target addr:0xfffff7e36900 for P+P set 1
+[+] Group 0:
+Attack mode: 417
+Base mode: 413
+[+] No signal
+[+] Time Elapse: 0s, 160231485ns
+[+] Group 1:
+Attack mode: 401
+Base mode: 431
+[+] No signal
+[+] Time Elapse: 0s, 160692354ns
+[+] Group 2:
+Attack mode: 400
+Base mode: 407
+[+] No signal
+[+] Time Elapse: 0s, 160432024ns
+[+] Group 3:
+Attack mode: 400
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160714896ns
+[+] Group 4:
+Attack mode: 391
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160595230ns
+[+] Group 5:
+Attack mode: 394
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160235486ns
+[+] Group 6:
+Attack mode: 390
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160163570ns
+[+] Group 7:
+Attack mode: 432
+Base mode: 443
+[+] No signal
+[+] Time Elapse: 0s, 160540482ns
+[+] Try 47: Pick Target addr:0xfffff7e3a900 for P+P set 1
+[+] Group 0:
+Attack mode: 395
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160209944ns
+[+] Group 1:
+Attack mode: 387
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160236735ns
+[+] Group 2:
+Attack mode: 397
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160332984ns
+[+] Group 3:
+Attack mode: 432
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160328942ns
+[+] Group 4:
+Attack mode: 402
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160139904ns
+[+] Group 5:
+Attack mode: 386
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160200778ns
+[+] Group 6:
+Attack mode: 430
+Base mode: 411
+[+] No signal
+[+] Time Elapse: 0s, 160111321ns
+[+] Group 7:
+Attack mode: 417
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160608564ns
+[+] Try 48: Pick Target addr:0xfffff7e3e900 for P+P set 1
+[+] Group 0:
+Attack mode: 437
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 160459066ns
+[+] Group 1:
+Attack mode: 401
+Base mode: 408
+[+] No signal
+[+] Time Elapse: 0s, 159784284ns
+[+] Group 2:
+Attack mode: 386
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 159666369ns
+[+] Group 3:
+Attack mode: 419
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 159883948ns
+[+] Group 4:
+Attack mode: 435
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160039696ns
+[+] Group 5:
+Attack mode: 385
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160228277ns
+[+] Group 6:
+Attack mode: 392
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160074571ns
+[+] Group 7:
+Attack mode: 389
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 159744409ns
+[+] Try 49: Pick Target addr:0xfffff7e42900 for P+P set 1
+[+] Group 0:
+Attack mode: 404
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 159909239ns
+[+] Group 1:
+Attack mode: 399
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 159994239ns
+[+] Group 2:
+Attack mode: 398
+Base mode: 559
+[+] No signal
+[+] Time Elapse: 0s, 160005613ns
+[+] Group 3:
+Attack mode: 384
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 159996780ns
+[+] Group 4:
+Attack mode: 401
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160199861ns
+[+] Group 5:
+Attack mode: 405
+Base mode: 407
+[+] No signal
+[+] Time Elapse: 0s, 160306901ns
+[+] Group 6:
+Attack mode: 392
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160266235ns
+[+] Group 7:
+Attack mode: 431
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160344692ns
+[+] Try 50: Pick Target addr:0xfffff7e46900 for P+P set 1
+[+] Group 0:
+Attack mode: 399
+Base mode: 413
+[+] No signal
+[+] Time Elapse: 0s, 160411108ns
+[+] Group 1:
+Attack mode: 438
+Base mode: 438
+[+] No signal
+[+] Time Elapse: 0s, 160511731ns
+[+] Group 2:
+Attack mode: 386
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160274027ns
+[+] Group 3:
+Attack mode: 391
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160481690ns
+[+] Group 4:
+Attack mode: 388
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160512607ns
+[+] Group 5:
+Attack mode: 407
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160327609ns
+[+] Group 6:
+Attack mode: 396
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160593147ns
+[+] Group 7:
+Attack mode: 394
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160304901ns
+[+] Try 51: Pick Target addr:0xfffff7e4a900 for P+P set 1
+[+] Group 0:
+Attack mode: 401
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160448275ns
+[+] Group 1:
+Attack mode: 385
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 160390816ns
+[+] Group 2:
+Attack mode: 389
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160228361ns
+[+] Group 3:
+Attack mode: 391
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 159738534ns
+[+] Group 4:
+Attack mode: 396
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 159752201ns
+[+] Group 5:
+Attack mode: 419
+Base mode: 425
+[+] No signal
+[+] Time Elapse: 0s, 159896240ns
+[+] Group 6:
+Attack mode: 396
+Base mode: 443
+[+] No signal
+[+] Time Elapse: 0s, 159998739ns
+[+] Group 7:
+Attack mode: 421
+Base mode: 423
+[+] No signal
+[+] Time Elapse: 0s, 160010613ns
+[+] Try 52: Pick Target addr:0xfffff7e4e900 for P+P set 1
+[+] Group 0:
+Attack mode: 398
+Base mode: 559
+[+] No signal
+[+] Time Elapse: 0s, 160001405ns
+[+] Group 1:
+Attack mode: 435
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 159949364ns
+[+] Group 2:
+Attack mode: 558
+Base mode: 386
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160024238ns
+[+] Group 2:
+Attack mode: 390
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160008322ns
+[+] Group 3:
+Attack mode: 396
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160361984ns
+[+] Group 4:
+Attack mode: 394
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160468941ns
+[+] Group 5:
+Attack mode: 394
+Base mode: 414
+[+] No signal
+[+] Time Elapse: 0s, 160480524ns
+[+] Group 6:
+Attack mode: 398
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160299693ns
+[+] Group 7:
+Attack mode: 455
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 160575105ns
+[+] Try 53: Pick Target addr:0xfffff7e52900 for P+P set 1
+[+] Group 0:
+Attack mode: 391
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160332401ns
+[+] Group 1:
+Attack mode: 398
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160521523ns
+[+] Group 2:
+Attack mode: 389
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160175362ns
+[+] Group 3:
+Attack mode: 393
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160216361ns
+[+] Group 4:
+Attack mode: 431
+Base mode: 431
+[+] No signal
+[+] Time Elapse: 0s, 160611689ns
+[+] Group 5:
+Attack mode: 399
+Base mode: 428
+[+] No signal
+[+] Time Elapse: 0s, 160380151ns
+[+] Group 6:
+Attack mode: 438
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160467065ns
+[+] Group 7:
+Attack mode: 436
+Base mode: 427
+[+] No signal
+[+] Time Elapse: 0s, 160249944ns
+[+] Try 54: Pick Target addr:0xfffff7e56900 for P+P set 1
+[+] Group 0:
+Attack mode: 392
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160373025ns
+[+] Group 1:
+Attack mode: 390
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 160566564ns
+[+] Group 2:
+Attack mode: 410
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 159896448ns
+[+] Group 3:
+Attack mode: 399
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160455566ns
+[+] Group 4:
+Attack mode: 388
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160237944ns
+[+] Group 5:
+Attack mode: 394
+Base mode: 425
+[+] No signal
+[+] Time Elapse: 0s, 160504899ns
+[+] Group 6:
+Attack mode: 387
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160206319ns
+[+] Group 7:
+Attack mode: 386
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160215319ns
+[+] Try 55: Pick Target addr:0xfffff7e5a900 for P+P set 1
+[+] Group 0:
+Attack mode: 562
+Base mode: 396
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160511440ns
+[+] Group 0:
+Attack mode: 391
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160222402ns
+[+] Group 1:
+Attack mode: 386
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160372484ns
+[+] Group 2:
+Attack mode: 436
+Base mode: 441
+[+] No signal
+[+] Time Elapse: 0s, 160379983ns
+[+] Group 3:
+Attack mode: 400
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160144362ns
+[+] Group 4:
+Attack mode: 399
+Base mode: 411
+[+] No signal
+[+] Time Elapse: 0s, 160111154ns
+[+] Group 5:
+Attack mode: 422
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160102154ns
+[+] Group 6:
+Attack mode: 410
+Base mode: 413
+[+] No signal
+[+] Time Elapse: 0s, 160291985ns
+[+] Group 7:
+Attack mode: 564
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 160228694ns
+[+] Try 56: Pick Target addr:0xfffff7e5e900 for P+P set 1
+[+] Group 0:
+Attack mode: 392
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 160177903ns
+[+] Group 1:
+Attack mode: 390
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160245360ns
+[+] Group 2:
+Attack mode: 385
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160207778ns
+[+] Group 3:
+Attack mode: 399
+Base mode: 412
+[+] No signal
+[+] Time Elapse: 0s, 160440441ns
+[+] Group 4:
+Attack mode: 407
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160229693ns
+[+] Group 5:
+Attack mode: 400
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160143653ns
+[+] Group 6:
+Attack mode: 391
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160209736ns
+[+] Group 7:
+Attack mode: 391
+Base mode: 413
+[+] No signal
+[+] Time Elapse: 0s, 160431816ns
+[+] Try 57: Pick Target addr:0xfffff7e62900 for P+P set 1
+[+] Group 0:
+Attack mode: 401
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160177153ns
+[+] Group 1:
+Attack mode: 390
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160313610ns
+[+] Group 2:
+Attack mode: 404
+Base mode: 409
+[+] No signal
+[+] Time Elapse: 0s, 162724160ns
+[+] Group 3:
+Attack mode: 409
+Base mode: 419
+[+] No signal
+[+] Time Elapse: 0s, 160329776ns
+[+] Group 4:
+Attack mode: 407
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160334401ns
+[+] Group 5:
+Attack mode: 428
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 160565064ns
+[+] Group 6:
+Attack mode: 408
+Base mode: 411
+[+] No signal
+[+] Time Elapse: 0s, 159756158ns
+[+] Group 7:
+Attack mode: 396
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 159728284ns
+[+] Try 58: Pick Target addr:0xfffff7e66900 for P+P set 1
+[+] Group 0:
+Attack mode: 412
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160264152ns
+[+] Group 1:
+Attack mode: 398
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160407191ns
+[+] Group 2:
+Attack mode: 438
+Base mode: 386
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160558522ns
+[+] Group 2:
+Attack mode: 395
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160263527ns
+[+] Group 3:
+Attack mode: 399
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160520440ns
+[+] Group 4:
+Attack mode: 386
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160145570ns
+[+] Group 5:
+Attack mode: 389
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160016572ns
+[+] Group 6:
+Attack mode: 423
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 159803616ns
+[+] Group 7:
+Attack mode: 392
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160303818ns
+[+] Try 59: Pick Target addr:0xfffff7e6a900 for P+P set 1
+[+] Group 0:
+Attack mode: 399
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 161067516ns
+[+] Group 1:
+Attack mode: 398
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160341150ns
+[+] Group 2:
+Attack mode: 418
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160620605ns
+[+] Group 3:
+Attack mode: 417
+Base mode: 408
+[+] No signal
+[+] Time Elapse: 0s, 160322609ns
+[+] Group 4:
+Attack mode: 432
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160454316ns
+[+] Group 5:
+Attack mode: 432
+Base mode: 412
+[+] No signal
+[+] Time Elapse: 0s, 162090043ns
+[+] Group 6:
+Attack mode: 405
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160352776ns
+[+] Group 7:
+Attack mode: 387
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160333359ns
+[+] Try 60: Pick Target addr:0xfffff7e6e900 for P+P set 1
+[+] Group 0:
+Attack mode: 393
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160443982ns
+[+] Group 1:
+Attack mode: 406
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 160430733ns
+[+] Group 2:
+Attack mode: 420
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160448816ns
+[+] Group 3:
+Attack mode: 386
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160283693ns
+[+] Group 4:
+Attack mode: 399
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160531606ns
+[+] Group 5:
+Attack mode: 387
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160243193ns
+[+] Group 6:
+Attack mode: 395
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160261110ns
+[+] Group 7:
+Attack mode: 437
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 160582522ns
+[+] Try 61: Pick Target addr:0xfffff7e72900 for P+P set 1
+[+] Group 0:
+Attack mode: 382
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160296943ns
+[+] Group 1:
+Attack mode: 386
+Base mode: 377
+[+] No signal
+[+] Time Elapse: 0s, 160232361ns
+[+] Group 2:
+Attack mode: 388
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160564814ns
+[+] Group 3:
+Attack mode: 389
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160431483ns
+[+] Group 4:
+Attack mode: 414
+Base mode: 419
+[+] No signal
+[+] Time Elapse: 0s, 160599648ns
+[+] Group 5:
+Attack mode: 397
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160216777ns
+[+] Group 6:
+Attack mode: 409
+Base mode: 412
+[+] No signal
+[+] Time Elapse: 0s, 160358733ns
+[+] Group 7:
+Attack mode: 429
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160437399ns
+[+] Try 62: Pick Target addr:0xfffff7e76900 for P+P set 1
+[+] Group 0:
+Attack mode: 399
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160249277ns
+[+] Group 1:
+Attack mode: 406
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160805395ns
+[+] Group 2:
+Attack mode: 387
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160277568ns
+[+] Group 3:
+Attack mode: 395
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160617480ns
+[+] Group 4:
+Attack mode: 387
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160329234ns
+[+] Group 5:
+Attack mode: 391
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160508565ns
+[+] Group 6:
+Attack mode: 382
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160680188ns
+[+] Group 7:
+Attack mode: 388
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 160325901ns
+[+] Try 63: Pick Target addr:0xfffff7e7a900 for P+P set 1
+[+] Group 0:
+Attack mode: 391
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160326443ns
+[+] Group 1:
+Attack mode: 391
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160496899ns
+[+] Group 2:
+Attack mode: 387
+Base mode: 411
+[+] No signal
+[+] Time Elapse: 0s, 160501356ns
+[+] Group 3:
+Attack mode: 414
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160272277ns
+[+] Group 4:
+Attack mode: 403
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160471899ns
+[+] Group 5:
+Attack mode: 388
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160269027ns
+[+] Group 6:
+Attack mode: 384
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160314818ns
+[+] Group 7:
+Attack mode: 399
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160539565ns
+[+] Try 64: Pick Target addr:0xfffff7e7e900 for P+P set 1
+[+] Group 0:
+Attack mode: 386
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160315276ns
+[+] Group 1:
+Attack mode: 396
+Base mode: 422
+[+] No signal
+[+] Time Elapse: 0s, 160411192ns
+[+] Group 2:
+Attack mode: 414
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160364567ns
+[+] Group 3:
+Attack mode: 391
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 159766450ns
+[+] Group 4:
+Attack mode: 402
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 159855407ns
+[+] Group 5:
+Attack mode: 412
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160013155ns
+[+] Group 6:
+Attack mode: 384
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160009197ns
+[+] Group 7:
+Attack mode: 405
+Base mode: 449
+[+] No signal
+[+] Time Elapse: 0s, 159993197ns
+[+] Try 65: Pick Target addr:0xfffff7e82900 for P+P set 1
+[+] Group 0:
+Attack mode: 436
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160434566ns
+[+] Group 1:
+Attack mode: 403
+Base mode: 408
+[+] No signal
+[+] Time Elapse: 0s, 160295485ns
+[+] Group 2:
+Attack mode: 562
+Base mode: 557
+[+] No signal
+[+] Time Elapse: 0s, 160261319ns
+[+] Group 3:
+Attack mode: 396
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160173445ns
+[+] Group 4:
+Attack mode: 391
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160360818ns
+[+] Group 5:
+Attack mode: 393
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 159820824ns
+[+] Group 6:
+Attack mode: 388
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 159821783ns
+[+] Group 7:
+Attack mode: 406
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160229902ns
+[+] Try 66: Pick Target addr:0xfffff7e86900 for P+P set 1
+[+] Group 0:
+Attack mode: 399
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160159278ns
+[+] Group 1:
+Attack mode: 421
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 160466941ns
+[+] Group 2:
+Attack mode: 398
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160060947ns
+[+] Group 3:
+Attack mode: 389
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160424941ns
+[+] Group 4:
+Attack mode: 400
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160442316ns
+[+] Group 5:
+Attack mode: 398
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160185982ns
+[+] Group 6:
+Attack mode: 387
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160291844ns
+[+] Group 7:
+Attack mode: 391
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160229762ns
+[+] Try 67: Pick Target addr:0xfffff7e8a900 for P+P set 1
+[+] Group 0:
+Attack mode: 394
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160514799ns
+[+] Group 1:
+Attack mode: 387
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160406509ns
+[+] Group 2:
+Attack mode: 400
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160523257ns
+[+] Group 3:
+Attack mode: 427
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160161805ns
+[+] Group 4:
+Attack mode: 387
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160258054ns
+[+] Group 5:
+Attack mode: 558
+Base mode: 564
+[+] No signal
+[+] Time Elapse: 0s, 160436009ns
+[+] Group 6:
+Attack mode: 387
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160179472ns
+[+] Group 7:
+Attack mode: 387
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160413509ns
+[+] Try 68: Pick Target addr:0xfffff7e8e900 for P+P set 1
+[+] Group 0:
+Attack mode: 395
+Base mode: 557
+[+] No signal
+[+] Time Elapse: 0s, 160599923ns
+[+] Group 1:
+Attack mode: 381
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160344635ns
+[+] Group 2:
+Attack mode: 398
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160290053ns
+[+] Group 3:
+Attack mode: 396
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160578674ns
+[+] Group 4:
+Attack mode: 393
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160301928ns
+[+] Group 5:
+Attack mode: 432
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 160481550ns
+[+] Group 6:
+Attack mode: 384
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160260345ns
+[+] Group 7:
+Attack mode: 388
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160481591ns
+[+] Try 69: Pick Target addr:0xfffff7e92900 for P+P set 1
+[+] Group 0:
+Attack mode: 387
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160298636ns
+[+] Group 1:
+Attack mode: 411
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160233887ns
+[+] Group 2:
+Attack mode: 391
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160096723ns
+[+] Group 3:
+Attack mode: 401
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160617589ns
+[+] Group 4:
+Attack mode: 392
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160313136ns
+[+] Group 5:
+Attack mode: 396
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 160479384ns
+[+] Group 6:
+Attack mode: 396
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 162522973ns
+[+] Group 7:
+Attack mode: 382
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 159684147ns
+[+] Try 70: Pick Target addr:0xfffff7e96900 for P+P set 1
+[+] Group 0:
+Attack mode: 382
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 159852186ns
+[+] Group 1:
+Attack mode: 381
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160236429ns
+[+] Group 2:
+Attack mode: 388
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 159750063ns
+[+] Group 3:
+Attack mode: 399
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160008392ns
+[+] Group 4:
+Attack mode: 408
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 159904976ns
+[+] Group 5:
+Attack mode: 388
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160245470ns
+[+] Group 6:
+Attack mode: 384
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160173346ns
+[+] Group 7:
+Attack mode: 391
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 159687356ns
+[+] Try 71: Pick Target addr:0xfffff7e9a900 for P+P set 1
+[+] Group 0:
+Attack mode: 558
+Base mode: 434
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 159955893ns
+[+] Group 0:
+Attack mode: 559
+Base mode: 429
+[+] Get Signal (2)
+[+] Time Elapse: 0s, 160002475ns
+[+] Group 0:
+Attack mode: 433
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 160002641ns
+[+] Group 1:
+Attack mode: 405
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160250345ns
+[+] Group 2:
+Attack mode: 414
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160608590ns
+[+] Group 3:
+Attack mode: 390
+Base mode: 557
+[+] No signal
+[+] Time Elapse: 0s, 160165097ns
+[+] Group 4:
+Attack mode: 558
+Base mode: 385
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 159969392ns
+[+] Group 4:
+Attack mode: 381
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160388802ns
+[+] Group 5:
+Attack mode: 392
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160624297ns
+[+] Group 6:
+Attack mode: 438
+Base mode: 386
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 159990184ns
+[+] Group 6:
+Attack mode: 436
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 160428217ns
+[+] Group 7:
+Attack mode: 397
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 159680230ns
+[+] Try 72: Pick Target addr:0xfffff7e9e900 for P+P set 1
+[+] Group 0:
+Attack mode: 437
+Base mode: 412
+[+] No signal
+[+] Time Elapse: 0s, 159899352ns
+[+] Group 1:
+Attack mode: 431
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 159953726ns
+[+] Group 2:
+Attack mode: 437
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160028599ns
+[+] Group 3:
+Attack mode: 433
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 161001541ns
+[+] Group 4:
+Attack mode: 570
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 159993724ns
+[+] Group 5:
+Attack mode: 414
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 159996975ns
+[+] Group 6:
+Attack mode: 430
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 160024641ns
+[+] Group 7:
+Attack mode: 388
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 159960018ns
+[+] Try 73: Pick Target addr:0xfffff7ea2900 for P+P set 1
+[+] Group 0:
+Attack mode: 541
+Base mode: 556
+[+] No signal
+[+] Time Elapse: 0s, 160020100ns
+[+] Group 1:
+Attack mode: 387
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 160270137ns
+[+] Group 2:
+Attack mode: 386
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 159687689ns
+[+] Group 3:
+Attack mode: 382
+Base mode: 557
+[+] No signal
+[+] Time Elapse: 0s, 160029350ns
+[+] Group 4:
+Attack mode: 558
+Base mode: 428
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160013391ns
+[+] Group 4:
+Attack mode: 389
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 159994225ns
+[+] Group 5:
+Attack mode: 386
+Base mode: 430
+[+] No signal
+[+] Time Elapse: 0s, 159992350ns
+[+] Group 6:
+Attack mode: 564
+Base mode: 564
+[+] No signal
+[+] Time Elapse: 0s, 159991308ns
+[+] Group 7:
+Attack mode: 432
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160277970ns
+[+] Try 74: Pick Target addr:0xfffff7ea6900 for P+P set 1
+[+] Group 0:
+Attack mode: 410
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160321595ns
+[+] Group 1:
+Attack mode: 387
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 159935059ns
+[+] Group 2:
+Attack mode: 386
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160484550ns
+[+] Group 3:
+Attack mode: 385
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160407384ns
+[+] Group 4:
+Attack mode: 397
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 160414385ns
+[+] Group 5:
+Attack mode: 558
+Base mode: 562
+[+] No signal
+[+] Time Elapse: 0s, 160131806ns
+[+] Group 6:
+Attack mode: 563
+Base mode: 423
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160050391ns
+[+] Group 6:
+Attack mode: 437
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 159981058ns
+[+] Group 7:
+Attack mode: 392
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160016725ns
+[+] Try 75: Pick Target addr:0xfffff7eaa900 for P+P set 1
+[+] Group 0:
+Attack mode: 391
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 159991434ns
+[+] Group 1:
+Attack mode: 391
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 159980350ns
+[+] Group 2:
+Attack mode: 574
+Base mode: 577
+[+] No signal
+[+] Time Elapse: 0s, 162016482ns
+[+] Group 3:
+Attack mode: 382
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160151723ns
+[+] Group 4:
+Attack mode: 398
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160224263ns
+[+] Group 5:
+Attack mode: 386
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160172097ns
+[+] Group 6:
+Attack mode: 404
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160494758ns
+[+] Group 7:
+Attack mode: 402
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 161088040ns
+[+] Try 76: Pick Target addr:0xfffff7eae900 for P+P set 1
+[+] Group 0:
+Attack mode: 400
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160321720ns
+[+] Group 1:
+Attack mode: 387
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 159642356ns
+[+] Group 2:
+Attack mode: 393
+Base mode: 557
+[+] No signal
+[+] Time Elapse: 0s, 159879310ns
+[+] Group 3:
+Attack mode: 386
+Base mode: 448
+[+] No signal
+[+] Time Elapse: 0s, 160014724ns
+[+] Group 4:
+Attack mode: 558
+Base mode: 558
+[+] No signal
+[+] Time Elapse: 0s, 159989267ns
+[+] Group 5:
+Attack mode: 435
+Base mode: 564
+[+] No signal
+[+] Time Elapse: 0s, 159996517ns
+[+] Group 6:
+Attack mode: 433
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 173565160ns
+[+] Group 7:
+Attack mode: 386
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160059766ns
+[+] Try 77: Pick Target addr:0xfffff7eb2900 for P+P set 1
+[+] Group 0:
+Attack mode: 563
+Base mode: 452
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160601006ns
+[+] Group 0:
+Attack mode: 391
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160215680ns
+[+] Group 1:
+Attack mode: 397
+Base mode: 421
+[+] No signal
+[+] Time Elapse: 0s, 160589757ns
+[+] Group 2:
+Attack mode: 386
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160415343ns
+[+] Group 3:
+Attack mode: 393
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160530299ns
+[+] Group 4:
+Attack mode: 558
+Base mode: 405
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160048182ns
+[+] Group 4:
+Attack mode: 432
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 159990683ns
+[+] Group 5:
+Attack mode: 434
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 159985141ns
+[+] Group 6:
+Attack mode: 386
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160011516ns
+[+] Group 7:
+Attack mode: 430
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 159990141ns
+[+] Try 78: Pick Target addr:0xfffff7eb6900 for P+P set 1
+[+] Group 0:
+Attack mode: 392
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160226346ns
+[+] Group 1:
+Attack mode: 397
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 159778645ns
+[+] Group 2:
+Attack mode: 432
+Base mode: 557
+[+] No signal
+[+] Time Elapse: 0s, 159984225ns
+[+] Group 3:
+Attack mode: 393
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160273429ns
+[+] Group 4:
+Attack mode: 395
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160217305ns
+[+] Group 5:
+Attack mode: 395
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 159873310ns
+[+] Group 6:
+Attack mode: 386
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160213263ns
+[+] Group 7:
+Attack mode: 563
+Base mode: 406
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160483133ns
+[+] Group 7:
+Attack mode: 380
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160218179ns
+[+] Try 79: Pick Target addr:0xfffff7eba900 for P+P set 1
+[+] Group 0:
+Attack mode: 385
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160275011ns
+[+] Group 1:
+Attack mode: 393
+Base mode: 409
+[+] No signal
+[+] Time Elapse: 0s, 160485091ns
+[+] Group 2:
+Attack mode: 383
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160436342ns
+[+] Group 3:
+Attack mode: 419
+Base mode: 428
+[+] No signal
+[+] Time Elapse: 0s, 160573215ns
+[+] Group 4:
+Attack mode: 407
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 172982086ns
+[+] Group 5:
+Attack mode: 391
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 163202920ns
+[+] Group 6:
+Attack mode: 386
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160293428ns
+[+] Group 7:
+Attack mode: 386
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160093598ns
+[+] Try 80: Pick Target addr:0xfffff7ebe900 for P+P set 1
+[+] Group 0:
+Attack mode: 389
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160558507ns
+[+] Group 1:
+Attack mode: 385
+Base mode: 378
+[+] No signal
+[+] Time Elapse: 0s, 161897484ns
+[+] Group 2:
+Attack mode: 392
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160403218ns
+[+] Group 3:
+Attack mode: 401
+Base mode: 407
+[+] No signal
+[+] Time Elapse: 0s, 160488175ns
+[+] Group 4:
+Attack mode: 384
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160265179ns
+[+] Group 5:
+Attack mode: 404
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160367427ns
+[+] Group 6:
+Attack mode: 558
+Base mode: 557
+[+] No signal
+[+] Time Elapse: 0s, 160314928ns
+[+] Group 7:
+Attack mode: 411
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160305178ns
+[+] Try 81: Pick Target addr:0xfffff7ec2900 for P+P set 1
+[+] Group 0:
+Attack mode: 404
+Base mode: 448
+[+] No signal
+[+] Time Elapse: 0s, 162674221ns
+[+] Group 1:
+Attack mode: 389
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160341594ns
+[+] Group 2:
+Attack mode: 393
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160322886ns
+[+] Group 3:
+Attack mode: 411
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160450842ns
+[+] Group 4:
+Attack mode: 386
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160398009ns
+[+] Group 5:
+Attack mode: 390
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 160469133ns
+[+] Group 6:
+Attack mode: 407
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 162426808ns
+[+] Group 7:
+Attack mode: 400
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 161109414ns
+[+] Try 82: Pick Target addr:0xfffff7ec6900 for P+P set 1
+[+] Group 0:
+Attack mode: 397
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 159741563ns
+[+] Group 1:
+Attack mode: 391
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160027974ns
+[+] Group 2:
+Attack mode: 385
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160412010ns
+[+] Group 3:
+Attack mode: 404
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160583673ns
+[+] Group 4:
+Attack mode: 385
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160404926ns
+[+] Group 5:
+Attack mode: 390
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160502216ns
+[+] Group 6:
+Attack mode: 381
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160292679ns
+[+] Group 7:
+Attack mode: 386
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160274137ns
+[+] Try 83: Pick Target addr:0xfffff7eca900 for P+P set 1
+[+] Group 0:
+Attack mode: 390
+Base mode: 430
+[+] No signal
+[+] Time Elapse: 0s, 160532383ns
+[+] Group 1:
+Attack mode: 390
+Base mode: 409
+[+] No signal
+[+] Time Elapse: 0s, 161581531ns
+[+] Group 2:
+Attack mode: 386
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160276220ns
+[+] Group 3:
+Attack mode: 394
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160027016ns
+[+] Group 4:
+Attack mode: 389
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160068141ns
+[+] Group 5:
+Attack mode: 391
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160049766ns
+[+] Group 6:
+Attack mode: 414
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160121306ns
+[+] Group 7:
+Attack mode: 399
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160168180ns
+[+] Try 84: Pick Target addr:0xfffff7ece900 for P+P set 1
+[+] Group 0:
+Attack mode: 393
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160051516ns
+[+] Group 1:
+Attack mode: 390
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160812002ns
+[+] Group 2:
+Attack mode: 389
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 159934559ns
+[+] Group 3:
+Attack mode: 385
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160116140ns
+[+] Group 4:
+Attack mode: 384
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160203263ns
+[+] Group 5:
+Attack mode: 406
+Base mode: 557
+[+] No signal
+[+] Time Elapse: 0s, 160223096ns
+[+] Group 6:
+Attack mode: 379
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160168763ns
+[+] Group 7:
+Attack mode: 387
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160142431ns
+[+] Try 85: Pick Target addr:0xfffff7ed2900 for P+P set 1
+[+] Group 0:
+Attack mode: 398
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 159955059ns
+[+] Group 1:
+Attack mode: 384
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160318428ns
+[+] Group 2:
+Attack mode: 390
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160240637ns
+[+] Group 3:
+Attack mode: 407
+Base mode: 410
+[+] No signal
+[+] Time Elapse: 0s, 160483300ns
+[+] Group 4:
+Attack mode: 394
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160308011ns
+[+] Group 5:
+Attack mode: 401
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 160568965ns
+[+] Group 6:
+Attack mode: 407
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160291470ns
+[+] Group 7:
+Attack mode: 406
+Base mode: 433
+[+] No signal
+[+] Time Elapse: 0s, 160234304ns
+[+] Try 86: Pick Target addr:0xfffff7ed6900 for P+P set 1
+[+] Group 0:
+Attack mode: 417
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 160565423ns
+[+] Group 1:
+Attack mode: 401
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160398176ns
+[+] Group 2:
+Attack mode: 382
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160102473ns
+[+] Group 3:
+Attack mode: 397
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160568882ns
+[+] Group 4:
+Attack mode: 391
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160320636ns
+[+] Group 5:
+Attack mode: 409
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160414093ns
+[+] Group 6:
+Attack mode: 403
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160371468ns
+[+] Group 7:
+Attack mode: 393
+Base mode: 403
+[+] No signal
+[+] Time Elapse: 0s, 160328135ns
+[+] Try 87: Pick Target addr:0xfffff7eda900 for P+P set 1
+[+] Group 0:
+Attack mode: 423
+Base mode: 451
+[+] No signal
+[+] Time Elapse: 0s, 160492841ns
+[+] Group 1:
+Attack mode: 389
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160323761ns
+[+] Group 2:
+Attack mode: 394
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160589382ns
+[+] Group 3:
+Attack mode: 386
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160172596ns
+[+] Group 4:
+Attack mode: 388
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160051057ns
+[+] Group 5:
+Attack mode: 384
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160271053ns
+[+] Group 6:
+Attack mode: 401
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160460008ns
+[+] Group 7:
+Attack mode: 390
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160396010ns
+[+] Try 88: Pick Target addr:0xfffff7ede900 for P+P set 1
+[+] Group 0:
+Attack mode: 392
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160577132ns
+[+] Group 1:
+Attack mode: 760
+Base mode: 390
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160298053ns
+[+] Group 1:
+Attack mode: 764
+Base mode: 398
+[+] Get Signal (2)
+[+] Time Elapse: 0s, 160028683ns
+[+] Group 1:
+Attack mode: 408
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160348427ns
+[+] Group 2:
+Attack mode: 570
+Base mode: 568
+[+] No signal
+[+] Time Elapse: 0s, 160354677ns
+[+] Group 3:
+Attack mode: 383
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160342677ns
+[+] Group 4:
+Attack mode: 399
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160314887ns
+[+] Group 5:
+Attack mode: 389
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160583590ns
+[+] Group 6:
+Attack mode: 379
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160165889ns
+[+] Group 7:
+Attack mode: 388
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160170389ns
+[+] Try 89: Pick Target addr:0xfffff7ee2900 for P+P set 1
+[+] Group 0:
+Attack mode: 389
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 160635006ns
+[+] Group 1:
+Attack mode: 389
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160300469ns
+[+] Group 2:
+Attack mode: 436
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160520841ns
+[+] Group 3:
+Attack mode: 391
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160362344ns
+[+] Group 4:
+Attack mode: 387
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160388302ns
+[+] Group 5:
+Attack mode: 421
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160405718ns
+[+] Group 6:
+Attack mode: 390
+Base mode: 410
+[+] No signal
+[+] Time Elapse: 0s, 160390593ns
+[+] Group 7:
+Attack mode: 558
+Base mode: 412
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160542174ns
+[+] Group 7:
+Attack mode: 405
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160158222ns
+[+] Try 90: Pick Target addr:0xfffff7ee6900 for P+P set 1
+[+] Group 0:
+Attack mode: 384
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 161909983ns
+[+] Group 1:
+Attack mode: 388
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160145681ns
+[+] Group 2:
+Attack mode: 387
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160034474ns
+[+] Group 3:
+Attack mode: 393
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160368511ns
+[+] Group 4:
+Attack mode: 393
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160475050ns
+[+] Group 5:
+Attack mode: 408
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160271803ns
+[+] Group 6:
+Attack mode: 388
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160514800ns
+[+] Group 7:
+Attack mode: 389
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160380469ns
+[+] Try 91: Pick Target addr:0xfffff7eea900 for P+P set 1
+[+] Group 0:
+Attack mode: 398
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160151055ns
+[+] Group 1:
+Attack mode: 405
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160523508ns
+[+] Group 2:
+Attack mode: 389
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160366010ns
+[+] Group 3:
+Attack mode: 435
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 160471258ns
+[+] Group 4:
+Attack mode: 390
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160486134ns
+[+] Group 5:
+Attack mode: 410
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160172597ns
+[+] Group 6:
+Attack mode: 395
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 159867893ns
+[+] Group 7:
+Attack mode: 387
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160347969ns
+[+] Try 92: Pick Target addr:0xfffff7eee900 for P+P set 1
+[+] Group 0:
+Attack mode: 387
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160473467ns
+[+] Group 1:
+Attack mode: 390
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160435343ns
+[+] Group 2:
+Attack mode: 388
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 161623572ns
+[+] Group 3:
+Attack mode: 412
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160261679ns
+[+] Group 4:
+Attack mode: 570
+Base mode: 406
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160403884ns
+[+] Group 4:
+Attack mode: 426
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160149556ns
+[+] Group 5:
+Attack mode: 398
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160303761ns
+[+] Group 6:
+Attack mode: 398
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160557465ns
+[+] Group 7:
+Attack mode: 426
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160440217ns
+[+] Try 93: Pick Target addr:0xfffff7ef2900 for P+P set 1
+[+] Group 0:
+Attack mode: 431
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160790586ns
+[+] Group 1:
+Attack mode: 437
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 161861443ns
+[+] Group 2:
+Attack mode: 387
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 159993059ns
+[+] Group 3:
+Attack mode: 394
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160378094ns
+[+] Group 4:
+Attack mode: 429
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160560132ns
+[+] Group 5:
+Attack mode: 397
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 160248929ns
+[+] Group 6:
+Attack mode: 386
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160418843ns
+[+] Group 7:
+Attack mode: 394
+Base mode: 559
+[+] No signal
+[+] Time Elapse: 0s, 160293512ns
+[+] Try 94: Pick Target addr:0xfffff7ef6900 for P+P set 1
+[+] Group 0:
+Attack mode: 381
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 159984266ns
+[+] Group 1:
+Attack mode: 390
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160235637ns
+[+] Group 2:
+Attack mode: 386
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160206263ns
+[+] Group 3:
+Attack mode: 386
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160583382ns
+[+] Group 4:
+Attack mode: 395
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160167347ns
+[+] Group 5:
+Attack mode: 395
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160237429ns
+[+] Group 6:
+Attack mode: 392
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160026433ns
+[+] Group 7:
+Attack mode: 388
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160119181ns
+[+] Try 95: Pick Target addr:0xfffff7efa900 for P+P set 1
+[+] Group 0:
+Attack mode: 411
+Base mode: 563
+[+] No signal
+[+] Time Elapse: 0s, 160538591ns
+[+] Group 1:
+Attack mode: 394
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160263262ns
+[+] Group 2:
+Attack mode: 398
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160242679ns
+[+] Group 3:
+Attack mode: 415
+Base mode: 411
+[+] No signal
+[+] Time Elapse: 0s, 160487050ns
+[+] Group 4:
+Attack mode: 389
+Base mode: 414
+[+] No signal
+[+] Time Elapse: 0s, 160230804ns
+[+] Group 5:
+Attack mode: 414
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160142598ns
+[+] Group 6:
+Attack mode: 445
+Base mode: 411
+[+] No signal
+[+] Time Elapse: 0s, 160412801ns
+[+] Group 7:
+Attack mode: 416
+Base mode: 433
+[+] No signal
+[+] Time Elapse: 0s, 160304553ns
+[+] Try 96: Pick Target addr:0xfffff7efe900 for P+P set 1
+[+] Group 0:
+Attack mode: 399
+Base mode: 407
+[+] No signal
+[+] Time Elapse: 0s, 160070598ns
+[+] Group 1:
+Attack mode: 381
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160074640ns
+[+] Group 2:
+Attack mode: 418
+Base mode: 420
+[+] No signal
+[+] Time Elapse: 0s, 160237388ns
+[+] Group 3:
+Attack mode: 571
+Base mode: 408
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160413968ns
+[+] Group 3:
+Attack mode: 437
+Base mode: 430
+[+] No signal
+[+] Time Elapse: 0s, 163393709ns
+[+] Group 4:
+Attack mode: 1397
+Base mode: 1243
+[+] Noise Test Environment 1
+[+] Time Elapse: 0s, 174431978ns
+[+] Group 4:
+Attack mode: 398
+Base mode: 403
+[+] No signal
+[+] Time Elapse: 0s, 160282178ns
+[+] Group 5:
+Attack mode: 398
+Base mode: 415
+[+] No signal
+[+] Time Elapse: 0s, 160368010ns
+[+] Group 6:
+Attack mode: 394
+Base mode: 419
+[+] No signal
+[+] Time Elapse: 0s, 160184471ns
+[+] Group 7:
+Attack mode: 383
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160368885ns
+[+] Try 97: Pick Target addr:0xfffff7f02900 for P+P set 1
+[+] Group 0:
+Attack mode: 387
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160256220ns
+[+] Group 1:
+Attack mode: 400
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160348719ns
+[+] Group 2:
+Attack mode: 419
+Base mode: 411
+[+] No signal
+[+] Time Elapse: 0s, 160449634ns
+[+] Group 3:
+Attack mode: 411
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160560215ns
+[+] Group 4:
+Attack mode: 409
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160556798ns
+[+] Group 5:
+Attack mode: 409
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160201055ns
+[+] Group 6:
+Attack mode: 418
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 162906258ns
+[+] Group 7:
+Attack mode: 393
+Base mode: 409
+[+] No signal
+[+] Time Elapse: 0s, 159764229ns
+[+] Try 98: Pick Target addr:0xfffff7f06900 for P+P set 1
+[+] Group 0:
+Attack mode: 401
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160260012ns
+[+] Group 1:
+Attack mode: 415
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160247804ns
+[+] Group 2:
+Attack mode: 430
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160567591ns
+[+] Group 3:
+Attack mode: 411
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160265387ns
+[+] Group 4:
+Attack mode: 418
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 160182055ns
+[+] Group 5:
+Attack mode: 406
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 160547007ns
+[+] Group 6:
+Attack mode: 417
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 162644346ns
+[+] Group 7:
+Attack mode: 408
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160445717ns
+[+] Try 99: Pick Target addr:0xfffff7f0a900 for P+P set 1
+[+] Group 0:
+Attack mode: 406
+Base mode: 409
+[+] No signal
+[+] Time Elapse: 0s, 160194680ns
+[+] Group 1:
+Attack mode: 411
+Base mode: 415
+[+] No signal
+[+] Time Elapse: 0s, 160557965ns
+[+] Group 2:
+Attack mode: 403
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160346135ns
+[+] Group 3:
+Attack mode: 412
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160670880ns
+[+] Group 4:
+Attack mode: 402
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160391844ns
+[+] Group 5:
+Attack mode: 412
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160423676ns
+[+] Group 6:
+Attack mode: 401
+Base mode: 403
+[+] No signal
+[+] Time Elapse: 0s, 160409052ns
+[+] Group 7:
+Attack mode: 392
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160174180ns
+[+] Try 100: Pick Target addr:0xfffff7f0e900 for P+P set 1
+[+] Group 0:
+Attack mode: 403
+Base mode: 411
+[+] No signal
+[+] Time Elapse: 0s, 159968768ns
+[+] Group 1:
+Attack mode: 407
+Base mode: 412
+[+] No signal
+[+] Time Elapse: 0s, 160608714ns
+[+] Group 2:
+Attack mode: 396
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160175972ns
+[+] Group 3:
+Attack mode: 411
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160226013ns
+[+] Group 4:
+Attack mode: 416
+Base mode: 411
+[+] No signal
+[+] Time Elapse: 0s, 160132806ns
+[+] Group 5:
+Attack mode: 406
+Base mode: 411
+[+] No signal
+[+] Time Elapse: 0s, 160453383ns
+[+] Group 6:
+Attack mode: 400
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160046599ns
+[+] Group 7:
+Attack mode: 396
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160095015ns
+[+] Try 101: Pick Target addr:0xfffff7f12900 for P+P set 1
+[+] Group 0:
+Attack mode: 431
+Base mode: 430
+[+] No signal
+[+] Time Elapse: 0s, 160027475ns
+[+] Group 1:
+Attack mode: 429
+Base mode: 413
+[+] No signal
+[+] Time Elapse: 0s, 162444016ns
+[+] Group 2:
+Attack mode: 435
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160406342ns
+[+] Group 3:
+Attack mode: 431
+Base mode: 410
+[+] No signal
+[+] Time Elapse: 0s, 160206346ns
+[+] Group 4:
+Attack mode: 400
+Base mode: 428
+[+] No signal
+[+] Time Elapse: 0s, 160073016ns
+[+] Group 5:
+Attack mode: 416
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160044890ns
+[+] Group 6:
+Attack mode: 401
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160089056ns
+[+] Group 7:
+Attack mode: 407
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160096473ns
+[+] Try 102: Pick Target addr:0xfffff7f16900 for P+P set 1
+[+] Group 0:
+Attack mode: 432
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160470717ns
+[+] Group 1:
+Attack mode: 388
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160429759ns
+[+] Group 2:
+Attack mode: 416
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160559382ns
+[+] Group 3:
+Attack mode: 430
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160187722ns
+[+] Group 4:
+Attack mode: 396
+Base mode: 426
+[+] No signal
+[+] Time Elapse: 0s, 160246012ns
+[+] Group 5:
+Attack mode: 396
+Base mode: 412
+[+] No signal
+[+] Time Elapse: 0s, 160286970ns
+[+] Group 6:
+Attack mode: 398
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160466883ns
+[+] Group 7:
+Attack mode: 408
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160327136ns
+[+] Try 103: Pick Target addr:0xfffff7f1a900 for P+P set 1
+[+] Group 0:
+Attack mode: 442
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160792878ns
+[+] Group 1:
+Attack mode: 445
+Base mode: 420
+[+] No signal
+[+] Time Elapse: 0s, 160528425ns
+[+] Group 2:
+Attack mode: 432
+Base mode: 422
+[+] No signal
+[+] Time Elapse: 0s, 160393843ns
+[+] Group 3:
+Attack mode: 406
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160093848ns
+[+] Group 4:
+Attack mode: 379
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160272304ns
+[+] Group 5:
+Attack mode: 419
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160488508ns
+[+] Group 6:
+Attack mode: 386
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160406551ns
+[+] Group 7:
+Attack mode: 387
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160501758ns
+[+] Try 104: Pick Target addr:0xfffff7f1e900 for P+P set 1
+[+] Group 0:
+Attack mode: 429
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160260096ns
+[+] Group 1:
+Attack mode: 395
+Base mode: 410
+[+] No signal
+[+] Time Elapse: 0s, 160327177ns
+[+] Group 2:
+Attack mode: 431
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160506008ns
+[+] Group 3:
+Attack mode: 393
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160325011ns
+[+] Group 4:
+Attack mode: 387
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160559299ns
+[+] Group 5:
+Attack mode: 409
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160384301ns
+[+] Group 6:
+Attack mode: 428
+Base mode: 425
+[+] No signal
+[+] Time Elapse: 0s, 160173264ns
+[+] Group 7:
+Attack mode: 435
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 160364594ns
+[+] Try 105: Pick Target addr:0xfffff7f22900 for P+P set 1
+[+] Group 0:
+Attack mode: 437
+Base mode: 433
+[+] No signal
+[+] Time Elapse: 0s, 161611322ns
+[+] Group 1:
+Attack mode: 417
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160221137ns
+[+] Group 2:
+Attack mode: 407
+Base mode: 431
+[+] No signal
+[+] Time Elapse: 0s, 160552340ns
+[+] Group 3:
+Attack mode: 401
+Base mode: 430
+[+] No signal
+[+] Time Elapse: 0s, 160543716ns
+[+] Group 4:
+Attack mode: 405
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160407552ns
+[+] Group 5:
+Attack mode: 393
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 160224637ns
+[+] Group 6:
+Attack mode: 404
+Base mode: 557
+[+] No signal
+[+] Time Elapse: 0s, 160529549ns
+[+] Group 7:
+Attack mode: 390
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160432176ns
+[+] Try 106: Pick Target addr:0xfffff7f26900 for P+P set 1
+[+] Group 0:
+Attack mode: 412
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 160476592ns
+[+] Group 1:
+Attack mode: 412
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160430676ns
+[+] Group 2:
+Attack mode: 435
+Base mode: 411
+[+] No signal
+[+] Time Elapse: 0s, 160067515ns
+[+] Group 3:
+Attack mode: 434
+Base mode: 407
+[+] No signal
+[+] Time Elapse: 0s, 160628339ns
+[+] Group 4:
+Attack mode: 402
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160330094ns
+[+] Group 5:
+Attack mode: 404
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160467717ns
+[+] Group 6:
+Attack mode: 434
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160349969ns
+[+] Group 7:
+Attack mode: 435
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160377468ns
+[+] Try 107: Pick Target addr:0xfffff7f2a900 for P+P set 1
+[+] Group 0:
+Attack mode: 431
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160465467ns
+[+] Group 1:
+Attack mode: 393
+Base mode: 430
+[+] No signal
+[+] Time Elapse: 0s, 160312761ns
+[+] Group 2:
+Attack mode: 405
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160284470ns
+[+] Group 3:
+Attack mode: 558
+Base mode: 450
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160594006ns
+[+] Group 3:
+Attack mode: 392
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160369386ns
+[+] Group 4:
+Attack mode: 381
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160509632ns
+[+] Group 5:
+Attack mode: 406
+Base mode: 425
+[+] No signal
+[+] Time Elapse: 0s, 160234138ns
+[+] Group 6:
+Attack mode: 410
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160238846ns
+[+] Group 7:
+Attack mode: 406
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 159984933ns
+[+] Try 108: Pick Target addr:0xfffff7f2e900 for P+P set 1
+[+] Group 0:
+Attack mode: 434
+Base mode: 429
+[+] No signal
+[+] Time Elapse: 0s, 160381010ns
+[+] Group 1:
+Attack mode: 436
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160437884ns
+[+] Group 2:
+Attack mode: 411
+Base mode: 431
+[+] No signal
+[+] Time Elapse: 0s, 160504258ns
+[+] Group 3:
+Attack mode: 400
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 160445634ns
+[+] Group 4:
+Attack mode: 408
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160046016ns
+[+] Group 5:
+Attack mode: 399
+Base mode: 423
+[+] No signal
+[+] Time Elapse: 0s, 160222680ns
+[+] Group 6:
+Attack mode: 438
+Base mode: 430
+[+] No signal
+[+] Time Elapse: 0s, 160469134ns
+[+] Group 7:
+Attack mode: 395
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160184805ns
+[+] Try 109: Pick Target addr:0xfffff7f32900 for P+P set 1
+[+] Group 0:
+Attack mode: 386
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160371469ns
+[+] Group 1:
+Attack mode: 437
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160573257ns
+[+] Group 2:
+Attack mode: 398
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160213263ns
+[+] Group 3:
+Attack mode: 386
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160230512ns
+[+] Group 4:
+Attack mode: 384
+Base mode: 409
+[+] No signal
+[+] Time Elapse: 0s, 160488009ns
+[+] Group 5:
+Attack mode: 413
+Base mode: 410
+[+] No signal
+[+] Time Elapse: 0s, 160318261ns
+[+] Group 6:
+Attack mode: 387
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160735629ns
+[+] Group 7:
+Attack mode: 401
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 160310469ns
+[+] Try 110: Pick Target addr:0xfffff7f36900 for P+P set 1
+[+] Group 0:
+Attack mode: 434
+Base mode: 431
+[+] No signal
+[+] Time Elapse: 0s, 160491883ns
+[+] Group 1:
+Attack mode: 432
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 160113432ns
+[+] Group 2:
+Attack mode: 417
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160339635ns
+[+] Group 3:
+Attack mode: 435
+Base mode: 412
+[+] No signal
+[+] Time Elapse: 0s, 160538924ns
+[+] Group 4:
+Attack mode: 411
+Base mode: 431
+[+] No signal
+[+] Time Elapse: 0s, 160467383ns
+[+] Group 5:
+Attack mode: 437
+Base mode: 437
+[+] No signal
+[+] Time Elapse: 0s, 160532757ns
+[+] Group 6:
+Attack mode: 435
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160162805ns
+[+] Group 7:
+Attack mode: 435
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160155597ns
+[+] Try 111: Pick Target addr:0xfffff7f3a900 for P+P set 1
+[+] Group 0:
+Attack mode: 429
+Base mode: 432
+[+] No signal
+[+] Time Elapse: 0s, 160096556ns
+[+] Group 1:
+Attack mode: 437
+Base mode: 435
+[+] No signal
+[+] Time Elapse: 0s, 160557757ns
+[+] Group 2:
+Attack mode: 433
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160205429ns
+[+] Group 3:
+Attack mode: 396
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160315386ns
+[+] Group 4:
+Attack mode: 404
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160101640ns
+[+] Group 5:
+Attack mode: 404
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160458342ns
+[+] Group 6:
+Attack mode: 407
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160411676ns
+[+] Group 7:
+Attack mode: 408
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160555549ns
+[+] Try 112: Pick Target addr:0xfffff7f3e900 for P+P set 1
+[+] Group 0:
+Attack mode: 429
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160134472ns
+[+] Group 1:
+Attack mode: 436
+Base mode: 403
+[+] No signal
+[+] Time Elapse: 0s, 160384677ns
+[+] Group 2:
+Attack mode: 433
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160541424ns
+[+] Group 3:
+Attack mode: 396
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160377676ns
+[+] Group 4:
+Attack mode: 420
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160222137ns
+[+] Group 5:
+Attack mode: 421
+Base mode: 434
+[+] No signal
+[+] Time Elapse: 0s, 160565340ns
+[+] Group 6:
+Attack mode: 408
+Base mode: 401
+[+] No signal
+[+] Time Elapse: 0s, 161307536ns
+[+] Group 7:
+Attack mode: 538
+Base mode: 429
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160428925ns
+[+] Group 7:
+Attack mode: 412
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160189305ns
+[+] Try 113: Pick Target addr:0xfffff7f42900 for P+P set 1
+[+] Group 0:
+Attack mode: 430
+Base mode: 412
+[+] No signal
+[+] Time Elapse: 0s, 160306219ns
+[+] Group 1:
+Attack mode: 406
+Base mode: 428
+[+] No signal
+[+] Time Elapse: 0s, 160302511ns
+[+] Group 2:
+Attack mode: 380
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160452550ns
+[+] Group 3:
+Attack mode: 386
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160264429ns
+[+] Group 4:
+Attack mode: 412
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160584131ns
+[+] Group 5:
+Attack mode: 383
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160293220ns
+[+] Group 6:
+Attack mode: 384
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160210222ns
+[+] Group 7:
+Attack mode: 442
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160537299ns
+[+] P+P Evset 2 Fixed!
+[+] Try 1: Pick Target addr:0xfffff7d82900 for P+P set 2
+[+] Group 0:
+Attack mode: 411
+Base mode: 423
+[+] No signal
+[+] Time Elapse: 0s, 161688280ns
+[+] Group 1:
+Attack mode: 417
+Base mode: 429
+[+] No signal
+[+] Time Elapse: 0s, 160174764ns
+[+] Group 2:
+Attack mode: 414
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 160836044ns
+[+] Group 3:
+Attack mode: 406
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 160415426ns
+[+] Group 4:
+Attack mode: 403
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160273346ns
+[+] Group 5:
+Attack mode: 410
+Base mode: 410
+[+] No signal
+[+] Time Elapse: 0s, 160481883ns
+[+] Group 6:
+Attack mode: 407
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160453301ns
+[+] Group 7:
+Attack mode: 414
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160439718ns
+[+] Try 2: Pick Target addr:0xfffff7d86900 for P+P set 2
+[+] Group 0:
+Attack mode: 406
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160397385ns
+[+] Group 1:
+Attack mode: 411
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160327094ns
+[+] Group 2:
+Attack mode: 407
+Base mode: 399
+[+] No signal
+[+] Time Elapse: 0s, 160423092ns
+[+] Group 3:
+Attack mode: 402
+Base mode: 403
+[+] No signal
+[+] Time Elapse: 0s, 160356302ns
+[+] Group 4:
+Attack mode: 406
+Base mode: 580
+[+] No signal
+[+] Time Elapse: 0s, 160652797ns
+[+] Group 5:
+Attack mode: 409
+Base mode: 409
+[+] No signal
+[+] Time Elapse: 0s, 160296970ns
+[+] Group 6:
+Attack mode: 411
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160499257ns
+[+] Group 7:
+Attack mode: 410
+Base mode: 409
+[+] No signal
+[+] Time Elapse: 0s, 160452384ns
+[+] Try 3: Pick Target addr:0xfffff7d8a900 for P+P set 2
+[+] Group 0:
+Attack mode: 405
+Base mode: 409
+[+] No signal
+[+] Time Elapse: 0s, 160267554ns
+[+] Group 1:
+Attack mode: 417
+Base mode: 429
+[+] No signal
+[+] Time Elapse: 0s, 160620548ns
+[+] Group 2:
+Attack mode: 420
+Base mode: 419
+[+] No signal
+[+] Time Elapse: 0s, 160228304ns
+[+] Group 3:
+Attack mode: 974
+Base mode: 920
+[+] Noise Test Environment 1
+[+] Time Elapse: 0s, 160562631ns
+[+] Group 3:
+Attack mode: 922
+Base mode: 771
+[+] Noise Test Environment 2
+[+] Time Elapse: 0s, 160349844ns
+[+] Group 3:
+Attack mode: 1081
+Base mode: 1078
+[+] Noise Test Environment 3
+[+] Try different P+P Evset!
+[+] P+P Evset 3 Fixed!
+[+] Try 1: Pick Target addr:0xfffff7d82900 for P+P set 3
+[+] Group 0:
+Attack mode: 385
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160548132ns
+[+] Group 1:
+Attack mode: 404
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 160660505ns
+[+] Group 2:
+Attack mode: 393
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160479258ns
+[+] Group 3:
+Attack mode: 414
+Base mode: 567
+[+] No signal
+[+] Time Elapse: 0s, 161190079ns
+[+] Group 4:
+Attack mode: 548
+Base mode: 554
+[+] No signal
+[+] Time Elapse: 0s, 160280053ns
+[+] Group 5:
+Attack mode: 387
+Base mode: 396
+[+] No signal
+[+] Time Elapse: 0s, 160838919ns
+[+] Group 6:
+Attack mode: 388
+Base mode: 416
+[+] No signal
+[+] Time Elapse: 0s, 162197688ns
+[+] Group 7:
+Attack mode: 381
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160232970ns
+[+] Try 2: Pick Target addr:0xfffff7d86900 for P+P set 3
+[+] Group 0:
+Attack mode: 380
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160235221ns
+[+] Group 1:
+Attack mode: 412
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160599089ns
+[+] Group 2:
+Attack mode: 385
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160398843ns
+[+] Group 3:
+Attack mode: 379
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160292720ns
+[+] Group 4:
+Attack mode: 380
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 161407325ns
+[+] Group 5:
+Attack mode: 381
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160245387ns
+[+] Group 6:
+Attack mode: 384
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160182763ns
+[+] Group 7:
+Attack mode: 401
+Base mode: 402
+[+] No signal
+[+] Time Elapse: 0s, 160645380ns
+[+] Try 3: Pick Target addr:0xfffff7d8a900 for P+P set 3
+[+] Group 0:
+Attack mode: 396
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160464134ns
+[+] Group 1:
+Attack mode: 566
+Base mode: 389
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160458009ns
+[+] Group 1:
+Attack mode: 401
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160196721ns
+[+] Group 2:
+Attack mode: 396
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160221888ns
+[+] Group 3:
+Attack mode: 383
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160788086ns
+[+] Group 4:
+Attack mode: 386
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160611631ns
+[+] Group 5:
+Attack mode: 383
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160418760ns
+[+] Group 6:
+Attack mode: 394
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160588715ns
+[+] Group 7:
+Attack mode: 389
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 161170538ns
+[+] Try 4: Pick Target addr:0xfffff7d8e900 for P+P set 3
+[+] Group 0:
+Attack mode: 404
+Base mode: 422
+[+] No signal
+[+] Time Elapse: 0s, 162321894ns
+[+] Group 1:
+Attack mode: 554
+Base mode: 394
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160485342ns
+[+] Group 1:
+Attack mode: 388
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160316261ns
+[+] Group 2:
+Attack mode: 395
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160699921ns
+[+] Group 3:
+Attack mode: 382
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160258095ns
+[+] Group 4:
+Attack mode: 380
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160493383ns
+[+] Group 5:
+Attack mode: 438
+Base mode: 385
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160629380ns
+[+] Group 5:
+Attack mode: 402
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160184597ns
+[+] Group 6:
+Attack mode: 415
+Base mode: 558
+[+] No signal
+[+] Time Elapse: 0s, 160446176ns
+[+] Group 7:
+Attack mode: 404
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160375635ns
+[+] Try 5: Pick Target addr:0xfffff7d92900 for P+P set 3
+[+] Group 0:
+Attack mode: 396
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160360010ns
+[+] Group 1:
+Attack mode: 393
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160262095ns
+[+] Group 2:
+Attack mode: 382
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160188138ns
+[+] Group 3:
+Attack mode: 385
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160227638ns
+[+] Group 4:
+Attack mode: 388
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160400426ns
+[+] Group 5:
+Attack mode: 384
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160388301ns
+[+] Group 6:
+Attack mode: 387
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160433050ns
+[+] Group 7:
+Attack mode: 384
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160412926ns
+[+] Try 6: Pick Target addr:0xfffff7d96900 for P+P set 3
+[+] Group 0:
+Attack mode: 385
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160206388ns
+[+] Group 1:
+Attack mode: 383
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160094348ns
+[+] Group 2:
+Attack mode: 384
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160107764ns
+[+] Group 3:
+Attack mode: 388
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 161530865ns
+[+] Group 4:
+Attack mode: 385
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160346094ns
+[+] Group 5:
+Attack mode: 385
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160204680ns
+[+] Group 6:
+Attack mode: 548
+Base mode: 551
+[+] No signal
+[+] Time Elapse: 0s, 177482676ns
+[+] Group 7:
+Attack mode: 382
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160354844ns
+[+] Try 7: Pick Target addr:0xfffff7d9a900 for P+P set 3
+[+] Group 0:
+Attack mode: 390
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160085682ns
+[+] Group 1:
+Attack mode: 426
+Base mode: 555
+[+] No signal
+[+] Time Elapse: 0s, 160598840ns
+[+] Group 2:
+Attack mode: 378
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160328886ns
+[+] Group 3:
+Attack mode: 389
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160451426ns
+[+] Group 4:
+Attack mode: 378
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160570257ns
+[+] Group 5:
+Attack mode: 387
+Base mode: 436
+[+] No signal
+[+] Time Elapse: 0s, 160520758ns
+[+] Group 6:
+Attack mode: 389
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160366177ns
+[+] Group 7:
+Attack mode: 384
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160157472ns
+[+] Try 8: Pick Target addr:0xfffff7d9e900 for P+P set 3
+[+] Group 0:
+Attack mode: 385
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160616715ns
+[+] Group 1:
+Attack mode: 382
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160290845ns
+[+] Group 2:
+Attack mode: 380
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160397426ns
+[+] Group 3:
+Attack mode: 378
+Base mode: 377
+[+] No signal
+[+] Time Elapse: 0s, 160433426ns
+[+] Group 4:
+Attack mode: 378
+Base mode: 378
+[+] No signal
+[+] Time Elapse: 0s, 160405009ns
+[+] Group 5:
+Attack mode: 393
+Base mode: 409
+[+] No signal
+[+] Time Elapse: 0s, 160396177ns
+[+] Group 6:
+Attack mode: 387
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160376510ns
+[+] Group 7:
+Attack mode: 396
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160595298ns
+[+] Try 9: Pick Target addr:0xfffff7da2900 for P+P set 3
+[+] Group 0:
+Attack mode: 384
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160387843ns
+[+] Group 1:
+Attack mode: 383
+Base mode: 378
+[+] No signal
+[+] Time Elapse: 0s, 160336344ns
+[+] Group 2:
+Attack mode: 385
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160548632ns
+[+] Group 3:
+Attack mode: 383
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160294094ns
+[+] Group 4:
+Attack mode: 406
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160470425ns
+[+] Group 5:
+Attack mode: 387
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160757379ns
+[+] Group 6:
+Attack mode: 383
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160423051ns
+[+] Group 7:
+Attack mode: 555
+Base mode: 401
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160775545ns
+[+] Group 7:
+Attack mode: 378
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160323136ns
+[+] Try 10: Pick Target addr:0xfffff7da6900 for P+P set 3
+[+] Group 0:
+Attack mode: 380
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160169972ns
+[+] Group 1:
+Attack mode: 385
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160399009ns
+[+] Group 2:
+Attack mode: 549
+Base mode: 389
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 161089165ns
+[+] Group 2:
+Attack mode: 397
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160392468ns
+[+] Group 3:
+Attack mode: 386
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160608964ns
+[+] Group 4:
+Attack mode: 388
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160363385ns
+[+] Group 5:
+Attack mode: 391
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160360219ns
+[+] Group 6:
+Attack mode: 447
+Base mode: 391
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160300011ns
+[+] Group 6:
+Attack mode: 386
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160391009ns
+[+] Group 7:
+Attack mode: 393
+Base mode: 408
+[+] No signal
+[+] Time Elapse: 0s, 160481508ns
+[+] Try 11: Pick Target addr:0xfffff7daa900 for P+P set 3
+[+] Group 0:
+Attack mode: 383
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160337136ns
+[+] Group 1:
+Attack mode: 394
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160285678ns
+[+] Group 2:
+Attack mode: 392
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160475216ns
+[+] Group 3:
+Attack mode: 394
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160075182ns
+[+] Group 4:
+Attack mode: 394
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160405260ns
+[+] Group 5:
+Attack mode: 402
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 160570465ns
+[+] Group 6:
+Attack mode: 387
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 161193579ns
+[+] Group 7:
+Attack mode: 385
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160220138ns
+[+] Try 12: Pick Target addr:0xfffff7dae900 for P+P set 3
+[+] Group 0:
+Attack mode: 388
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160415176ns
+[+] Group 1:
+Attack mode: 381
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160237804ns
+[+] Group 2:
+Attack mode: 378
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160136264ns
+[+] Group 3:
+Attack mode: 383
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160341761ns
+[+] Group 4:
+Attack mode: 384
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160464259ns
+[+] Group 5:
+Attack mode: 383
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160222179ns
+[+] Group 6:
+Attack mode: 380
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160387760ns
+[+] Group 7:
+Attack mode: 378
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160361844ns
+[+] Try 13: Pick Target addr:0xfffff7db2900 for P+P set 3
+[+] Group 0:
+Attack mode: 378
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160251471ns
+[+] Group 1:
+Attack mode: 378
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160363677ns
+[+] Group 2:
+Attack mode: 552
+Base mode: 546
+[+] No signal
+[+] Time Elapse: 0s, 160323386ns
+[+] Group 3:
+Attack mode: 385
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 160461217ns
+[+] Group 4:
+Attack mode: 414
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160527882ns
+[+] Group 5:
+Attack mode: 379
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160198221ns
+[+] Group 6:
+Attack mode: 379
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160317011ns
+[+] Group 7:
+Attack mode: 380
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160556590ns
+[+] Try 14: Pick Target addr:0xfffff7db6900 for P+P set 3
+[+] Group 0:
+Attack mode: 381
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160424635ns
+[+] Group 1:
+Attack mode: 413
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 161879067ns
+[+] Group 2:
+Attack mode: 413
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160148556ns
+[+] Group 3:
+Attack mode: 379
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160741587ns
+[+] Group 4:
+Attack mode: 382
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160272429ns
+[+] Group 5:
+Attack mode: 380
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160602131ns
+[+] Group 6:
+Attack mode: 381
+Base mode: 377
+[+] No signal
+[+] Time Elapse: 0s, 160395176ns
+[+] Group 7:
+Attack mode: 384
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160577840ns
+[+] Try 15: Pick Target addr:0xfffff7dba900 for P+P set 3
+[+] Group 0:
+Attack mode: 380
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160381051ns
+[+] Group 1:
+Attack mode: 394
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160468466ns
+[+] Group 2:
+Attack mode: 398
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160289762ns
+[+] Group 3:
+Attack mode: 388
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160167222ns
+[+] Group 4:
+Attack mode: 411
+Base mode: 422
+[+] No signal
+[+] Time Elapse: 0s, 160550923ns
+[+] Group 5:
+Attack mode: 381
+Base mode: 421
+[+] No signal
+[+] Time Elapse: 0s, 160482342ns
+[+] Group 6:
+Attack mode: 405
+Base mode: 409
+[+] No signal
+[+] Time Elapse: 0s, 160563757ns
+[+] Group 7:
+Attack mode: 377
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160240887ns
+[+] Try 16: Pick Target addr:0xfffff7dbe900 for P+P set 3
+[+] Group 0:
+Attack mode: 378
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160159556ns
+[+] Group 1:
+Attack mode: 377
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160148764ns
+[+] Group 2:
+Attack mode: 379
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160528799ns
+[+] Group 3:
+Attack mode: 378
+Base mode: 378
+[+] No signal
+[+] Time Elapse: 0s, 160311677ns
+[+] Group 4:
+Attack mode: 383
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160120473ns
+[+] Group 5:
+Attack mode: 382
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160353385ns
+[+] Group 6:
+Attack mode: 379
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160414009ns
+[+] Group 7:
+Attack mode: 386
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160495758ns
+[+] Try 17: Pick Target addr:0xfffff7dc2900 for P+P set 3
+[+] Group 0:
+Attack mode: 382
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160494675ns
+[+] Group 1:
+Attack mode: 388
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160424093ns
+[+] Group 2:
+Attack mode: 392
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160681963ns
+[+] Group 3:
+Attack mode: 387
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160431384ns
+[+] Group 4:
+Attack mode: 384
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160136305ns
+[+] Group 5:
+Attack mode: 379
+Base mode: 378
+[+] No signal
+[+] Time Elapse: 0s, 160207680ns
+[+] Group 6:
+Attack mode: 383
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160085932ns
+[+] Group 7:
+Attack mode: 379
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160372093ns
+[+] Try 18: Pick Target addr:0xfffff7dc6900 for P+P set 3
+[+] Group 0:
+Attack mode: 380
+Base mode: 378
+[+] No signal
+[+] Time Elapse: 0s, 160616797ns
+[+] Group 1:
+Attack mode: 384
+Base mode: 378
+[+] No signal
+[+] Time Elapse: 0s, 160302012ns
+[+] Group 2:
+Attack mode: 386
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160582131ns
+[+] Group 3:
+Attack mode: 404
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160564048ns
+[+] Group 4:
+Attack mode: 425
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160532466ns
+[+] Group 5:
+Attack mode: 388
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160397093ns
+[+] Group 6:
+Attack mode: 384
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160625089ns
+[+] Group 7:
+Attack mode: 383
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 161071248ns
+[+] Try 19: Pick Target addr:0xfffff7dca900 for P+P set 3
+[+] Group 0:
+Attack mode: 382
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160231263ns
+[+] Group 1:
+Attack mode: 391
+Base mode: 552
+[+] No signal
+[+] Time Elapse: 0s, 160455842ns
+[+] Group 2:
+Attack mode: 394
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160246846ns
+[+] Group 3:
+Attack mode: 420
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160709255ns
+[+] Group 4:
+Attack mode: 380
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160542091ns
+[+] Group 5:
+Attack mode: 385
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160492633ns
+[+] Group 6:
+Attack mode: 381
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160305386ns
+[+] Group 7:
+Attack mode: 387
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160389510ns
+[+] Try 20: Pick Target addr:0xfffff7dce900 for P+P set 3
+[+] Group 0:
+Attack mode: 387
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160478675ns
+[+] Group 1:
+Attack mode: 388
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160414134ns
+[+] Group 2:
+Attack mode: 390
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160525632ns
+[+] Group 3:
+Attack mode: 381
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160561007ns
+[+] Group 4:
+Attack mode: 380
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160499799ns
+[+] Group 5:
+Attack mode: 390
+Base mode: 380
+[+] No signal
+[+] Time Elapse: 0s, 160227263ns
+[+] Group 6:
+Attack mode: 386
+Base mode: 400
+[+] No signal
+[+] Time Elapse: 0s, 160553924ns
+[+] Group 7:
+Attack mode: 382
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160414093ns
+[+] Try 21: Pick Target addr:0xfffff7dd2900 for P+P set 3
+[+] Group 0:
+Attack mode: 404
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160289636ns
+[+] Group 1:
+Attack mode: 415
+Base mode: 414
+[+] No signal
+[+] Time Elapse: 0s, 160498591ns
+[+] Group 2:
+Attack mode: 405
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160363677ns
+[+] Group 3:
+Attack mode: 414
+Base mode: 447
+[+] No signal
+[+] Time Elapse: 0s, 160514341ns
+[+] Group 4:
+Attack mode: 400
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 160033016ns
+[+] Group 5:
+Attack mode: 390
+Base mode: 407
+[+] No signal
+[+] Time Elapse: 0s, 160397551ns
+[+] Group 6:
+Attack mode: 424
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160578339ns
+[+] Group 7:
+Attack mode: 384
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 161150205ns
+[+] Try 22: Pick Target addr:0xfffff7dd6900 for P+P set 3
+[+] Group 0:
+Attack mode: 1057
+Base mode: 912
+[+] Noise Test Environment 1
+[+] Time Elapse: 0s, 174168608ns
+[+] Group 0:
+Attack mode: 979
+Base mode: 662
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 166368158ns
+[+] Group 0:
+Attack mode: 1430
+Base mode: 1411
+[+] Noise Test Environment 1
+[+] Time Elapse: 0s, 174648600ns
+[+] Group 0:
+Attack mode: 1395
+Base mode: 1397
+[+] Noise Test Environment 2
+[+] Time Elapse: 0s, 185919199ns
+[+] Group 0:
+Attack mode: 561
+Base mode: 567
+[+] No signal
+[+] Time Elapse: 0s, 161456658ns
+[+] Group 1:
+Attack mode: 412
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160185388ns
+[+] Group 2:
+Attack mode: 432
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160435175ns
+[+] Group 3:
+Attack mode: 412
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 159980476ns
+[+] Group 4:
+Attack mode: 393
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160170389ns
+[+] Group 5:
+Attack mode: 404
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160058558ns
+[+] Group 6:
+Attack mode: 391
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 160580798ns
+[+] Group 7:
+Attack mode: 380
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160198263ns
+[+] Try 23: Pick Target addr:0xfffff7dda900 for P+P set 3
+[+] Group 0:
+Attack mode: 393
+Base mode: 381
+[+] No signal
+[+] Time Elapse: 0s, 160607673ns
+[+] Group 1:
+Attack mode: 1058
+Base mode: 1310
+[+] Noise Test Environment 1
+[+] Time Elapse: 0s, 191298940ns
+[+] Group 1:
+Attack mode: 634
+Base mode: 949
+[+] Noise Test Environment 2
+[+] Time Elapse: 0s, 163032881ns
+[+] Group 1:
+Attack mode: 399
+Base mode: 413
+[+] No signal
+[+] Time Elapse: 0s, 165764876ns
+[+] Group 2:
+Attack mode: 560
+Base mode: 404
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 166549571ns
+[+] Group 2:
+Attack mode: 557
+Base mode: 414
+[+] Get Signal (2)
+[+] Time Elapse: 0s, 164854767ns
+[+] Group 2:
+Attack mode: 400
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160415010ns
+[+] Group 3:
+Attack mode: 561
+Base mode: 444
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160249887ns
+[+] Group 3:
+Attack mode: 421
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160268679ns
+[+] Group 4:
+Attack mode: 560
+Base mode: 554
+[+] No signal
+[+] Time Elapse: 0s, 160428801ns
+[+] Group 5:
+Attack mode: 410
+Base mode: 413
+[+] No signal
+[+] Time Elapse: 0s, 160420051ns
+[+] Group 6:
+Attack mode: 391
+Base mode: 429
+[+] No signal
+[+] Time Elapse: 0s, 160108306ns
+[+] Group 7:
+Attack mode: 386
+Base mode: 406
+[+] No signal
+[+] Time Elapse: 0s, 160171806ns
+[+] Try 24: Pick Target addr:0xfffff7dde900 for P+P set 3
+[+] Group 0:
+Attack mode: 395
+Base mode: 560
+[+] No signal
+[+] Time Elapse: 0s, 160104265ns
+[+] Group 1:
+Attack mode: 403
+Base mode: 414
+[+] No signal
+[+] Time Elapse: 0s, 160427467ns
+[+] Group 2:
+Attack mode: 393
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160141140ns
+[+] Group 3:
+Attack mode: 391
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160115223ns
+[+] Group 4:
+Attack mode: 422
+Base mode: 419
+[+] No signal
+[+] Time Elapse: 0s, 160315178ns
+[+] Group 5:
+Attack mode: 430
+Base mode: 404
+[+] No signal
+[+] Time Elapse: 0s, 160480258ns
+[+] Group 6:
+Attack mode: 394
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160651255ns
+[+] Group 7:
+Attack mode: 566
+Base mode: 571
+[+] No signal
+[+] Time Elapse: 0s, 179414476ns
+[+] Try 25: Pick Target addr:0xfffff7de2900 for P+P set 3
+[+] Group 0:
+Attack mode: 455
+Base mode: 401
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 160214929ns
+[+] Group 0:
+Attack mode: 569
+Base mode: 560
+[+] No signal
+[+] Time Elapse: 0s, 160760712ns
+[+] Group 1:
+Attack mode: 393
+Base mode: 392
+[+] No signal
+[+] Time Elapse: 0s, 160295887ns
+[+] Group 2:
+Attack mode: 401
+Base mode: 447
+[+] No signal
+[+] Time Elapse: 0s, 160466591ns
+[+] Group 3:
+Attack mode: 398
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160358760ns
+[+] Group 4:
+Attack mode: 407
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160265845ns
+[+] Group 5:
+Attack mode: 414
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160426051ns
+[+] Group 6:
+Attack mode: 400
+Base mode: 393
+[+] No signal
+[+] Time Elapse: 0s, 161984274ns
+[+] Group 7:
+Attack mode: 385
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160382677ns
+[+] Try 26: Pick Target addr:0xfffff7de6900 for P+P set 3
+[+] Group 0:
+Attack mode: 395
+Base mode: 405
+[+] No signal
+[+] Time Elapse: 0s, 159986642ns
+[+] Group 1:
+Attack mode: 384
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 162823635ns
+[+] Group 2:
+Attack mode: 393
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160259262ns
+[+] Group 3:
+Attack mode: 391
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160317511ns
+[+] Group 4:
+Attack mode: 380
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160519841ns
+[+] Group 5:
+Attack mode: 388
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 160133598ns
+[+] Group 6:
+Attack mode: 392
+Base mode: 395
+[+] No signal
+[+] Time Elapse: 0s, 159922101ns
+[+] Group 7:
+Attack mode: 391
+Base mode: 397
+[+] No signal
+[+] Time Elapse: 0s, 160145972ns
+[+] Try 27: Pick Target addr:0xfffff7dea900 for P+P set 3
+[+] Group 0:
+Attack mode: 456
+Base mode: 559
+[+] No signal
+[+] Time Elapse: 0s, 160292179ns
+[+] Group 1:
+Attack mode: 403
+Base mode: 414
+[+] No signal
+[+] Time Elapse: 0s, 160220179ns
+[+] Group 2:
+Attack mode: 402
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160172138ns
+[+] Group 3:
+Attack mode: 394
+Base mode: 382
+[+] No signal
+[+] Time Elapse: 0s, 159948518ns
+[+] Group 4:
+Attack mode: 387
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160104806ns
+[+] Group 5:
+Attack mode: 398
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160106306ns
+[+] Group 6:
+Attack mode: 400
+Base mode: 389
+[+] No signal
+[+] Time Elapse: 0s, 160255637ns
+[+] Group 7:
+Attack mode: 385
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160329219ns
+[+] Try 28: Pick Target addr:0xfffff7dee900 for P+P set 3
+[+] Group 0:
+Attack mode: 381
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160278846ns
+[+] Group 1:
+Attack mode: 384
+Base mode: 385
+[+] No signal
+[+] Time Elapse: 0s, 160190471ns
+[+] Group 2:
+Attack mode: 392
+Base mode: 391
+[+] No signal
+[+] Time Elapse: 0s, 160137181ns
+[+] Group 3:
+Attack mode: 386
+Base mode: 442
+[+] No signal
+[+] Time Elapse: 0s, 160214054ns
+[+] Group 4:
+Attack mode: 554
+Base mode: 553
+[+] No signal
+[+] Time Elapse: 0s, 160191763ns
+[+] Group 5:
+Attack mode: 390
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160308177ns
+[+] Group 6:
+Attack mode: 397
+Base mode: 398
+[+] No signal
+[+] Time Elapse: 0s, 160032141ns
+[+] Group 7:
+Attack mode: 389
+Base mode: 387
+[+] No signal
+[+] Time Elapse: 0s, 160136597ns
+[+] Try 29: Pick Target addr:0xfffff7df2900 for P+P set 3
+[+] Group 0:
+Attack mode: 404
+Base mode: 410
+[+] No signal
+[+] Time Elapse: 0s, 160092848ns
+[+] Group 1:
+Attack mode: 553
+Base mode: 554
+[+] No signal
+[+] Time Elapse: 0s, 160425926ns
+[+] Group 2:
+Attack mode: 430
+Base mode: 388
+[+] No signal
+[+] Time Elapse: 0s, 160089973ns
+[+] Group 3:
+Attack mode: 401
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160229804ns
+[+] Group 4:
+Attack mode: 399
+Base mode: 384
+[+] No signal
+[+] Time Elapse: 0s, 160156014ns
+[+] Group 5:
+Attack mode: 395
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160320636ns
+[+] Group 6:
+Attack mode: 554
+Base mode: 556
+[+] No signal
+[+] Time Elapse: 0s, 160388759ns
+[+] Group 7:
+Attack mode: 380
+Base mode: 379
+[+] No signal
+[+] Time Elapse: 0s, 160453092ns
+[+] Try 30: Pick Target addr:0xfffff7df6900 for P+P set 3
+[+] Group 0:
+Attack mode: 394
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160635297ns
+[+] Group 1:
+Attack mode: 393
+Base mode: 409
+[+] No signal
+[+] Time Elapse: 0s, 160067015ns
+[+] Group 2:
+Attack mode: 412
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160816961ns
+[+] Group 3:
+Attack mode: 387
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160132014ns
+[+] Group 4:
+Attack mode: 386
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160777919ns
+[+] Group 5:
+Attack mode: 382
+Base mode: 390
+[+] No signal
+[+] Time Elapse: 0s, 160461675ns
+[+] Group 6:
+Attack mode: 391
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160686379ns
+[+] Group 7:
+Attack mode: 388
+Base mode: 417
+[+] No signal
+[+] Time Elapse: 0s, 160200346ns
+[+] Try 31: Pick Target addr:0xfffff7dfa900 for P+P set 3
+[+] Group 0:
+Attack mode: 404
+Base mode: 559
+[+] No signal
+[+] Time Elapse: 0s, 160480800ns
+[+] Group 1:
+Attack mode: 413
+Base mode: 394
+[+] No signal
+[+] Time Elapse: 0s, 160426259ns
+[+] Group 2:
+Attack mode: 394
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 160314970ns
+[+] Group 3:
+Attack mode: 560
+Base mode: 559
+[+] No signal
+[+] Time Elapse: 0s, 160521008ns
+[+] Group 4:
+Attack mode: 382
+Base mode: 386
+[+] No signal
+[+] Time Elapse: 0s, 160487383ns
+[+] Group 5:
+Attack mode: 414
+Base mode: 383
+[+] No signal
+[+] Time Elapse: 0s, 161488116ns
+[+] Group 6:
+Attack mode: 887
+Base mode: 573
+[+] Get Signal (1)
+[+] Time Elapse: 0s, 168720868ns
+[+] Group 6:
+Attack mode: 1008
+Base mode: 402
+[+] Get Signal (2)
+[+] Time Elapse: 0s, 166504572ns
+[+] Group 6:
+Attack mode: 671
+Base mode: 443
+[+] Get Signal (3)
+[+] Get Attack Gadgets!
+--------------------------------Start Leaking-----------------------------
+Attack mode: 384
+Base mode: 387
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160152889ns
+[+] measure times: 1
+Attack mode: 430
+Base mode: 403
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 166783525ns
+[+] measure times: 2
+Attack mode: 561
+Base mode: 565
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 162442266ns
+[+] measure times: 3
+Attack mode: 567
+Base mode: 548
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160359844ns
+[+] measure times: 4
+Attack mode: 410
+Base mode: 388
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160224430ns
+[+] measure times: 5
+Attack mode: 433
+Base mode: 401
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160223929ns
+[+] measure times: 6
+Attack mode: 389
+Base mode: 386
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159968267ns
+[+] measure times: 7
+Attack mode: 555
+Base mode: 554
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160423009ns
+[+] measure times: 8
+Attack mode: 395
+Base mode: 403
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160764545ns
+[+] measure times: 9
+Attack mode: 401
+Base mode: 406
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160632506ns
+[+] measure times: 10
+Attack mode: 395
+Base mode: 388
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159866727ns
+[+] measure times: 11
+Attack mode: 396
+Base mode: 392
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160079056ns
+[+] measure times: 12
+Attack mode: 401
+Base mode: 410
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160006767ns
+[+] measure times: 13
+Attack mode: 435
+Base mode: 554
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160401426ns
+[+] measure times: 14
+Attack mode: 555
+Base mode: 553
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160037849ns
+[+] measure times: 15
+Attack mode: 585
+Base mode: 554
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159963684ns
+[+] measure times: 16
+Attack mode: 429
+Base mode: 552
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159957476ns
+[+] measure times: 17
+Attack mode: 574
+Base mode: 552
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159948434ns
+[+] measure times: 18
+Attack mode: 584
+Base mode: 562
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160170138ns
+[+] measure times: 19
+Attack mode: 415
+Base mode: 398
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159776187ns
+[+] measure times: 20
+Attack mode: 389
+Base mode: 394
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160064682ns
+[+] measure times: 21
+Attack mode: 394
+Base mode: 389
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160185764ns
+[+] measure times: 22
+Attack mode: 391
+Base mode: 402
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159956475ns
+[+] measure times: 23
+Attack mode: 400
+Base mode: 391
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159813561ns
+[+] measure times: 24
+Attack mode: 391
+Base mode: 392
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160230388ns
+[+] measure times: 25
+Attack mode: 392
+Base mode: 392
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160119682ns
+[+] measure times: 26
+Attack mode: 402
+Base mode: 390
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159759313ns
+[+] measure times: 27
+Attack mode: 406
+Base mode: 387
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159967975ns
+[+] measure times: 28
+Attack mode: 437
+Base mode: 391
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159771979ns
+[+] measure times: 29
+Attack mode: 432
+Base mode: 385
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159803520ns
+[+] measure times: 30
+Attack mode: 392
+Base mode: 388
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160108015ns
+[+] measure times: 31
+Attack mode: 421
+Base mode: 386
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159969267ns
+[+] measure times: 32
+Attack mode: 419
+Base mode: 383
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159931601ns
+[+] measure times: 33
+Attack mode: 411
+Base mode: 387
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159857102ns
+[+] measure times: 34
+Attack mode: 561
+Base mode: 389
+[+] Secret Key is 1!
+[+] Time Elapse: 0s, 159983183ns
+[+] measure times: 35
+Attack mode: 410
+Base mode: 398
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160009016ns
+[+] measure times: 36
+Attack mode: 406
+Base mode: 388
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159892726ns
+[+] measure times: 37
+Attack mode: 439
+Base mode: 388
+[+] Secret Key is 1!
+[+] Time Elapse: 0s, 160101765ns
+[+] measure times: 38
+Attack mode: 417
+Base mode: 398
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160166931ns
+[+] measure times: 39
+Attack mode: 404
+Base mode: 397
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160207263ns
+[+] measure times: 40
+Attack mode: 391
+Base mode: 389
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159848060ns
+[+] measure times: 41
+Attack mode: 554
+Base mode: 547
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160558215ns
+[+] measure times: 42
+Attack mode: 394
+Base mode: 418
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160239138ns
+[+] measure times: 43
+Attack mode: 404
+Base mode: 385
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160036433ns
+[+] measure times: 44
+Attack mode: 387
+Base mode: 424
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160003434ns
+[+] measure times: 45
+Attack mode: 391
+Base mode: 398
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159896477ns
+[+] measure times: 46
+Attack mode: 388
+Base mode: 396
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159856103ns
+[+] measure times: 47
+Attack mode: 392
+Base mode: 389
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160015808ns
+[+] measure times: 48
+Attack mode: 391
+Base mode: 391
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160180471ns
+[+] measure times: 49
+Attack mode: 400
+Base mode: 385
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160073056ns
+[+] measure times: 50
+Attack mode: 555
+Base mode: 555
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160266845ns
+[+] measure times: 51
+Attack mode: 564
+Base mode: 554
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160091181ns
+[+] measure times: 52
+Attack mode: 429
+Base mode: 554
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 161061081ns
+[+] measure times: 53
+Attack mode: 554
+Base mode: 563
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160760420ns
+[+] measure times: 54
+Attack mode: 555
+Base mode: 393
+[+] Secret Key is 1!
+[+] Time Elapse: 0s, 160218555ns
+[+] measure times: 55
+Attack mode: 395
+Base mode: 404
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159779395ns
+[+] measure times: 56
+Attack mode: 550
+Base mode: 407
+[+] Secret Key is 1!
+[+] Time Elapse: 0s, 159984225ns
+[+] measure times: 57
+Attack mode: 393
+Base mode: 548
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159976725ns
+[+] measure times: 58
+Attack mode: 411
+Base mode: 388
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159975517ns
+[+] measure times: 59
+Attack mode: 397
+Base mode: 383
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159936434ns
+[+] measure times: 60
+Attack mode: 550
+Base mode: 384
+[+] Secret Key is 1!
+[+] Time Elapse: 0s, 160032849ns
+[+] measure times: 61
+Attack mode: 390
+Base mode: 389
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159904435ns
+[+] measure times: 62
+Attack mode: 405
+Base mode: 389
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160067807ns
+[+] measure times: 63
+Attack mode: 555
+Base mode: 552
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160606048ns
+[+] measure times: 64
+Attack mode: 552
+Base mode: 566
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160245845ns
+[+] measure times: 65
+Attack mode: 405
+Base mode: 408
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160204429ns
+[+] measure times: 66
+Attack mode: 402
+Base mode: 549
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160706546ns
+[+] measure times: 67
+Attack mode: 402
+Base mode: 403
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160289720ns
+[+] measure times: 68
+Attack mode: 408
+Base mode: 394
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159895644ns
+[+] measure times: 69
+Attack mode: 396
+Base mode: 394
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159870518ns
+[+] measure times: 70
+Attack mode: 392
+Base mode: 389
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160057683ns
+[+] measure times: 71
+Attack mode: 395
+Base mode: 395
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159914935ns
+[+] measure times: 72
+Attack mode: 756
+Base mode: 553
+[+] Secret Key is 1!
+[+] Time Elapse: 0s, 160810586ns
+[+] measure times: 73
+Attack mode: 409
+Base mode: 392
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159898477ns
+[+] measure times: 74
+Attack mode: 404
+Base mode: 391
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159945600ns
+[+] measure times: 75
+Attack mode: 567
+Base mode: 408
+[+] Secret Key is 1!
+[+] Time Elapse: 0s, 159964726ns
+[+] measure times: 76
+Attack mode: 422
+Base mode: 397
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159963350ns
+[+] measure times: 77
+Attack mode: 404
+Base mode: 398
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159959017ns
+[+] measure times: 78
+Attack mode: 388
+Base mode: 391
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160072724ns
+[+] measure times: 79
+Attack mode: 432
+Base mode: 403
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159886768ns
+[+] measure times: 80
+Attack mode: 420
+Base mode: 394
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160053224ns
+[+] measure times: 81
+Attack mode: 389
+Base mode: 384
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159839602ns
+[+] measure times: 82
+Attack mode: 551
+Base mode: 409
+[+] Secret Key is 1!
+[+] Time Elapse: 0s, 159982100ns
+[+] measure times: 83
+Attack mode: 554
+Base mode: 550
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159968976ns
+[+] measure times: 84
+Attack mode: 548
+Base mode: 389
+[+] Secret Key is 1!
+[+] Time Elapse: 0s, 159979308ns
+[+] measure times: 85
+Attack mode: 764
+Base mode: 396
+[+] Secret Key is 1!
+[+] Time Elapse: 0s, 160267887ns
+[+] measure times: 86
+Attack mode: 384
+Base mode: 391
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160133430ns
+[+] measure times: 87
+Attack mode: 391
+Base mode: 433
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160468300ns
+[+] measure times: 88
+Attack mode: 554
+Base mode: 624
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 163433375ns
+[+] measure times: 89
+Attack mode: 545
+Base mode: 768
+[+] Noisy Measuremnts!
+[+] Time Elapse: 0s, 171582652ns
+[+] measure times: 90
+Attack mode: 386
+Base mode: 389
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160071516ns
+[+] measure times: 91
+Attack mode: 393
+Base mode: 398
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159915434ns
+[+] measure times: 92
+Attack mode: 386
+Base mode: 385
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159929267ns
+[+] measure times: 93
+Attack mode: 397
+Base mode: 395
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160087723ns
+[+] measure times: 94
+Attack mode: 384
+Base mode: 388
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159824269ns
+[+] measure times: 95
+Attack mode: 386
+Base mode: 388
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 163016506ns
+[+] measure times: 96
+Attack mode: 434
+Base mode: 550
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160595298ns
+[+] measure times: 97
+Attack mode: 555
+Base mode: 403
+[+] Secret Key is 1!
+[+] Time Elapse: 0s, 160314344ns
+[+] measure times: 98
+Attack mode: 398
+Base mode: 387
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 160021724ns
+[+] measure times: 99
+Attack mode: 400
+Base mode: 396
+[+] Secret Key is 0!
+[+] Time Elapse: 0s, 159818686ns
+[+] measure times: 100
+Terminated.
