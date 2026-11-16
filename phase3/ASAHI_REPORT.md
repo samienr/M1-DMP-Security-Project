@@ -267,3 +267,76 @@ stdout for each run, `ctswap_sk{0,1}.txt` -- raw per-round P+P latencies,
 per-boot-session (regenerate with `setarch $(uname -m) -R
 ./target/release/examples/linux_dyld_search` before any future run) and
 isn't meant to be committed as a fixed value.
+
+## Attempt to raise Primitive B's detection rate (paused, inconclusive)
+
+Follow-up work, started after the above, to try to improve on the 11%
+true-positive rate.
+
+**Lever 1 (tried, confirmed not to help): lower the attack-base diff
+threshold.** The attacker's `Secret Key is 1!` classification requires
+`attack_median - base_median > 50` (ticks), a magic number hardcoded in
+`ctswap_attacker.rs` in two places. A retrospective ROC-style sweep of the
+*already-collected* sk0/sk1 round data (full attack/base medians are
+printed every round, not just the final verdict, so this needed no new
+runs) suggested lowering the cutoff to 10 would raise TPR from 11% to 41%
+at the same 0% FPR. That didn't hold up: the threshold was exposed as a
+new optional 4th CLI arg (`diff_threshold`, defaults to 50 if omitted, so
+old invocations are unaffected) and rebuilt, then tested with two full
+fresh runs (new eviction-set-gen + gadget search each, not reusing the
+earlier gadget):
+
+| threshold | secret=1 TPR | secret=0 FPR | z | p |
+|---|---|---|---|---|
+| 50 (original) | 11/100 | 0/100 | 3.412 | **0.00065** (significant) |
+| 10 | 10/100 | 4/100 | 1.663 | 0.0963 (not significant) |
+
+Lowering the threshold didn't raise TPR at all (10% vs 11%, noise) and
+measurably raised FPR (0%→4%), making the result *less* statistically
+distinguishable, not more. A per-run diagnostic (sweeping every possible
+threshold against the fresh run's own data) showed why: that run's
+attack-base diff distribution was weak noise centered near zero (best
+achievable was 51% at threshold=0, decaying fast above it) -- not a clean
+bimodal split that any cutoff could cleanly separate. Each run also
+independently discovers a *different* (eviction-set, target-address)
+gadget via random search, so this retrospective tuning was overfit to one
+run's specific noise profile and never had a mechanism to generalize.
+**Conclusion: the ceiling here is gadget quality, not the classification
+threshold** -- confirmed by direct non-circular testing, not just
+inferred.
+
+**Lever 2 (code changed, run interrupted before completion): tighten the
+gadget-acceptance bar.** The search currently accepts a gadget after only
+3 consecutive `attack_median - base_median > diff_threshold` hits
+(`repetitions=16` samples each) -- a loose bar that two independent search
+runs both cleared with gadgets that turned out to carry only weak signal.
+Raised to 5 consecutive hits in `ctswap_attacker.rs` (with threshold back
+at the better-performing 50), on the reasoning that a stricter bar should
+reject marginal/lucky gadgets and keep searching for a more reliably-
+triggering one, at the cost of a longer search. **This run was started but
+had to be killed mid-search** (machine needed to reboot into another OS)
+-- it had not yet found a gadget (still iterating page offsets, "No
+signal" at the point it was stopped), so there's no result yet, positive
+or negative. The code change is committed; **next step on resume is just
+to re-run it**:
+```bash
+# regenerate the (boot-session-specific) dyld_space.txt first
+cd phase2/GoFetch/poc/crypto_attacker
+setarch "$(uname -m)" -R ./target/release/examples/linux_dyld_search
+# victim (separate terminal/background), secret 0 or 1
+cd ../crypto_victim && setarch "$(uname -m)" -R ./target/release/examples/ctswap_victim 1
+# attacker: repetitions=16, pp_threshold=680, num_group=8, diff_threshold=50
+cd ../crypto_attacker && setarch "$(uname -m)" -R ./target/release/examples/ctswap_attacker 16 680 8 50
+```
+Run it against both a secret=1 and a secret=0 victim (full independent
+search each time, ~7-15+ min per run with the stricter bar) and compare
+TPR/FPR the same way as above (or just feed both logs to
+`phase3/PrimitiveB/analyze_ctswap_linux.py`).
+
+**Other untried levers worth considering if lever 2 also doesn't move the
+needle:** raising `repetitions` itself (16 -> 32, matching GoFetch's own
+README example value) to shrink per-round variance throughout both the
+search and measurement phases; or running several independent full
+searches and keeping whichever discovered gadget shows the cleanest
+calibration-phase separation, rather than accepting the first one that
+clears the acceptance bar.
