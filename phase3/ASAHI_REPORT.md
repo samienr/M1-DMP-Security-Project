@@ -417,12 +417,9 @@ the acceptance bar does not fix weak-gadget quality; it just makes the
 search far more likely to fail outright (51 minutes to scan the entire
 non-conflicting-evset space with zero qualifying gadgets, vs. ~200s for
 lever 1's 3-hit bar to find *a* gadget, even a weak one) while providing
-no guaranteed improvement when it does succeed. **Recommendation: revert
-to the original 3-hit bar** (lever 2's code change is `diff_threshold`-gated
-via a 5th CLI arg in some iterations of this work -- see
-`ctswap_attacker.rs` for the current hardcoded value, 5, which should be
-reverted to 3 for any future run) as the best-performing configuration
-found so far (11% TPR / 0% FPR, p=0.00065). The real ceiling, confirmed
+no guaranteed improvement when it does succeed. **Reverted to the original
+3-hit bar** in `ctswap_attacker.rs` (rebuilt) as the best-performing
+configuration found so far (11% TPR / 0% FPR, p=0.00065). The real ceiling, confirmed
 twice now by two independent, non-circular levers, is gadget quality and
 search-space noise intrinsic to this hardware/timer combination, not the
 final classification threshold or the search's acceptance bar.
@@ -438,3 +435,69 @@ that clears the acceptance bar.
 Artifacts: `phase3/PrimitiveB/results/{attacker_sk0_lever2.log,
 attacker_sk1_lever2.log, ctswap_sk0_lever2.txt, ctswap_sk1_lever2.txt,
 ctswap_bench_sk0_lever2.txt, ctswap_bench_sk1_lever2.txt}`.
+
+## Why does the paper's ct-swap result look cleaner than ours?
+
+After both tuning levers failed, it's worth directly comparing our
+methodology against the GoFetch paper's own (`HW Security Term
+Project/usenixsecurity24-chen-boru.pdf`, Section 5, "Attacking
+Constant-Time Conditional Swap") rather than just asserting we fall short
+of it.
+
+**The paper doesn't actually report a single ct-swap accuracy percentage
+either.** Section 5.2 describes running **3200 trials per secret value**
+(32x our 100-round measurement) and presents the result qualitatively, as
+a "clearly distinguishable" bimodal Prime+Probe latency histogram
+(their Figure 9, ~600-800 tick range) -- not a TPR/FPR table. A much
+larger sample size makes an aggregate picture look cleaner even without a
+better per-trial signal-to-noise ratio; it doesn't by itself mean their
+per-trial channel was less noisy than ours, just that they characterized
+it with 32x the data we used for our final measurement.
+
+**Checked and ruled out: core pinning.** The code pins the attacker's
+main/flush/timer threads to CPU 4-6 and the victim to CPU 7
+(`evict-rs/src/lib.rs`, `ctswap_attacker.rs`, `ctswap_victim.rs`). The
+original macOS `pin_cpu()` only ever set a QoS class as a scheduling
+*hint* (`cpu_id <= 3` -> `QOS_CLASS_BACKGROUND`, `cpu_id <= 7` ->
+`QOS_CLASS_USER_INTERACTIVE`), implicitly assuming cores 0-3 are
+efficiency cores and 4-7 are performance cores. Verified directly on this
+machine via `/proc/device-tree/cpus/cpu@{0..7}/compatible` and
+`/sys/.../cpufreq/scaling_max_freq`: cores 0-3 are indeed
+`apple,icestorm` (E-cores, 2.064 GHz max) and 4-7 are the Firestorm P-cores
+(2.988 GHz max, `compatible` string absent/different, consistent with a
+distinct cluster). So the Linux port's hard `sched_setaffinity` pin to
+cores 4-7 for all four timing-critical threads is landing them on real
+P-cores correctly -- if anything this is a *harder* guarantee than macOS's
+own soft QoS hint (same conclusion as the Primitive A pinning finding
+above), not a source of extra noise. This was a real hypothesis worth
+checking, not just a hand-wave -- it came back negative.
+
+**Most likely real factor (already identified above, restated for
+context): uncalibrated thresholds.** `pp_threshold=680` and
+`diff_threshold=50` were carried over unchanged from the macOS README's
+own example invocation and never independently recalibrated against this
+machine's actual Linux/Asahi `CounterTimer` tick-rate and L2 hit/miss
+latency distribution. The paper's authors presumably tuned their
+equivalent constants for their own test rig; we never ran an equivalent
+calibration sweep for Primitive B the way `phase0_skeleton/calibrate.py`
+did for Primitive A's PMC-adjacent timing.
+
+**Large, directly-demonstrated run-to-run gadget-quality variance.** This
+session's own two lever-2 runs are direct evidence: one random
+compound-eviction-set search (secret=0) found a gadget with a clean
+~200-tick attack/base separation on its first few tries; a different run
+(secret=1, same code, same machine, same boot session) exhausted the
+*entire* 47-candidate search space and found nothing usable at all. Lever
+1's two independently-discovered gadgets were both weak (10-11% TPR). The
+paper's one published Figure 9 is plausibly closer to a best-case draw
+from this same quality distribution -- not evidence that every run on
+every M1 unit converges this cleanly, or that our port is systematically
+inferior for a fixed gadget.
+
+**Still untested, genuinely unknown:** whether Asahi Linux's
+reverse-engineered memory-management stack (physical-page allocation
+behavior, cache-maintenance op implementations, DVFS governor behavior)
+produces "good" compound eviction sets less often than Apple's native
+XNU kernel on the same silicon. This would be a legitimate, interesting
+Phase-4-style characterization question, but nothing measured so far
+isolates it as a cause -- it remains a hypothesis, not a finding.
