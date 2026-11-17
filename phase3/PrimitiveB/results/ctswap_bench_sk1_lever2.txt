@@ -1,0 +1,2 @@
+64 evset gen time: 146 s
+Compound Evset finding time: 3069 s

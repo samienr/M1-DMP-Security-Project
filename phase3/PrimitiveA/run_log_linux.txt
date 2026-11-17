@@ -1,0 +1,89 @@
+=== Run 1 (seed 1) ===
+trial 10: failed to parse output, skipping
+trial 63: failed to parse output, skipping
+trial 298: failed to parse output, skipping
+trial 423: failed to parse output, skipping
+======================================================================
+Primitive A (Augury Algorithm 3) -- mach_absolute_time results
+======================================================================
+Trials:              496 (of 500 requested)
+Accuracy:            77.4% (384/496)
+95% CI (Wilson):     [73.5%, 80.9%]
+
+Augury paper, PMC timer:              92.0%  (not reproduced -- see header note)
+Augury paper, mach_absolute_time:      70.2%
+This replication, mach_absolute_time:  77.4%  (delta: +7.2 pts)
+
+Hit/miss timing separation (first-probe reading, in timer units):
+  chosen candidate (expected: fast/hit) (n=496):
+    [   0-0   ]  0
+    [   1-1   ]  0
+    [   2-3   ]  0
+    [   4-7   ]  0
+    [   8-15  ]  0
+    [  16-31  ]  0
+    [  32-63  ] ######################################## 313
+    [  64-127 ] ####### 57
+    [ 128-255 ] ### 31
+    [ 256+    ] ############ 95
+  other candidates (expected: slow/miss) (n=992):
+    [   0-0   ]  0
+    [   1-1   ]  0
+    [   2-3   ]  0
+    [   4-7   ]  0
+    [   8-15  ]  0
+    [  16-31  ]  0
+    [  32-63  ] #### 74
+    [  64-127 ]  17
+    [ 128-255 ] ########### 207
+    [ 256+    ] ######################################## 694
+
+Wrote per-trial data to out_mach_linux_1.csv
+
+=== Run 2 (seed 2) ===
+trial 9: failed to parse output, skipping
+trial 80: failed to parse output, skipping
+trial 87: failed to parse output, skipping
+trial 153: failed to parse output, skipping
+trial 184: failed to parse output, skipping
+trial 295: failed to parse output, skipping
+trial 335: failed to parse output, skipping
+trial 370: failed to parse output, skipping
+trial 444: failed to parse output, skipping
+trial 479: failed to parse output, skipping
+======================================================================
+Primitive A (Augury Algorithm 3) -- mach_absolute_time results
+======================================================================
+Trials:              490 (of 500 requested)
+Accuracy:            75.1% (368/490)
+95% CI (Wilson):     [71.1%, 78.7%]
+
+Augury paper, PMC timer:              92.0%  (not reproduced -- see header note)
+Augury paper, mach_absolute_time:      70.2%
+This replication, mach_absolute_time:  75.1%  (delta: +4.9 pts)
+
+Hit/miss timing separation (first-probe reading, in timer units):
+  chosen candidate (expected: fast/hit) (n=490):
+    [   0-0   ]  0
+    [   1-1   ]  0
+    [   2-3   ]  0
+    [   4-7   ]  0
+    [   8-15  ]  0
+    [  16-31  ]  0
+    [  32-63  ] ######################################## 305
+    [  64-127 ] ###### 46
+    [ 128-255 ] ### 28
+    [ 256+    ] ############## 111
+  other candidates (expected: slow/miss) (n=980):
+    [   0-0   ]  0
+    [   1-1   ]  0
+    [   2-3   ]  0
+    [   4-7   ]  0
+    [   8-15  ]  0
+    [  16-31  ]  0
+    [  32-63  ] ## 49
+    [  64-127 ] # 25
+    [ 128-255 ] ############ 210
+    [ 256+    ] ######################################## 696
+
+Wrote per-trial data to out_mach_linux_2.csv

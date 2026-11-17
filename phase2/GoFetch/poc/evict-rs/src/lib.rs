@@ -28,6 +28,13 @@ const KB: usize = 1024;
 const MB: usize = 1024 * 1024;
 
 /* pin cpu */
+// `libc::pthread_set_qos_class_self_np`/`qos_class_t` only exist in the
+// `libc` crate's macOS bindings -- this function previously failed to even
+// *compile* on Linux (not just fail at runtime), since those symbols don't
+// exist in `libc`'s Linux surface at all. Ported the same way as
+// augury/util/linux-util.c and libaugury-ffi-sys's c_augury.c: pin to the
+// exact requested core via sched_setaffinity instead of a QOS class.
+#[cfg(target_os = "macos")]
 pub unsafe fn pin_cpu(cpu_id: usize) {
     if cpu_id <= 3 {
         libc::pthread_set_qos_class_self_np(libc::qos_class_t::QOS_CLASS_BACKGROUND, 0);
@@ -36,6 +43,17 @@ pub unsafe fn pin_cpu(cpu_id: usize) {
     } else {
         panic!("error! make sure 0 <= core_no <= 7");
     }
+}
+
+#[cfg(not(target_os = "macos"))]
+pub unsafe fn pin_cpu(cpu_id: usize) {
+    let mut set: libc::cpu_set_t = std::mem::zeroed();
+    libc::CPU_ZERO(&mut set);
+    libc::CPU_SET(cpu_id, &mut set);
+    if libc::sched_setaffinity(0, std::mem::size_of::<libc::cpu_set_t>(), &set) < 0 {
+        panic!("pin_cpu: sched_setaffinity failed");
+    }
+    libc::setpriority(libc::PRIO_PROCESS, 0, -20);
 }
 
 /* L2 Eviction Set Generation Algorithm set */
