@@ -294,21 +294,18 @@ fn ctswap_hacker(
                     succeed_times += 1;
                     noise_times = 0;
                     println!("[+] Get Signal ({})", succeed_times);
-                    // Raised from the original 3: on this machine's timer,
-                    // two independently-discovered gadgets that cleared a
-                    // 3-consecutive-hit bar both turned out to carry only
-                    // weak signal (10-11% true-positive rate at 0% false-
-                    // positive rate -- see phase3/ASAHI_REPORT.md). A
-                    // post-hoc threshold sweep on the resulting data found
-                    // no cutoff that fixed this, since the per-round
-                    // (attack-base) gap distribution itself was weak noise
-                    // centered near zero, not a clean bimodal signal --
-                    // i.e. the problem was gadget quality, not the final
-                    // classification threshold. Requiring more consecutive
-                    // hits here makes the *search* itself more selective,
-                    // rejecting marginal gadgets that only clear the bar by
-                    // chance, at the cost of a longer search.
-                    if succeed_times >= 5 {
+                    // Tried raising this to 5 (requiring more consecutive
+                    // hits, on the theory that a stricter bar would reject
+                    // marginal/lucky gadgets): confirmed worse, not better
+                    // -- see phase3/ASAHI_REPORT.md. Against a secret=1
+                    // victim it exhausted the entire 47-evset search space
+                    // without ever finding a qualifying gadget at all (0%
+                    // TPR, vs. 11% at the original bar of 3); against a
+                    // secret=0 victim it did find one, but that run's FPR
+                    // was already 0% at the original bar too, so it wasn't
+                    // an improvement on the metric that mattered. Reverted
+                    // to the original, better-performing value of 3.
+                    if succeed_times >= 3 {
                         gadget_flag = 1;
                         println!("[+] Get Attack Gadgets!");
                         break;

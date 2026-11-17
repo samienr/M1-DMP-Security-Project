@@ -12,6 +12,44 @@ primitives on Asahi directly, at the user's request -- treat the Primitive B
 section as exploratory/novel-investigation material, not a substitute for
 the planned macOS Primitive B replication.
 
+## Summary / key takeaways
+
+- **Primitive A (Augury OOB read): reproduced, and beats its own baseline.**
+  76.3% pooled accuracy on Linux `clock_gettime`, higher than both this
+  project's own macOS run (48.3%) and the paper's own macOS
+  `mach_absolute_time` figure (70.2%). Likely explanation: Linux
+  `sched_setaffinity` is a hard pin, macOS's QoS-based `pin_cpu()` is only a
+  scheduling hint -- plausible but not yet confirmed with a dedicated
+  pinned-vs-unpinned control measurement.
+- **Primitive B (GoFetch ct-swap): a real but weak secret-dependent DMP
+  channel exists on this hardware**, and required a substantial from-scratch
+  Linux port (no macOS-only `dyld_search`/`kperf`/QoS APIs survive the
+  move). Best measured config: 11% TPR / 0% FPR, p=0.00065 -- statistically
+  real, but far below the paper's own macOS numbers.
+- **Two independent attempts to improve Primitive B's detection rate both
+  failed, and the second made things actively worse.** Lowering the
+  classification threshold (50→10) traded a flat TPR for a higher FPR,
+  losing significance (p=0.00065→0.096). Raising the search's
+  gadget-acceptance bar (3→5 consecutive hits) was worse still: against a
+  secret=1 victim it exhausted the *entire* 47-eviction-set search space
+  (~51 min) without ever finding a qualifying gadget at all (0% TPR,
+  p=1.00, not significant). **Both negative results independently point to
+  the same root cause: gadget quality / search-space noise intrinsic to
+  this hardware-timer combination, not the final classification threshold
+  or the search's acceptance bar.** Neither is a tunable knob here --
+  recommend keeping the original 3-hit/threshold-50 configuration as the
+  best-known-good baseline, and pursuing the untried levers noted at the
+  end of that section (higher `repetitions`, multiple independent searches
+  kept-best) only if more time is available.
+- **Operational note for future long sessions on this hardware:** this
+  machine suspends to `s2idle` on idle/lid-close by default. A multi-hour
+  background `ctswap_attacker` search survives a brief suspend/resume
+  unharmed (Linux freezes rather than kills processes, and the
+  attacker/victim link is loopback TCP, unaffected by network-sleep
+  teardown) -- but `systemd-inhibit --what=sleep:idle --mode=block sleep
+  infinity` (killed when done) is worth running proactively before kicking
+  off any search expected to run past 20-30 minutes, as this session's did.
+
 ## Primitive A (Augury Algorithm 3, OOB read) — done
 
 `augury/oob-poc.c`'s Linux timer path (already present in the repo at
@@ -68,7 +106,7 @@ essential, but is cheap to re-run (`python3 drive_oob_poc.py
 Artifacts: `phase3/PrimitiveA/oob-poc-mach-linux` (binary),
 `out_mach_linux_1.csv`, `out_mach_linux_2.csv`, `run_log_linux.txt`.
 
-## Primitive B (GoFetch ct-swap, Section 5) — ported and running; gadget search in progress
+## Primitive B (GoFetch ct-swap, Section 5) — ported, run to completion, weak real signal confirmed
 
 ### Why this needed a real port, not just a recompile
 
@@ -268,10 +306,13 @@ per-boot-session (regenerate with `setarch $(uname -m) -R
 ./target/release/examples/linux_dyld_search` before any future run) and
 isn't meant to be committed as a fixed value.
 
-## Attempt to raise Primitive B's detection rate (paused, inconclusive)
+## Attempt to raise Primitive B's detection rate (both levers tried, neither helped)
 
 Follow-up work, started after the above, to try to improve on the 11%
-true-positive rate.
+true-positive rate. Two levers were tried; neither improved on the
+original 3-hit/50-threshold configuration, and the second made things
+worse. **Current recommendation: keep the original configuration** (11%
+TPR / 0% FPR at threshold=50, 3-consecutive-hit bar).
 
 **Lever 1 (tried, confirmed not to help): lower the attack-base diff
 threshold.** The attacker's `Secret Key is 1!` classification requires
@@ -305,38 +346,95 @@ run's specific noise profile and never had a mechanism to generalize.
 threshold** -- confirmed by direct non-circular testing, not just
 inferred.
 
-**Lever 2 (code changed, run interrupted before completion): tighten the
-gadget-acceptance bar.** The search currently accepts a gadget after only
-3 consecutive `attack_median - base_median > diff_threshold` hits
-(`repetitions=16` samples each) -- a loose bar that two independent search
-runs both cleared with gadgets that turned out to carry only weak signal.
-Raised to 5 consecutive hits in `ctswap_attacker.rs` (with threshold back
-at the better-performing 50), on the reasoning that a stricter bar should
-reject marginal/lucky gadgets and keep searching for a more reliably-
-triggering one, at the cost of a longer search. **This run was started but
-had to be killed mid-search** (machine needed to reboot into another OS)
--- it had not yet found a gadget (still iterating page offsets, "No
-signal" at the point it was stopped), so there's no result yet, positive
-or negative. The code change is committed; **next step on resume is just
-to re-run it**:
-```bash
-# regenerate the (boot-session-specific) dyld_space.txt first
-cd phase2/GoFetch/poc/crypto_attacker
-setarch "$(uname -m)" -R ./target/release/examples/linux_dyld_search
-# victim (separate terminal/background), secret 0 or 1
-cd ../crypto_victim && setarch "$(uname -m)" -R ./target/release/examples/ctswap_victim 1
-# attacker: repetitions=16, pp_threshold=680, num_group=8, diff_threshold=50
-cd ../crypto_attacker && setarch "$(uname -m)" -R ./target/release/examples/ctswap_attacker 16 680 8 50
-```
-Run it against both a secret=1 and a secret=0 victim (full independent
-search each time, ~7-15+ min per run with the stricter bar) and compare
-TPR/FPR the same way as above (or just feed both logs to
-`phase3/PrimitiveB/analyze_ctswap_linux.py`).
+**Lever 2 (tried to completion, confirmed not to help -- makes things
+worse): tighten the gadget-acceptance bar.** The search originally accepts
+a gadget after only 3 consecutive `attack_median - base_median >
+diff_threshold` hits (`repetitions=16` samples each) -- a loose bar that
+two independent search runs both cleared with gadgets that turned out to
+carry only weak signal. Raised to 5 consecutive hits in
+`ctswap_attacker.rs` (with threshold back at the better-performing 50), on
+the reasoning that a stricter bar should reject marginal/lucky gadgets and
+keep searching for a more reliably-triggering one, at the cost of a longer
+search. An earlier attempt at this run was killed mid-search by a machine
+reboot with no result either way; it was resumed and run to completion
+against both a secret=1 and a secret=0 victim (fresh eviction-set-gen +
+gadget search each, no state reused):
 
-**Other untried levers worth considering if lever 2 also doesn't move the
-needle:** raising `repetitions` itself (16 -> 32, matching GoFetch's own
-README example value) to shrink per-round variance throughout both the
-search and measurement phases; or running several independent full
-searches and keeping whichever discovered gadget shows the cleanest
-calibration-phase separation, rather than accepting the first one that
-clears the acceptance bar.
+| victim | evset gen | gadget search | outcome |
+|---|---|---|---|
+| secret=1 | 146s | 3069s (~51 min) | **no gadget found** -- exhausted all 47 non-conflicting eviction sets without any clearing the 5-hit bar |
+| secret=0 | 948s (~16 min) | 793s (~13 min) | gadget found at eviction set 11/46, with a clean separation (attack/base medians ~600/~395, a ~200-tick gap vs. the noisy ~20-tick gaps lever 1's gadgets showed) |
+
+Measurement phase (100 rounds each):
+
+| | predicted "1" | predicted "0" | noisy |
+|---|---|---|---|
+| **secret=1 victim** (n=100) | 0 | 95 | 5 |
+| **secret=0 victim** (n=100) | 0 | 100 | 0 |
+
+```
+P(report "1" | secret=1) = 0.0%   95% CI [0.0%, 3.7%]
+P(report "1" | secret=0) = 0.0%   95% CI [0.0%, 3.7%]
+
+Two-proportion z-test: z = 0.000, two-sided p = 1.00000  (NOT significant)
+```
+
+**Reproduce:** `python3 phase3/PrimitiveB/analyze_ctswap_linux.py
+phase3/PrimitiveB/results/attacker_sk1_lever2.log
+phase3/PrimitiveB/results/attacker_sk0_lever2.log`
+
+Compare to lever 1's p=0.00065 (significant): lever 2 doesn't just fail to
+improve things, it destroys the one statistically-significant result this
+project had found.
+
+The secret=0 run's 100%-correct, 0-noisy result looks impressive in
+isolation, but it is not comparable to lever 1's TPR/FPR table: FPR
+(P(report "1" | secret=0)) was *already* 0% under the original 3-hit bar,
+so this is not an improvement on the dimension lever 2 was meant to fix.
+The dimension that actually mattered -- TPR against a secret=1 victim --
+is unambiguously worse under lever 2: the search never found a qualifying
+gadget at all across the full 47-evset space, so the measurement phase ran
+against an unvalidated fallback address and produced garbage (0% TPR,
+worse than lever 1's already-weak 11%).
+
+**Why the asymmetry between the two victims:** the gadget search talks to
+the live victim process throughout (not a secret-blind calibration step),
+so the search's own success is itself secret-dependent -- whether a given
+(eviction-set, target-address) pair produces a clean DMP-triggering signal
+depends on where the real swap places the pointer under *that victim's own
+fixed secret*. On this hardware, with this timer, at this stricter bar,
+a qualifying gadget happened to exist in the available search space for
+the secret=0 case and not for the secret=1 case. That is itself useful
+information (it says the achievable gadget quality is highly
+run-dependent, consistent with lever 1's finding that two independently-
+discovered gadgets had very different quality), but it means lever 2's
+two runs cannot be read as a paired secret=1-vs-secret=0 comparison of one
+fixed gadget -- each run discovers and evaluates its own gadget against
+its own victim, same as lever 1.
+
+**Conclusion: lever 2 is a net negative, not just neutral.** Tightening
+the acceptance bar does not fix weak-gadget quality; it just makes the
+search far more likely to fail outright (51 minutes to scan the entire
+non-conflicting-evset space with zero qualifying gadgets, vs. ~200s for
+lever 1's 3-hit bar to find *a* gadget, even a weak one) while providing
+no guaranteed improvement when it does succeed. **Recommendation: revert
+to the original 3-hit bar** (lever 2's code change is `diff_threshold`-gated
+via a 5th CLI arg in some iterations of this work -- see
+`ctswap_attacker.rs` for the current hardcoded value, 5, which should be
+reverted to 3 for any future run) as the best-performing configuration
+found so far (11% TPR / 0% FPR, p=0.00065). The real ceiling, confirmed
+twice now by two independent, non-circular levers, is gadget quality and
+search-space noise intrinsic to this hardware/timer combination, not the
+final classification threshold or the search's acceptance bar.
+
+**Other untried levers worth considering for future work:** raising
+`repetitions` itself (16 -> 32, matching GoFetch's own README example
+value) to shrink per-round variance throughout both the search and
+measurement phases; or running several independent full searches (at the
+original 3-hit bar) and keeping whichever discovered gadget shows the
+cleanest calibration-phase separation, rather than accepting the first one
+that clears the acceptance bar.
+
+Artifacts: `phase3/PrimitiveB/results/{attacker_sk0_lever2.log,
+attacker_sk1_lever2.log, ctswap_sk0_lever2.txt, ctswap_sk1_lever2.txt,
+ctswap_bench_sk0_lever2.txt, ctswap_bench_sk1_lever2.txt}`.
