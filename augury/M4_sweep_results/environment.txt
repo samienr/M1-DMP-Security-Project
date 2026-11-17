@@ -1,0 +1,43 @@
+=== Environment snapshot: Mon Nov 16 22:50:06 CST 2026 ===
+--- sw_vers ---
+ProductName:		macOS
+ProductVersion:		26.6.2
+BuildVersion:		25G83
+--- uname -a ---
+Darwin Mohsens-Air.localdomain 25.6.0 Darwin Kernel Version 25.6.0: Fri Jul 31 19:11:03 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8132 arm64
+--- CPU topology ---
+brand: Apple M4
+physical cpus (total): 10
+logical cpus (total):  10
+perflevel0 (P-core?) physicalcpu: 4
+perflevel1 (E-core?) physicalcpu: 6
+--- git commit / status ---
+e38f7232e579c071f195fb4320fc013c7a56e443
+?? analyze_m4_results.py
+?? augury_m4_conclude.sh
+?? existence_fast.sh
+?? sweep_results_20261116_224432/
+?? sweep_results_20261116_225006/
+--- compiler version ---
+Apple clang version 21.0.0 (clang-2100.1.1.101)
+Target: arm64-apple-darwin25.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+--- conda env list ---
+
+# conda environments:
+#
+# * -> active
+# + -> frozen
+base                 *   /Users/uncletest/miniconda3
+augury                   /Users/uncletest/miniconda3/envs/augury
+
+--- bin/augury ---
+-rwxr-xr-x  1 uncletest  staff  51048 Nov 14 16:07 bin/augury
+--- sweep config used ---
+QUICK_MODE=0
+TRAIN_SIZES=1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192
+OFFSETS=0 1 2 3 4 5 6 7 8 9 10 12 14 16 18 20
+REPS_PER_CONFIG=5
+REPS (internal, per ./bin/augury call)=32
+CORE=7 DENSITY=16
