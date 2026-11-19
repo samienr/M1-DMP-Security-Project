@@ -66,6 +66,24 @@ the planned macOS Primitive B replication.
   explicit confound controls (ruled out AOP-proximity and mapping-overlap)
   the paper doesn't document checking -- not the underlying fact itself.
   See `phase3/AddrRangeSweep/README.md`.
+- **Follow-up, genuinely new: that "address restriction" isn't real --
+  it's AoP-to-target proximity in disguise.** Added `FORCE_ADDR` support
+  for the AoP's own address (previously only the target buffer could be
+  forced), then forced *both* close together deep inside the region the
+  Augury paper calls categorically "not dereferenceable": the DMP
+  activated fine (8/8 trials, ~4x speedup), and stopped activating when
+  the same two buffers were moved far apart in that *same* region (5/5,
+  baseline). Confirmed at a second independent low address. Quantified
+  the actual mechanism: full-strength activation out to ~3 GiB of
+  AoP-to-target separation, a sharp falloff over ~3.1-3.8 GiB, dead
+  beyond ~4 GiB -- a deterministic, reproducible distance limit the
+  paper's own Table II doesn't report (it lists the address restriction
+  as independent of its separately-documented, KiB-scale "prefetch
+  distance," which operates within the AoP's own training sequence, not
+  between the AoP and an external target). This also fully explains the
+  bimodal/probabilistic appearance of the first sweep above: AoP's own
+  ASLR'd placement was randomly sampling different points along this same
+  deterministic curve each trial. See `phase3/ProximityGating/README.md`.
 
 ## Primitive A (Augury Algorithm 3, OOB read) — done
 
@@ -179,6 +197,14 @@ Linux boundary to within ~5.3 GiB. A clean independent replication with
 tighter precision and documented confound controls, not a new discovery.
 Full method, raw sweep data, bisection transcript, and reproduce steps:
 `phase3/AddrRangeSweep/README.md`.
+
+**Follow-up (genuinely new, not in the paper): this boundary turned out
+not to be a real absolute-address effect at all.** See
+`phase3/ProximityGating/README.md` -- forcing both the AoP and the
+target buffer together, close together, deep inside this section's
+"dead zone" activates the DMP fine; the real, quantified mechanism is
+AoP-to-target proximity (full strength to ~3 GiB, dead beyond ~4 GiB),
+not either buffer's absolute location.
 
 ## Primitive B (GoFetch ct-swap, Section 5) — ported, run to completion, weak real signal confirmed
 

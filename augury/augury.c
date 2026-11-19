@@ -69,7 +69,8 @@ static void sighandler_local() {
 int main(int argc, char **argv) {
         // Check arguments
 #ifdef FORCE_ADDR
-        if (!(argc == 6 || argc == 7)) // optional: forced data buffer address
+        // optional: forced data buffer address, and optional forced aop address
+        if (!(argc == 6 || argc == 7 || argc == 8))
 #else
         if (argc != 6)
 #endif
@@ -80,15 +81,24 @@ int main(int argc, char **argv) {
                         "<num_of_train_pointers> <offs_past_train_buf> "
                         "<repetitions> "
                         "<core_ID> <AOP cl density> "
-                        "[data base address (if built with FORCE_ADDR)]\n",
+                        "[data base address (if built with FORCE_ADDR)] "
+                        "[aop base address (if built with FORCE_ADDR)]\n",
                         argv[0]);
                 exit(1);
         }
 
 #ifdef FORCE_ADDR
+        // Parse address to force aop to, if one is specified (independent
+        // of data_base_addr, to test whether DMP activation depends on the
+        // absolute address of data_buffer or on the distance between aop
+        // and data_buffer).
+        uintptr_t aop_base_addr = (uintptr_t)NULL;
+        if (argc == 8) {
+                sscanf(argv[7], "%lx", &aop_base_addr);
+        }
         // Parse address to set data base addresses to if one is specified.
         uintptr_t data_base_addr = (uintptr_t)NULL;
-        if (argc == 7) {
+        if (argc >= 7) {
                 sscanf(argv[6], "%lx", &data_base_addr);
         }
         printf("[+] data_buffer base address: 0x%lx\n", data_base_addr);
@@ -153,21 +163,31 @@ int main(int argc, char **argv) {
             size_of_memory_checked_in_testing;
 
         // Allocate memory for the AoP
-        /* const uintptr_t forced_address = 0x100f0c000; */
-        /* volatile uint64_t **aop = mmap((void*)forced_address, */
-        /* 		total_memory_allocated_for_aop, PROT_READ | PROT_WRITE,
-         */
-        /* 		MAP_ANON | MAP_FIXED | MAP_PRIVATE, -1, 0); */
+        volatile uint64_t **aop = NULL;
+#ifdef FORCE_ADDR
+        if (aop_base_addr != (uintptr_t)NULL) {
+                // Caller is responsible for passing an already 2MB-aligned
+                // address; skip the normal alignment-search dance below.
+                aop = mmap((void *)aop_base_addr, total_memory_allocated_for_aop,
+                            PROT_READ | PROT_WRITE,
+                            MAP_FIXED | MAP_ANON | MAP_PRIVATE, -1, 0);
+                assert(aop != MAP_FAILED);
+                memset(aop, 0, total_memory_allocated_for_aop);
+                printf("[+] Forced AoP address at %p\n", aop);
+        } else
+#endif
 #ifdef N2MB
-        volatile uint64_t **aop =
+        {
+        aop =
             mmap(0, total_memory_allocated_for_aop, PROT_READ | PROT_WRITE,
                  MAP_ANON | MAP_PRIVATE, -1, 0);
         assert(aop != MAP_FAILED);
         memset(aop, 0, total_memory_allocated_for_aop);
-
+        }
 #else
+        {
         // Allocate memory for a 2 MB-aligned AoP
-        volatile uint64_t **aop =
+        aop =
             mmap(0, total_memory_allocated_for_aop + MB(2),
                  PROT_READ | PROT_WRITE, MAP_ANON | MAP_PRIVATE, -1, 0);
         memset(aop, 0, total_memory_allocated_for_aop + MB(2));
@@ -178,6 +198,7 @@ int main(int argc, char **argv) {
                         printf("[+] Aligned to 2MB boundary at %p\n", aop);
                         break;
                 }
+        }
         }
 #endif
         assert(aop != MAP_FAILED);
