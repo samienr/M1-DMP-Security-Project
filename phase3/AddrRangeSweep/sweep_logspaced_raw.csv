@@ -1,0 +1,52 @@
+addr,retries,status,base_test,aop_test,test_speedup,base_train,aop_train,train_speedup,success
+0x100000000,2,OK,257.78,269.44,0.9567,62879.81,62870.56,1.0001,False
+0x200000000,2,OK,256.53,265.59,0.9659,62913.59,62989.19,0.9988,False
+0x380000000,2,OK,263.03,262.97,1.0002,62470.88,62735.19,0.9958,False
+0x400000000,2,OK,264.31,265.69,0.9948,62909.62,62581.56,1.0052,False
+0x5a827999f,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x800000000,2,OK,269.59,265.66,1.0148,63448.72,63304.16,1.0023,False
+0xb504f333f,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x1000000000,2,OK,269.59,270.88,0.9953,62461.66,62468.12,0.9999,False
+0x16a09e667f,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x2000000000,2,OK,272.03,264.41,1.0288,62825.00,62726.12,1.0016,False
+0x2d413cccfe,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x4000000000,2,OK,264.31,260.41,1.0150,62786.12,62963.16,0.9972,False
+0x5a827999fc,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x8000000000,2,OK,269.53,268.19,1.0050,62431.91,62572.59,0.9978,False
+0xb504f333f9,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x10000000000,2,OK,266.91,263.06,1.0146,62390.34,62375.94,1.0002,False
+0x16a09e667f3,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x20000000000,2,OK,261.69,263.00,0.9950,63275.69,63067.38,1.0033,False
+0x2d413cccfe7,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x40000000000,2,OK,265.62,266.97,0.9950,62292.62,62421.66,0.9979,False
+0x5a827999fce,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x80000000000,2,OK,276.03,269.56,1.0240,63120.72,62486.66,1.0101,False
+0xb504f333f9d,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x100000000000,2,OK,268.25,268.22,1.0001,63715.72,63812.09,0.9985,False
+0x16a09e667f3b,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x200000000000,2,OK,412.78,451.78,0.9137,62949.19,62622.44,1.0052,False
+0x2d413cccfe77,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x400000000000,2,OK,272.06,262.88,1.0350,63126.25,62427.12,1.0112,False
+0x5a827999fcef,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x800000000000,2,OK,263.06,260.38,1.0103,62995.94,62877.66,1.0019,False
+0xb504f333f9de,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0xfffeefa00000,1,OK,257.78,40.41,6.3797,63783.69,22726.00,2.8066,True
+0xffff81c00000,1,OK,264.31,79.47,3.3260,63708.28,15499.62,4.1103,True
+0xffffff000000,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False
+0x1000000000000,1,FAIL:crashed (rc=-6): augury: augury.c:233: main: Assertion `data_buffer != MAP_FAILED' failed.
+,,,,,,,False

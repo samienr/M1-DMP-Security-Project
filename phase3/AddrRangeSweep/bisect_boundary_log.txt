@@ -1,0 +1,111 @@
+lo=0x800000000000 OFF (confirmed), hi=0xfffeefa00000 ON (confirmed)
+--- step 0: testing mid=0xbfff77d00000 ---
+  0xbfff77d00000: train_speedup=1.004
+  0xbfff77d00000: train_speedup=0.995
+  -> lo=0xbfff77d00000 hi=0xfffeefa00000 gap=0x3fff77d00000
+--- step 1: testing mid=0xdfff33b80000 ---
+  0xdfff33b80000: train_speedup=1.004
+  0xdfff33b80000: train_speedup=1.006
+  -> lo=0xdfff33b80000 hi=0xfffeefa00000 gap=0x1fffbbe80000
+--- step 2: testing mid=0xefff11ac0000 ---
+  0xefff11ac0000: train_speedup=0.997
+  0xefff11ac0000: train_speedup=1.000
+  -> lo=0xefff11ac0000 hi=0xfffeefa00000 gap=0xfffddf40000
+--- step 3: testing mid=0xf7ff00a60000 ---
+  0xf7ff00a60000: train_speedup=1.001
+  0xf7ff00a60000: train_speedup=1.005
+  -> lo=0xf7ff00a60000 hi=0xfffeefa00000 gap=0x7ffeefa0000
+--- step 4: testing mid=0xfbfef8230000 ---
+  0xfbfef8230000: train_speedup=1.003
+  0xfbfef8230000: train_speedup=1.002
+  -> lo=0xfbfef8230000 hi=0xfffeefa00000 gap=0x3fff77d0000
+--- step 5: testing mid=0xfdfef3e18000 ---
+  0xfdfef3e18000: train_speedup=0.999
+  0xfdfef3e18000: train_speedup=0.995
+  -> lo=0xfdfef3e18000 hi=0xfffeefa00000 gap=0x1fffbbe8000
+--- step 6: testing mid=0xfefef1c0c000 ---
+  0xfefef1c0c000: train_speedup=0.998
+  0xfefef1c0c000: train_speedup=1.027
+  -> lo=0xfefef1c0c000 hi=0xfffeefa00000 gap=0xfffddf4000
+--- step 7: testing mid=0xff7ef0b04000 ---
+  0xff7ef0b04000: train_speedup=1.001
+  0xff7ef0b04000: train_speedup=1.006
+  -> lo=0xff7ef0b04000 hi=0xfffeefa00000 gap=0x7ffeefc000
+--- step 8: testing mid=0xffbef0280000 ---
+  0xffbef0280000: train_speedup=0.995
+  0xffbef0280000: train_speedup=1.001
+  -> lo=0xffbef0280000 hi=0xfffeefa00000 gap=0x3fff780000
+--- step 9: testing mid=0xffdeefe40000 ---
+  0xffdeefe40000: train_speedup=0.993
+  0xffdeefe40000: train_speedup=1.007
+  -> lo=0xffdeefe40000 hi=0xfffeefa00000 gap=0x1fffbc0000
+--- step 10: testing mid=0xffeeefc20000 ---
+  0xffeeefc20000: train_speedup=1.001
+  0xffeeefc20000: train_speedup=1.003
+  -> lo=0xffeeefc20000 hi=0xfffeefa00000 gap=0xfffde0000
+--- step 11: testing mid=0xfff6efb10000 ---
+  0xfff6efb10000: train_speedup=1.003
+  0xfff6efb10000: train_speedup=0.996
+  -> lo=0xfff6efb10000 hi=0xfffeefa00000 gap=0x7ffef0000
+--- step 12: testing mid=0xfffaefa88000 ---
+  0xfffaefa88000: train_speedup=0.997
+  0xfffaefa88000: train_speedup=1.002
+  -> lo=0xfffaefa88000 hi=0xfffeefa00000 gap=0x3fff78000
+--- step 13: testing mid=0xfffcefa44000 ---
+  0xfffcefa44000: train_speedup=0.998
+  0xfffcefa44000: train_speedup=1.001
+  -> lo=0xfffcefa44000 hi=0xfffeefa00000 gap=0x1fffbc000
+--- step 14: testing mid=0xfffdefa20000 ---
+  0xfffdefa20000: train_speedup=2.852
+  -> lo=0xfffcefa44000 hi=0xfffdefa20000 gap=0xfffdc000
+--- step 15: testing mid=0xfffd6fa30000 ---
+  0xfffd6fa30000: train_speedup=0.987
+  0xfffd6fa30000: train_speedup=1.004
+  -> lo=0xfffd6fa30000 hi=0xfffdefa20000 gap=0x7fff0000
+
+Final bracket: OFF at 0xfffd6fa30000, ON at 0xfffdefa20000, gap=0x7fff0000 (2.00 GiB)
+
+=== Second pass, narrowing the 2 GiB bracket further ===
+--- step 0: testing mid=0xfffdafa28000 ---
+  0xfffdafa28000: train_speedup=0.997
+  0xfffdafa28000: train_speedup=1.001
+  -> lo=0xfffdafa28000 hi=0xfffdefa20000 gap=1023.97 MiB
+--- step 1: testing mid=0xfffdcfa24000 ---
+  0xfffdcfa24000: train_speedup=1.269
+  0xfffdcfa24000: train_speedup=0.994
+  -> lo=0xfffdcfa24000 hi=0xfffdefa20000 gap=511.98 MiB
+--- step 2: testing mid=0xfffddfa20000 ---
+  0xfffddfa20000: train_speedup=1.000
+  0xfffddfa20000: train_speedup=1.001
+  -> lo=0xfffddfa20000 hi=0xfffdefa20000 gap=256.00 MiB
+--- step 3: testing mid=0xfffde7a20000 ---
+  0xfffde7a20000: train_speedup=1.002
+  0xfffde7a20000: train_speedup=1.007
+  -> lo=0xfffde7a20000 hi=0xfffdefa20000 gap=128.00 MiB
+--- step 4: testing mid=0xfffdeba20000 ---
+  0xfffdeba20000: train_speedup=0.990
+  0xfffdeba20000: train_speedup=1.000
+  -> lo=0xfffdeba20000 hi=0xfffdefa20000 gap=64.00 MiB
+--- step 5: testing mid=0xfffdeda20000 ---
+  0xfffdeda20000: train_speedup=2.604
+  -> lo=0xfffdeba20000 hi=0xfffdeda20000 gap=32.00 MiB
+--- step 6: testing mid=0xfffdeca20000 ---
+  0xfffdeca20000: train_speedup=1.013
+  0xfffdeca20000: train_speedup=0.998
+  -> lo=0xfffdeca20000 hi=0xfffdeda20000 gap=16.00 MiB
+--- step 7: testing mid=0xfffded220000 ---
+  0xfffded220000: train_speedup=0.995
+  0xfffded220000: train_speedup=1.001
+  -> lo=0xfffded220000 hi=0xfffdeda20000 gap=8.00 MiB
+
+Final: OFF at 0xfffded220000, ON at 0xfffdeda20000, gap=8.000 MiB
+
+=== Additional checks beyond the ON region (not a clean DMP-off result; mmap itself starts failing) ===
+0xffffff000000: FAIL crashed (rc=-6): data_buffer != MAP_FAILED assertion
+0x1000000000000: FAIL crashed (rc=-6): data_buffer != MAP_FAILED assertion (this is 2^48, one past the max 48-bit address)
+0xffffa0000000: FAIL crashed (rc=-11, segfault)
+0xfffff0000000: FAIL crashed (rc=-6): data_buffer != MAP_FAILED assertion
+0xfffffe000000: FAIL crashed (rc=-6): data_buffer != MAP_FAILED assertion
+(So the kernel's actual mappable VA ceiling on this box sits somewhere between the
+confirmed-good 0xffff81c00000 and 0xffffa0000000 -- a separate, unrelated ABI/kernel
+limit, not a DMP property.)

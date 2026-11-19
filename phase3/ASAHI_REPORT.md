@@ -49,6 +49,16 @@ the planned macOS Primitive B replication.
   teardown) -- but `systemd-inhibit --what=sleep:idle --mode=block sleep
   infinity` (killed when done) is worth running proactively before kicking
   off any search expected to run past 20-30 minutes, as this session's did.
+- **Address-range characterization (new): the DMP only "sees" pointers
+  near the top of the 48-bit address space.** Ported Augury's `addrs.sh`
+  (never run on this box before) and swept `data_buffer`'s forced address
+  across 15 orders of magnitude (4 GiB - 128 TiB): zero activation
+  anywhere in that entire range. Activation only appears in a narrow band
+  at the very top of the 48-bit space (~255.99-256 TiB), binary-searched
+  to an 8 MiB-wide transition. That band happens to be exactly where this
+  kernel's own unhinted `mmap` calls naturally land. See
+  `phase3/AddrRangeSweep/README.md` for the full writeup, controls (ruled
+  out AOP-proximity and mapping-overlap as confounds), and reproduce steps.
 
 ## Primitive A (Augury Algorithm 3, OOB read) — done
 
@@ -105,6 +115,46 @@ essential, but is cheap to re-run (`python3 drive_oob_poc.py
 
 Artifacts: `phase3/PrimitiveA/oob-poc-mach-linux` (binary),
 `out_mach_linux_1.csv`, `out_mach_linux_2.csv`, `run_log_linux.txt`.
+
+## Address-range characterization (Augury's `addrs.sh`, ported) — new finding
+
+`augury/README.md` lists `addrs.sh` as characterizing DMP behavior "around
+`0x280000000-0xffff3f2b0000`" -- whether the DMP's willingness to treat
+cached data as a pointer depends on *where* that data lives in the
+address space. This was never run on this box before (only the OOB-read
+PoC and ct-swap were ported in earlier sessions). `addrs.sh` itself
+doesn't run on Linux (zsh + conda + a narrow 4-14 GiB default range), but
+the underlying C harness (`augury.c`) needed no porting -- it already has
+a `#ifdef FORCE_ADDR` path (force-`mmap`'s the pointer-target buffer via
+`MAP_FIXED`), and the Linux timer/pin_cpu backing was already in place.
+
+First confirmed the harness activates the DMP at all here, using the
+README's own known-good example (`64 3 5 7 16`, unforced): test-pointer
+access time dropped from ~270ns to 0-83ns, train time ~16.4us to ~3.8us --
+unambiguous. Then swept the forced address log-spaced across 15 orders of
+magnitude (4 GiB to 128 TiB, half-bit-exponent steps, `addrs.sh`'s own
+`256 1 32 4 1` parameters): **every single point showed zero activation**
+(`train_speedup` 0.95-1.04, pure noise, nowhere near the 2.0 success
+threshold used by the original tooling's own `get_avg.py`). Two points
+near the very top of the 48-bit space (`0xfffeefa00000`, `0xffff81c00000`
+-- the same narrow band where this kernel's own *unforced* `mmap(0, ...)`
+calls land) showed strong activation (2.84x-4.01x train speedup).
+Binary-searched the transition down to an **8 MiB-wide bracket** at
+~255.9919 TiB (right at the top of the 48-bit/256 TiB space). Ruled out
+two confounds directly: (1) `aop`'s own (ASLR'd, several-GiB-jittery)
+address isn't what determines the boundary -- the classification at a
+fixed forced address stayed consistent across many independently-ASLR'd
+runs; (2) the forced address never overlaps/corrupts `aop`'s own mapping
+(confirmed byte ranges don't intersect at one boundary point).
+
+**Conclusion: the DMP's pointer-plausibility heuristic, on this
+Linux/Asahi kernel, only recognizes addresses in a narrow band at the very
+top of the 48-bit user address space** -- which happens to be exactly
+where this kernel's default `mmap` allocator places ordinary unhinted
+anonymous mappings. A genuinely new characterization result for this
+Linux port, not previously investigated on this machine. Full method,
+raw sweep data, bisection transcript, and reproduce steps:
+`phase3/AddrRangeSweep/README.md`.
 
 ## Primitive B (GoFetch ct-swap, Section 5) — ported, run to completion, weak real signal confirmed
 
