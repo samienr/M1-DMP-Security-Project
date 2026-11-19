@@ -49,16 +49,23 @@ the planned macOS Primitive B replication.
   teardown) -- but `systemd-inhibit --what=sleep:idle --mode=block sleep
   infinity` (killed when done) is worth running proactively before kicking
   off any search expected to run past 20-30 minutes, as this session's did.
-- **Address-range characterization (new): the DMP only "sees" pointers
-  near the top of the 48-bit address space.** Ported Augury's `addrs.sh`
-  (never run on this box before) and swept `data_buffer`'s forced address
+- **Address-range characterization: independently replicates a published
+  Augury finding, not a new discovery (corrected from an earlier,
+  overclaimed version of this note).** Ported Augury's `addrs.sh` (never
+  run in *this* repo before) and swept `data_buffer`'s forced address
   across 15 orders of magnitude (4 GiB - 128 TiB): zero activation
-  anywhere in that entire range. Activation only appears in a narrow band
-  at the very top of the 48-bit space (~255.99-256 TiB), binary-searched
-  to an 8 MiB-wide transition. That band happens to be exactly where this
-  kernel's own unhinted `mmap` calls naturally land. See
-  `phase3/AddrRangeSweep/README.md` for the full writeup, controls (ruled
-  out AOP-proximity and mapping-overlap as confounds), and reproduce steps.
+  anywhere in that range, with activation appearing only in a narrow band
+  at the very top of the 48-bit space, binary-searched to an 8 MiB-wide
+  transition (~255.9919 TiB). The Augury paper itself already reports
+  this exact phenomenon on Asahi Linux (Section VI-B / Table II: "the DMP
+  will activate and dereference pointers above `0xffff3f2b0000`, but...
+  addresses below `0x280000000` are not dereferenceable") -- our measured
+  boundary lands **within ~5.3 GiB of their published `0xffff3f2b0000`**,
+  out of a 256,000 GiB range. What's new here is independent replication
+  without reference to that number, somewhat tighter precision, and
+  explicit confound controls (ruled out AOP-proximity and mapping-overlap)
+  the paper doesn't document checking -- not the underlying fact itself.
+  See `phase3/AddrRangeSweep/README.md`.
 
 ## Primitive A (Augury Algorithm 3, OOB read) — done
 
@@ -116,13 +123,29 @@ essential, but is cheap to re-run (`python3 drive_oob_poc.py
 Artifacts: `phase3/PrimitiveA/oob-poc-mach-linux` (binary),
 `out_mach_linux_1.csv`, `out_mach_linux_2.csv`, `run_log_linux.txt`.
 
-## Address-range characterization (Augury's `addrs.sh`, ported) — new finding
+## Address-range characterization (Augury's `addrs.sh`, ported) — replicates a published result
+
+**Correction to an earlier version of this section:** this was first
+written up as a "genuinely new" finding. It is not -- the Augury paper
+itself (Section VI-B, Table II) already reports this exact phenomenon,
+tested by the original authors on Asahi Linux: *"we found the DMP to
+activate and dereference pointers above `0xffff3f2b0000`, but...
+addresses below `0x280000000` are not dereferenceable."* Our
+independently-measured boundary (`0xfffded220000`-`0xfffdeda20000`,
+~255.9919 TiB) lands within **~5.3 GiB of their published
+`0xffff3f2b0000`** (255.997 TiB), out of a 256,000 GiB range -- this is a
+replication, not a discovery. The value of this section is the
+independent confirmation (we didn't look up their number first), the
+finer precision (8 MiB bracket vs. their single reported value), and the
+confound checks below that the paper doesn't document -- not the
+underlying fact, which was already known and published.
 
 `augury/README.md` lists `addrs.sh` as characterizing DMP behavior "around
 `0x280000000-0xffff3f2b0000`" -- whether the DMP's willingness to treat
 cached data as a pointer depends on *where* that data lives in the
-address space. This was never run on this box before (only the OOB-read
-PoC and ct-swap were ported in earlier sessions). `addrs.sh` itself
+address space. This was never run in *this repo* before (only the
+OOB-read PoC and ct-swap were ported in earlier sessions here).
+`addrs.sh` itself
 doesn't run on Linux (zsh + conda + a narrow 4-14 GiB default range), but
 the underlying C harness (`augury.c`) needed no porting -- it already has
 a `#ifdef FORCE_ADDR` path (force-`mmap`'s the pointer-target buffer via
@@ -151,9 +174,10 @@ runs; (2) the forced address never overlaps/corrupts `aop`'s own mapping
 Linux/Asahi kernel, only recognizes addresses in a narrow band at the very
 top of the 48-bit user address space** -- which happens to be exactly
 where this kernel's default `mmap` allocator places ordinary unhinted
-anonymous mappings. A genuinely new characterization result for this
-Linux port, not previously investigated on this machine. Full method,
-raw sweep data, bisection transcript, and reproduce steps:
+anonymous mappings, and matches the Augury paper's own published Asahi
+Linux boundary to within ~5.3 GiB. A clean independent replication with
+tighter precision and documented confound controls, not a new discovery.
+Full method, raw sweep data, bisection transcript, and reproduce steps:
 `phase3/AddrRangeSweep/README.md`.
 
 ## Primitive B (GoFetch ct-swap, Section 5) — ported, run to completion, weak real signal confirmed

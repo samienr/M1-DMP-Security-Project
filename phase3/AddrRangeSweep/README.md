@@ -103,10 +103,41 @@ isolates -- but the boundary itself is real, sharp (8 MiB out of a
 256 TiB space), reproducible across independently-ASLR'd runs, and not an
 artifact of the forcing mechanism or of overlapping `aop`'s own mapping.
 
-This is a new characterization result for this Linux/Asahi port -- the
-original `addrs.sh`/paper experiment was scoped to macOS, and this is the
-first time (across all of Phases 0-3) this specific "where does the DMP
-stop caring" question was tested on this machine.
+### Relationship to the published Augury result -- this replicates it, it is not a new discovery
+
+**Correction:** an earlier version of this writeup called this a "new
+characterization result... first time this question was tested" on
+this machine. That's wrong, and worth flagging explicitly rather than
+quietly fixing: the Augury paper (`Augury_Using_Data_Memory-Dependent_
+Prefetchers_to_Leak_Data_at_Rest.pdf`, Section VI-B "Memory Addressing
+Restrictions", and Table II) already reports this *exact* phenomenon,
+and the authors already tested it **on Asahi Linux themselves**:
+
+> "We additionally observed that on MacOS, the DMP will not dereference
+> pointers contained in the AoP which have a virtual address between
+> `0x280000000` and `0x7fe840004000` -- the end of mappable user-space
+> addresses. On Asahi Linux, which allows us to map virtual addresses
+> above `0x7fe840004000`, we found the DMP to activate and dereference
+> pointers above `0xffff3f2b0000`, but then addresses below
+> `0x280000000` are not dereferenceable. At this time, we do not have an
+> explanation for why there are restrictions on the virtual addresses the
+> M1 DMP will dereference."
+
+Our independently-measured boundary (`0xfffded220000`-`0xfffdeda20000`,
+~255.9919 TiB) lands **within ~5.3 GiB of their published
+`0xffff3f2b0000`** (255.997 TiB) -- essentially the same number, out of a
+256,000 GiB range. We also don't have an explanation for the restriction
+(same honest non-conclusion as the paper).
+
+**What's actually new here, then:** independent replication without
+having looked up their number first (this project's earlier sessions
+hadn't read this part of the PDF closely before running the sweep);
+somewhat tighter precision (an 8 MiB bracket via binary search, vs. their
+single reported threshold value); and two explicit confound checks the
+paper doesn't document doing (ruling out AOP's own ASLR'd address as the
+real determinant, and ruling out the forced address overlapping/
+corrupting AOP's mapping). The underlying fact about where the M1 DMP
+will and won't dereference pointers on Asahi Linux was already known.
 
 ## Reproduce
 
