@@ -13,9 +13,12 @@ target buffer's address. **When we force both the AoP and the target
 buffer to the same low addresses the paper calls "not dereferenceable,"
 placed close together, the DMP activates fine.** The real, previously
 unquantified mechanism is a GiB-scale distance limit between the AoP and
-whatever it's dereferencing -- full strength up to ~3 GiB apart, a sharp
-falloff between 3.1-3.8 GiB, and complete failure beyond ~4 GiB,
-regardless of where in the address space the pair sits.
+whatever it's dereferencing -- full strength up to ~3.7 GiB apart (true
+distance; see the precise-offset correction below), a sharp falloff
+through ~4.5 GiB, and complete failure beyond ~4.8 GiB -- **and it's
+one-directional**: the target must sit at a *higher* address than the
+AoP. The same distance below the AoP never activates it at all,
+confirmed at matched true distances.
 
 ## Background
 
@@ -112,18 +115,69 @@ A flat ~4x plateau out to at least 3 GiB, a clean monotonic decay over
 roughly 3.1-3.8 GiB, then a hard floor at baseline beyond ~4 GiB. Every
 point's own 5 trials cluster within a few percent of each other -- this
 is a deterministic property of the (aop, data_buffer) pair's separation,
-not a probabilistic one. (The within-`data_buffer`-sized-1024MiB-buffer
-offset of the actual dereferenced pointer value adds some slop to the
-precise falloff numbers -- the pointer stored in the AoP targets a
-pseudo-random offset inside `data_buffer`'s 1 GiB span, not necessarily
-its start -- but the qualitative plateau/falloff/floor shape is clear
-regardless.)
+not a probabilistic one.
 
 **This fully explains the earlier bimodal/probabilistic appearance** in
 `gradient_results.csv`: those trials weren't randomly on/off at the
 hardware level. AoP's own ASLR'd placement was randomly sampling
 different points along this exact deterministic curve each run, since
 only `data_buffer` was held fixed there.
+
+### Correcting the "slop": the internal offset is a fixed constant, not randomness
+
+An earlier draft of this writeup called the within-`data_buffer` pointer
+offset "pseudo-random... slop." It isn't random -- `augury.c` computes
+`test_idx_in_data_buffer` via a deterministic Lehmer PRNG seeded with a
+constant (`rand_idx = 1`), iterated a fixed number of times set entirely
+by `train_len`/`offs_past_train_buf` (both held constant at 256/1
+throughout this investigation). It is **exactly the same value, every
+run**: `test_idx_in_data_buffer = 93776752`, i.e. a fixed
+`93776752 * 16 * 8 = 750214016` bytes (**715.46 MiB**) past
+`data_buffer`'s own start. So the table above is nominal
+(`data_buffer_start - aop_start`), not the true distance to the actual
+dereferenced byte -- add 715.46 MiB to every row above to get the real
+number. The true plateau/falloff/floor, in terms of actual
+AoP-to-dereferenced-byte distance, is: **full strength to ~3.7 GiB,
+falloff ~3.8-4.5 GiB, dead beyond ~4.8 GiB.**
+
+### Directionality: the effect is one-way, not symmetric
+
+Repeated the same sweep with `data_buffer` placed *below* `aop` instead
+of above (`symmetry_sweep.py`, two fresh locations, `0x600000000` and
+`0xA00000000`, 3 trials per point, 8 points from 8 MiB to 6144 MiB
+nominal gap). **Every single "below" trial showed zero activation**
+(train_speedup pinned at 0.95-1.06, pure noise) -- including at nominal
+gaps small enough that the equivalent "above" distance sits deep in the
+confirmed plateau.
+
+That raised an obvious objection: because `data_buffer` is ~1 GiB and the
+dereferenced byte sits a fixed 715.46 MiB past its start, a small nominal
+"below" gap doesn't actually place the dereferenced byte 715.46 MiB
+*past* `aop` the way the "above" case does -- it's a genuinely different,
+smaller true distance, computed using `DATA_BUFFER_SIZE - 715.46 MiB` =
+308.54 MiB past `data_buffer`'s own, lower, start. So this needed a
+matched-distance control, not just matched nominal gaps.
+
+Solved for the exact `data_buffer` addresses that place the dereferenced
+byte at the *same* true distance from `aop` as two already-confirmed
+active "above" points (723 MiB and 2763 MiB, both deep in the plateau):
+
+```
+db=0x5a6188000 (below, true distance 723.01 MiB): 5/5 trials, train_speedup = 1.003, 0.997, 0.999, 1.003, 0.999
+db=0x526988000 (below, true distance 2763.01 MiB): 5/5 trials, train_speedup = 0.998, 1.015, 1.019, 0.998, 1.002
+```
+
+10/10 trials, zero activation, at exactly the same distances where
+"above" gives a clean ~4x every time. **The AoP-to-target proximity
+effect is directional: the DMP only prefetches a target at a *higher*
+address than the AoP, never a lower one, independent of distance.** This
+is a second, independent axis of the mechanism neither paper documents
+(their own "prefetch distance" concept, Table I, is inherently
+forward-only by construction -- `offs_past_train_buf` is always a
+positive offset *past* the training region within the same array -- so
+the question of a *target buffer* being below the AoP was never posed in
+the original methodology, the same way absolute address was never
+disentangled from proximity until the decisive experiment above).
 
 ## Why this is more than "the paper's boundary, replicated"
 
@@ -152,14 +206,22 @@ Table II conflates the GiB-scale one with absolute address.
   kernel's page-table/huge-page behavior isn't established here -- that
   would need testing on another kernel or ideally on macOS to see if the
   same GiB-scale number reproduces.
-- Didn't test whether the plateau/falloff shape is symmetric (data_buffer
-  below vs. above aop) or whether 3-4 GiB holds at other absolute
-  locations beyond the two spot-checked (`0x200000000`, `0x600000000`) --
-  reasonable next steps if this gets written up further.
-- The exact falloff numbers have some slop from the pointer's
-  pseudo-random offset within `data_buffer`'s own 1 GiB span (noted
-  above); a tighter measurement would force the exact dereferenced
-  offset rather than a random one within the 1 GiB window.
+- **Resolved since the first draft:** symmetry was tested (it isn't
+  symmetric -- see Directionality above) and the reach was confirmed to
+  hold at two more absolute locations (`0x600000000`, `0xA00000000`),
+  not just the original `0x200000000` spot-check -- all three locations
+  reproduce the same plateau/falloff/floor shape in the "above"
+  direction.
+- Still open: whether the ~3.7-4.8 GiB reach is a true hardware constant
+  (e.g., tied to TLB reach, a physical cache/memory-controller property,
+  or an address-translation structure) or something contingent on this
+  kernel's page-table/huge-page behavior -- would need testing on
+  another kernel, or ideally macOS, to see if the same GiB-scale number
+  reproduces there too.
+- Still open: *why* the effect is directional. Didn't probe whether this
+  tracks something like TLB/page-table walk direction, a prefetcher
+  design choice to only look "ahead," or something else -- this writeup
+  establishes the asymmetry empirically, not its mechanism.
 
 ## Reproduce
 
@@ -185,5 +247,11 @@ python3 reach_sweep.py                              # full distance curve (edit 
 - `reach_sweep.py`/`reach_results.csv`/`reach_results2.csv` -- the
   fixed-both-buffers distance curve (coarse pass + boundary-narrowing
   pass).
+- `symmetry_sweep.py`/`symmetry_results.csv`/`symmetry_results_below.csv`
+  -- the above-vs-below sweep at two fresh locations that found the
+  directional asymmetry.
+- `directionality_matched_distance_log.txt` -- the matched-true-distance
+  confirmatory runs ruling out the "below" sweep's nominal-vs-true-distance
+  confound as the explanation.
 - The `augury.c` change itself lives in `augury/augury.c` (not copied
   here) -- it's the project's shared source, not a phase-specific output.

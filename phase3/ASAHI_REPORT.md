@@ -17,10 +17,12 @@ the planned macOS Primitive B replication.
 - **Primitive A (Augury OOB read): reproduced, and beats its own baseline.**
   76.3% pooled accuracy on Linux `clock_gettime`, higher than both this
   project's own macOS run (48.3%) and the paper's own macOS
-  `mach_absolute_time` figure (70.2%). Likely explanation: Linux
-  `sched_setaffinity` is a hard pin, macOS's QoS-based `pin_cpu()` is only a
-  scheduling hint -- plausible but not yet confirmed with a dedicated
-  pinned-vs-unpinned control measurement.
+  `mach_absolute_time` figure (70.2%). The hard-pin-vs-soft-hint
+  hypothesis for *why* was tested directly (see
+  `phase3/SchedulerPinTest/README.md`) and **not confirmed**: pinned and
+  unpinned performed statistically indistinguishably, both at baseline
+  and under synthetic contention. The real explanation for the Linux
+  accuracy advantage remains open.
 - **Primitive B (GoFetch ct-swap): a real but weak secret-dependent DMP
   channel exists on this hardware**, and required a substantial from-scratch
   Linux port (no macOS-only `dyld_search`/`kperf`/QoS APIs survive the
@@ -67,23 +69,40 @@ the planned macOS Primitive B replication.
   the paper doesn't document checking -- not the underlying fact itself.
   See `phase3/AddrRangeSweep/README.md`.
 - **Follow-up, genuinely new: that "address restriction" isn't real --
-  it's AoP-to-target proximity in disguise.** Added `FORCE_ADDR` support
-  for the AoP's own address (previously only the target buffer could be
-  forced), then forced *both* close together deep inside the region the
-  Augury paper calls categorically "not dereferenceable": the DMP
-  activated fine (8/8 trials, ~4x speedup), and stopped activating when
-  the same two buffers were moved far apart in that *same* region (5/5,
-  baseline). Confirmed at a second independent low address. Quantified
-  the actual mechanism: full-strength activation out to ~3 GiB of
-  AoP-to-target separation, a sharp falloff over ~3.1-3.8 GiB, dead
-  beyond ~4 GiB -- a deterministic, reproducible distance limit the
-  paper's own Table II doesn't report (it lists the address restriction
-  as independent of its separately-documented, KiB-scale "prefetch
-  distance," which operates within the AoP's own training sequence, not
+  it's AoP-to-target proximity in disguise, and it's one-directional.**
+  Added `FORCE_ADDR` support for the AoP's own address (previously only
+  the target buffer could be forced), then forced *both* close together
+  deep inside the region the Augury paper calls categorically "not
+  dereferenceable": the DMP activated fine (8/8 trials, ~4x speedup),
+  and stopped activating when the same two buffers were moved far apart
+  in that *same* region (5/5, baseline). Confirmed at two more
+  independent low addresses. Quantified the actual mechanism, correcting
+  for a fixed (not random) internal pointer offset: full-strength
+  activation out to **~3.7 GiB** of true AoP-to-target separation, a
+  falloff through **~4.5 GiB**, dead beyond **~4.8 GiB** -- and this only
+  works when the target sits at a *higher* address than the AoP.
+  Repeating the sweep with the target placed *below* the AoP, at matched
+  true distances, gave zero activation in 10/10 confirmatory trials even
+  at distances where "above" is reliably active. Neither the magnitude
+  limit nor the directionality is in the paper's own Table II (its
+  "prefetch distance" concept is KiB-scale and inherently forward-only
+  by construction, operating within the AoP's own training sequence, not
   between the AoP and an external target). This also fully explains the
   bimodal/probabilistic appearance of the first sweep above: AoP's own
   ASLR'd placement was randomly sampling different points along this same
   deterministic curve each trial. See `phase3/ProximityGating/README.md`.
+- **`pp_threshold` (Primitive B) was never calibrated for this
+  hardware -- it's ~2-6x too high.** Built a dedicated calibration
+  harness reusing `ctswap_attacker.rs`'s own `CounterTimer`/eviction-set
+  primitives: a real L2 cache hit reads a rock-solid 108 ticks (zero
+  variance, 500 samples), a real eviction reads 131-331 ticks (mean 253).
+  `pp_threshold=680` (carried over unchanged from the GoFetch README's
+  macOS example) is 2.05x the single highest evicted value ever
+  recorded -- the `median_test_base >= pp_threshold` noise-detection
+  safety check it gates can never fire on this machine. Doesn't
+  retroactively change the lever-tuning conclusions above (a different
+  knob), but means that specific safety net has been inert through this
+  entire project. See `phase3/PPThresholdCalibration/README.md`.
 
 ## Primitive A (Augury Algorithm 3, OOB read) — done
 
@@ -119,17 +138,18 @@ Comparison points:
 than both this project's own macOS run and the paper's macOS number, despite
 running from inside the same kind of contended environment (this Claude Code
 session) that tanked the Mac's in-session number to 39% (see handoff notes).
-A plausible explanation, not yet confirmed: `pin_cpu()`'s Linux
-implementation uses `sched_setaffinity()`, a hard pin enforced by the kernel
-scheduler, whereas macOS's `pin_cpu()` only sets a QoS class -- a scheduling
-*hint*, not a binding affinity guarantee. If so, the DMP-timing signal would
-be systematically less disturbed by competing processes (e.g. this very
-session) on Linux than on macOS for exactly this reason. This is a genuine
-OS-scheduler-interaction result in the spirit of the Phase 4 "Asahi
-characterization" angle, surfaced incidentally while doing Phase 3 on this
-machine -- worth a deliberate follow-up measurement (e.g. comparing
-`sched_setaffinity` vs an unpinned control on Linux) before claiming it in
-the final report.
+The originally-proposed explanation -- `pin_cpu()`'s Linux
+`sched_setaffinity()` being a hard, kernel-enforced pin vs. macOS's QoS
+class being only a scheduling *hint* -- was flagged at the time as
+"plausible but not yet confirmed." It has since been tested directly
+(`phase3/SchedulerPinTest/README.md`) and **not confirmed**: pinned and
+unpinned `oob-poc` runs performed statistically indistinguishably, both
+at baseline and under a synthetic CPU-saturation contention load on the
+same core cluster. The real explanation for this Linux-vs-macOS gap
+remains open -- candidates not yet tested include `CLOCK_MONOTONIC`'s
+timer resolution vs. `mach_absolute_time`'s interrupt-driven quantization,
+or something specific to XNU's own scheduler rather than pinning
+mechanics in general.
 
 Caveat carried over from the Mac work: all of the above Linux numbers were
 measured from inside this Claude Code session, not a clean bare terminal,
@@ -140,6 +160,46 @@ essential, but is cheap to re-run (`python3 drive_oob_poc.py
 
 Artifacts: `phase3/PrimitiveA/oob-poc-mach-linux` (binary),
 `out_mach_linux_1.csv`, `out_mach_linux_2.csv`, `run_log_linux.txt`.
+
+## Hard-pin vs. soft-hint hypothesis for Primitive A — tested, not confirmed
+
+Followed up directly on the "noteworthy finding" above. Added an
+`AUGURY_NO_PIN` environment-variable toggle to `pin_cpu()` in
+`augury/util/linux-util.c`: when set, skip `sched_setaffinity()` to the
+single requested core and the `setpriority(-20)` boost, instead
+restricting affinity to the whole Firestorm cluster (cores 4-7) --
+mirroring what a QoS-class hint would do on macOS (bias toward the right
+cluster, no hard guarantee of a specific core or priority). Ran
+`drive_oob_poc.py` (120 trials each) in four conditions: pinned/unpinned
+crossed with baseline/contention (4 `taskset`-pinned `yes > /dev/null`
+processes saturating cores 4-7, the same cluster `oob-poc` uses).
+
+| Condition | Accuracy | n |
+|---|---|---|
+| Baseline, pinned | 72.9% | 118 |
+| Baseline, unpinned | 76.9% | 117 |
+| Contention, pinned | 73.3% | 120 |
+| Contention, unpinned | 75.0% | 120 |
+
+Two-proportion z-tests on every pairwise comparison that matters (pinned
+vs. unpinned at baseline, pinned vs. unpinned under contention, and
+baseline vs. contention within each pin condition): all four `|z| < 1`,
+nowhere near significance. **No condition differs from any other in any
+statistically detectable way.** If anything, unpinned slightly
+outperformed pinned in both conditions -- the opposite direction from
+the hypothesis -- but well within noise at this sample size.
+
+**Honest conclusion: this does not confirm the hard-pin hypothesis.**
+Two caveats worth being precise about rather than treating this as a
+clean refutation: the synthetic contention (raw CPU-bound busy loops)
+may not replicate whatever actually degraded the original macOS
+in-session run (could have been I/O wait, memory-bus contention, or
+something specific to that session rather than pure CPU scheduling
+pressure); and this only tests Primitive A's harness on this one
+machine with this one kind of load, so it doesn't establish that hard
+pinning is never beneficial -- only that it didn't measurably matter
+here. Full method, z-test derivations, and reproduce steps:
+`phase3/SchedulerPinTest/README.md`.
 
 ## Address-range characterization (Augury's `addrs.sh`, ported) — replicates a published result
 
@@ -601,3 +661,37 @@ produces "good" compound eviction sets less often than Apple's native
 XNU kernel on the same silicon. This would be a legitimate, interesting
 Phase-4-style characterization question, but nothing measured so far
 isolates it as a cause -- it remains a hypothesis, not a finding.
+
+## `pp_threshold` calibration — it was never done, and the number was ~2-6x too high
+
+Followed up on the "never independently calibrated" gap flagged above.
+Built `calibrate_pp.rs`, a dedicated harness reusing `ctswap_attacker.rs`'s
+own `CounterTimer` and `evict_rs::eviction_set_generation` primitives:
+500 "cached" samples (load, immediately re-time, no eviction attempt)
+and 500 "evicted" samples (the real `EvictionSet::evict_and_time_once`
+mechanism the attack itself uses).
+
+| | n | mean | std | min | max |
+|---|---|---|---|---|---|
+| cached | 500 | 108.0 | 0.00 | 108 | 108 |
+| evicted | 500 | 252.9 | 23.09 | 131 | 331 |
+
+The cached distribution isn't just tight -- it reads **exactly 108 on
+every single one of 500 samples**. The two distributions don't overlap
+at all; any threshold in `[109, 130]` separates them with zero errors
+across all 1000 samples.
+
+`pp_threshold=680` (the GoFetch README's macOS example value, carried
+over unchanged into every run in this project) is **2.05x the single
+highest evicted sample ever recorded**, 2.69x the evicted mean, and
+6.30x the cached value. Its only use in `ctswap_attacker.rs` is the
+ceiling in `median_test_base >= pp_threshold` -- a designed safety check
+for catching an abnormally slow (noisy/bad) baseline measurement during
+search. At 680, that check can never fire on this machine: nothing in
+1000 samples got within 2x of it. This doesn't retroactively invalidate
+the lever-tuning conclusions above (`diff_threshold` is a different
+knob, and this doesn't change the gadget-quality diagnosis), but it does
+mean that specific safety net has been inert through this entire
+project -- a genuine gap, now measured rather than assumed. Not yet
+validated end-to-end against a live ct-swap run with a corrected value.
+Full method, numbers, and caveats: `phase3/PPThresholdCalibration/README.md`.

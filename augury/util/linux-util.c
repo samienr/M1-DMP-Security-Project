@@ -8,6 +8,24 @@
 
 void pin_cpu(size_t core_ID)
 {
+	// AUGURY_NO_PIN: test harness for the hard-pin-vs-soft-hint hypothesis
+	// in phase3/ASAHI_REPORT.md -- skip sched_setaffinity entirely (still
+	// restrict to the Firestorm cluster, mirroring macOS's QoS-hint
+	// behavior: a *suggestion* the scheduler can override, not a binding
+	// affinity) to see whether accuracy degrades without the hard pin.
+	if (getenv("AUGURY_NO_PIN") != NULL) {
+		cpu_set_t set;
+		CPU_ZERO(&set);
+		for (int c = 4; c <= 7; c++) {
+			CPU_SET(c, &set);
+		}
+		if (sched_setaffinity(0, sizeof(cpu_set_t), &set) < 0) {
+			printf("Unable to Set Affinity\n");
+			exit(EXIT_FAILURE);
+		}
+		return;
+	}
+
 	cpu_set_t set;
 	CPU_ZERO(&set);
 	CPU_SET(core_ID, &set);

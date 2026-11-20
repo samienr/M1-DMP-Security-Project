@@ -1,0 +1,25 @@
+Matched true-distance confirmation that the proximity effect is
+one-directional (see README.md "Directionality" section for the
+derivation of these addresses: aop=0x600000000, fixed internal offset
+= 715.46 MiB, so nominal-gap-below = true_distance - (1024.0 - 715.46)
+= true_distance - 308.54 MiB).
+
+db=0x5a6188000 (below aop, true distance 723.01 MiB -- matches the
+confirmed-active "above, nominal=8 MiB" point, true distance 723.46 MiB):
+  trial 1: train_speedup=1.003 test_speedup=1.000
+  trial 2: train_speedup=0.997 test_speedup=0.967
+  trial 3: train_speedup=0.999 test_speedup=1.015
+  trial 4: train_speedup=1.003 test_speedup=0.996
+  trial 5: train_speedup=0.999 test_speedup=0.996
+
+db=0x526988000 (below aop, true distance 2763.01 MiB -- matches the
+confirmed-active "above, nominal=2048 MiB" point, true distance
+2763.46 MiB):
+  trial 1: train_speedup=0.998 test_speedup=0.967
+  trial 2: train_speedup=1.015 test_speedup=0.995
+  trial 3: train_speedup=1.019 test_speedup=1.014
+  trial 4: train_speedup=0.998 test_speedup=0.985
+  trial 5: train_speedup=1.002 test_speedup=1.015
+
+10/10 trials: zero activation, at exactly the distances where "above"
+gives ~4x every time.
